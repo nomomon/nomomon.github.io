@@ -1,3 +1,4 @@
 # nomomon.github.io
 ## My projects
-[Orama Visual Assistant](https://nomomon.github.io/OramaVA/)
+* [Orama Visual Assistant](https://nomomon.github.io/OramaVA/)
+* LaTeX Gen
