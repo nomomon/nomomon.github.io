@@ -1,6 +1,7 @@
 :root{
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -101,6 +102,7 @@ body::-webkit-scrollbar-thumb{
         margin-left:6rem;  /*rem relative to fontsize*/
     }
 }
+
 @media only screen and (max-width:600px){
     .logo{
         display: none;
@@ -119,7 +121,29 @@ body::-webkit-scrollbar-thumb{
     main{
         margin-left: 6px;
         margin-right: 6px;
-        margin-top: 10px;
-        margin-bottom:1px; 
+        margin-top: 5px;
+        margin-bottom:5.5rem; 
     }
+}
+
+.project{
+    padding: 5px;
+    margin-right: 5px;
+    border: var(--text-main) 1px solid;
+    border-radius: 10px;
+    display: inline-block;
+    width:300px;
+    max-width: 80%;
+    text-decoration: none;
+    color: var(--text-main);
+}
+.project h2{
+    text-align: center;
+}
+.project-describtion{
+    color: var(--text-primary);
+}
+.project-logo{
+    width:200px;
+    max-width: 50%;
 }

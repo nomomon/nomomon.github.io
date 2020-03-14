@@ -1,0 +1,114 @@
+@font-face {font-family: "Consolas"; src: url("//db.onlinewebfonts.com/t/1db29588408eadbd4406aae9238555eb.woff2") format("woff2");}
+
+:root{
+    --fa-primary-color:#FF7600;
+    --fa-secondary-color:#FF9400;
+    --bg-color:#FFFFFF;
+    --bg-color-1:#DCE4F2;
+    --bg-color-2:#99A0A8;
+    --bg-color-3:#6B81A5;
+    --fa-secondary-opacity:0.8;
+}
+.logo{
+    font-family: 'Sen', sans-serif;
+    color:#425066;
+    font-size: 3.5vh;
+}
+.logo i{
+    font-size: 3vh;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color-1);
+}
+nav{
+    background-color: white;
+    width:100vw;
+    height: 10vh;
+    box-shadow: 0 0 5px var(--bg-color-3);
+    position: fixed;
+    top:0;
+}
+nav .top, nav .settings{
+    padding: 0.6vh 25vw 0.6vw 20vw;
+}
+nav .settings{
+    width:100%;
+    border-top: solid var(--bg-color-1) 1px; 
+}
+nav .settings i{
+    font-size:1.5vh;
+}
+
+main{
+    margin-top:11vh;
+    width:100vw;
+    height:87vh;
+    overflow-y:scroll;
+}
+main .page{
+    background-color: white;
+    width: 55vw;
+    min-height: 100vh;
+    margin: 20px 25vw 10px 20vw;
+    box-shadow: 0 0 5px var(--bg-color-3);
+    padding: 4.95vw 0 4.95vw 0;
+}
+
+main .page .text{
+    padding: 0.2rem 3.85vw 0.2rem 7.7vw;
+}
+
+/* ======================= cell anatomy ========================= */
+/* 
+cell selected
+    inner_cell
+        input_area
+            js
+            md
+        rendered_html */
+.cell{
+    margin: 0.2rem 3.85vw 0.2rem 3.85vw;
+}
+.selected .rendered_html,
+.unselected .input_area{
+    display: none;
+}
+.selected .inner_cell{
+    border:1px solid black;
+    padding-top: 0.75vh;
+    padding-bottom:0.5vh;
+}
+.selected .input_area .input_type{
+    display: inline-block;
+    width:3.85vw;
+    text-align: center;
+    font-size: 10px;
+}
+.selected .md, .selected .js{
+    padding: 0.1vh 0.2vw 0.1vh 0.2vw;
+    border:1px black solid;
+    border-radius: 3px;
+    display: inline-block;
+    width: 42vw;
+    min-height: 10vh;
+    outline: none;
+    resize: none;
+    overflow-y: auto;
+    font-family: "Consolas";
+}
+.unselected .inner_cell{
+    border:none;
+    padding: none;
+}
+.unselected .rendered_html{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    margin-left:3.85vw;
+    width:43.45vw;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
