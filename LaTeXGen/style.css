@@ -1,7 +1,7 @@
 :root{
     --fa-primary-color:#FF7600;
     --fa-secondary-color:#FF9400;
-    --fa-secondary-opacity:none;
+    --fa-secondary-opacity:0.8;
     --bg-color:#FFFFFF;
     --bg-color-1:#A8AFB8;
     --bg-color-2:#425066;

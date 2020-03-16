@@ -1,4 +1,9 @@
 @font-face {font-family: "Consolas"; src: url("//db.onlinewebfonts.com/t/1db29588408eadbd4406aae9238555eb.woff2") format("woff2");}
+@font-face {font-family: "Latin Modern"; src: url("katex/lm.woff") format("woff");}
+
+.katex{
+    font: 1.1rem "Latin Modern"; !important
+}
 
 :root{
     --fa-primary-color:#FF7600;
@@ -42,9 +47,9 @@ nav .settings i{
 }
 
 main{
-    margin-top:11vh;
+    margin-top:10vh;
     width:100vw;
-    height:87vh;
+    height:90vh;
     overflow-y:scroll;
 }
 main .page{
@@ -103,12 +108,21 @@ cell selected
     padding: none;
 }
 .unselected .rendered_html{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Latin Modern','Times New Roman', Times, serif;
     font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
     margin-left:3.85vw;
     width:43.45vw;
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none; /* Standard */
+}
+.unselected .rendered_html span{
+    font-size: 12px;
+}
+
+@media only screen and (min-width:21cm){
+    
 }

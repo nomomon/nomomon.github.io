@@ -26,9 +26,9 @@ function removeCell(c){
 };
 function renderCell(c){
         let r = c.querySelector(".rendered_html");
-        let j = c.querySelector(".js")
-        let m = c.querySelector(".md")
-        r.innerHTML = m.innerText;
+
+        r.innerHTML = convert(c);
+        renderMathInElement(r, options)
 }
 page.addEventListener("click", e =>{
     e = parentCell(e.toElement);
@@ -78,4 +78,41 @@ function cellElement(){
     inner_cell.appendChild(rendered_html);
     cell.appendChild(inner_cell);
     return cell;
+}
+
+// KaTeX
+
+const options = {
+    // "displayMode":false,
+    "delimiters":[
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false}
+    ],
+    "ignoredTags":["script", "noscript", "style", "textarea", "pre", "code"]
+}
+
+// convert
+function convert(c){
+    let m = c.querySelector(".md").innerText;
+    let j = c.querySelector(".js").innerText;
+
+    eval(j);
+
+    j = j.split("var ").join("@").split("let ").join("@").split("const ").join("@").split(" =").join("@").split("=").join("@").split("@");
+    console.log(j)
+    for(let i = 1; i < j.length + 1; i+=2){
+        m = m.split('#'+ j[i] + '#').join(eval(j[i]));
+    }
+    m = m.split(/  /).join(" ");
+    m = m.split(/\+-/).join("-").split(/\+ -/).join("-");
+    m = m.split(/--/).join("+").split(/- -/).join("+");
+    return m;
+}
+//mathematical functions
+function rand(t, b, e){
+    t = t || "int";
+    b = b || -10;
+    e = e || 10;
+    if(t == "int") return Math.floor(e - Math.random()*(e - b));
+    if(t == "double") return e - Math.random()*(e - b)
 }
