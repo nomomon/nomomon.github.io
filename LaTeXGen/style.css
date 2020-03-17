@@ -7,6 +7,10 @@
     --bg-color-2:#425066;
     --bg-color-3:#5f6368;
 }
+html {
+  scroll-behavior: smooth;
+  -ms-scroll-translation: 2000ms;
+}
 body{
     margin:0;
     padding: 0;
@@ -15,7 +19,7 @@ body{
     height: 200vh;
 }
 img{
-    width:69vw;
+    width:72vw;
     min-width:350px;
     box-shadow: 0 0 10px var(--bg-color-2);
     margin-bottom: 5px;

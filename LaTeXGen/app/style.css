@@ -1,8 +1,31 @@
 @font-face {font-family: "Consolas"; src: url("//db.onlinewebfonts.com/t/1db29588408eadbd4406aae9238555eb.woff2") format("woff2");}
-@font-face {font-family: "Latin Modern"; src: url("katex/lm.woff") format("woff");}
+@font-face {
+    font-family: "Latin Modern"; 
+    src: url("katex/lm-regular.woff");
+    font-weight: normal; 
+    font-style: normal;
+}
+@font-face {
+    font-family: "Latin Modern"; 
+    src: url("katex/lm-bold.woff");
+    font-weight: bold; 
+    font-style: normal;
+}
+@font-face {
+    font-family: "Latin Modern"; 
+    src: url("katex/lm-bold-italic.woff");
+    font-weight: bold; 
+    font-style: italic;
+}
+@font-face {
+    font-family: "Latin Modern"; 
+    src: url("katex/lm-italic.woff");
+    font-weight: normal; 
+    font-style: italic;
+}
 
 .katex{
-    font: 1.1rem "Latin Modern"; !important
+    font: 1rem "Latin Modern" !important; 
 }
 
 :root{
@@ -13,6 +36,8 @@
     --bg-color-2:#99A0A8;
     --bg-color-3:#6B81A5;
     --fa-secondary-opacity:0.8;
+    --page-width:23.1cm;
+    --page-font-size:16;
 }
 .logo{
     font-family: 'Sen', sans-serif;
@@ -36,16 +61,15 @@ nav{
     top:0;
 }
 nav .top, nav .settings{
-    padding: 0.6vh 25vw 0.6vw 20vw;
+    padding: 0.6vh calc((100vw - var(--page-width))*5/9) 0.6vw calc((100vw - var(--page-width))*4/9);
 }
 nav .settings{
-    width:100%;
+    width:var(--page-width);
     border-top: solid var(--bg-color-1) 1px; 
 }
 nav .settings i{
-    font-size:1.5vh;
+    font-size:1.9vh;
 }
-
 main{
     margin-top:10vh;
     width:100vw;
@@ -54,9 +78,9 @@ main{
 }
 main .page{
     background-color: white;
-    width: 55vw;
+    width: var(--page-width);
     min-height: 100vh;
-    margin: 20px 25vw 10px 20vw;
+    margin: 20px calc((100vw - var(--page-width))*5/9) 10px calc((100vw - var(--page-width))*4/9);
     box-shadow: 0 0 5px var(--bg-color-3);
     padding: 4.95vw 0 4.95vw 0;
 }
@@ -109,7 +133,7 @@ cell selected
 }
 .unselected .rendered_html{
     font-family: 'Latin Modern','Times New Roman', Times, serif;
-    font-size: 16px;
+    font-size: var(--page-font-size);
     font-weight: 500;
     cursor: pointer;
     margin-left:3.85vw;
@@ -119,10 +143,7 @@ cell selected
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none; /* Standard */
 }
-.unselected .rendered_html span{
-    font-size: 12px;
-}
 
-@media only screen and (min-width:21cm){
+@media only screen and (min-width: var(--page-width)){
     
 }

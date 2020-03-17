@@ -24,8 +24,16 @@
             <div class="logo">LaTe<i class="fad fa-dna"></i>Gen</div>
         </div>
         <div class="settings">
-            <button onclick="addCell()" title="insert cell bellow"><i class="far fa-plus"></i></button>
-            <button onclick="removeCell(document.querySelector('.selected'))" title="delete current cell"><i class="far fa-trash"></i></button>
+            <button onclick="addCell()" title="insert cell bellow" style="float:left;"><i class="far fa-plus"></i></button>
+            <button onclick="removeCell(document.querySelector('.selected'))" title="delete current cell"  style="float:left;"><i class="far fa-trash"></i></button>
+            <button onclick="" title="cut current cell" style="float:left;"><i class="far fa-cut"></i></button>
+            <button onclick="" title="copy current cell" style="float:left;"><i class="far fa-copy"></i></button>
+            <button onclick="" title="paste cell" style="float:left;"><i class="far fa-paste"></i></button>
+            <button onclick="" title="search template" style="margin-left:10px;"><i class="far fa-file-search"></i></button>
+            <button onclick="" title="help" style="margin-left:10px;"><i class="far fa-question"></i></button>
+
+            <button onclick="" title="print document" style="float:right;"><i class="far fa-print"></i></button>
+            <button onclick="" title="download document" style="float:right;"><i class="far fa-download"></i></button>
         </div>
     </nav>
     <main>
@@ -35,7 +43,7 @@
                     <div class="input_area">
                         <div>
                             <div class="input_type">[markdown]</div>
-                            <div contenteditable="true" class="md">&lt;span style="float:left;&nbsp;font-size:5px;"&gt;Introduction&lt;/span&gt;<br>&lt;span style="float:right;&nbsp;font-size:5px;"&gt;some weirdo&lt;/span&gt;<br><div>&lt;br&gt;&lt;hr&gt;</div><div>&lt;center&gt;&lt;h1 style="font-weight:300;"&gt;Welcome!&lt;/h1&gt;&lt;/center&gt;</div><div><br></div><div>&lt;p&gt;This is the newest update of LaTeXGen. All of the functions from &lt;i&gt;chickenburger&lt;/i&gt; are available here. This webapp was designed as an A4 size paper for easy printing in future.&lt;/p&gt;</div><div><br></div><div>&lt;p&gt;You can add and delete cells, select and edit in them! They also support HTML. For more supported functions check out &lt;a href = "https://katex.org/docs/supported.html"&gt;KaTeX's Supported Functions&lt;/a&gt;.&lt;/p&gt;</div><div><br></div><div>&lt;p&gt;Did you know that equation $#a#x^2 + #b#x + #c# = 0$ has #d# real roots?&lt;/p&gt;</div></div>
+                            <div contenteditable="true" class="md">&lt;span style="float:left; font-size:12px;"&gt;Introduction&lt;/span&gt;<br>&lt;span style="float:right; font-size:12px;"&gt;some weirdo&lt;/span&gt;<br><div>&lt;br&gt;&lt;hr&gt;</div><div>&lt;center&gt;&lt;h1&gt;Welcome!&lt;/h1&gt;&lt;/center&gt;</div><div><br></div><div>&lt;p&gt;This is the newest update of LaTeXGen. All of the functions from &lt;i&gt;chickenburger&lt;/i&gt; are available here. This webapp was designed as an A4 size paper for easy printing in future.&lt;/p&gt;</div><div><br></div><div>&lt;p&gt;You can add and delete cells, select and edit in them! They also support HTML. For more supported functions check out &lt;a href = "https://katex.org/docs/supported.html"&gt;KaTeX's Supported Functions&lt;/a&gt;.&lt;/p&gt;</div><div><br></div><div>&lt;p&gt;Did you know that equation $#a#x^2 + #b#x + #c# = 0$ has #d# real roots?&lt;/p&gt;</div></div>
                         </div>
                         <div>
                             <div class="input_type">[javascript]</div>
