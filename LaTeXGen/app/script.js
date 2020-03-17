@@ -1,6 +1,11 @@
 const pages = document.getElementsByClassName("page");
 const page = pages[0];
 
+var clipboard ={
+    "md":"",
+    "js":""
+}
+
 function addCell(){
     unselectAll();
     page.appendChild(cellElement());
@@ -22,14 +27,40 @@ function removeEmptyCells(){
     });
 };
 function removeCell(c){
+    c = c || document.querySelector('.selected');
     page.removeChild(c)
 };
 function renderCell(c){
-        let r = c.querySelector(".rendered_html");
-
-        r.innerHTML = convert(c);
-        renderMathInElement(r, options)
+    c = c || document.querySelector('.selected');
+    
+    let r = c.querySelector(".rendered_html");
+    r.innerHTML = convert(c);
+    renderMathInElement(r, options)
 }
+
+
+function copyCell(c){
+    c = c || document.querySelector('.selected');
+    
+    clipboard.md = c.querySelector(".md").innerText;
+    clipboard.js = c.querySelector(".js").innerText; 
+}
+function cutCell(c){
+    c = c || document.querySelector('.selected');
+    
+    copyCell(c);
+    removeCell(c);
+}
+function pasteCell(){
+    if(clipboard.md != "" && clipboard.js != ""){
+        addCell();
+        let c = page.querySelector(".selected");
+        c.querySelector(".md").innerText = clipboard.md;
+        c.querySelector(".js").innerText = clipboard.js;
+    }
+}
+
+
 page.addEventListener("click", e =>{
     e = parentCell(e.toElement);
     if(e != 0){

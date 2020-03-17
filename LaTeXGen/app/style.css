@@ -51,6 +51,7 @@ body{
     margin: 0;
     padding: 0;
     background-color: var(--bg-color-1);
+    overflow-x: hidden;
 }
 nav{
     background-color: white;
@@ -73,13 +74,13 @@ nav .settings i{
 main{
     margin-top:10vh;
     width:100vw;
-    height:90vh;
     overflow-y:scroll;
 }
 main .page{
     background-color: white;
     width: var(--page-width);
     min-height: 100vh;
+    overflow: hidden;
     margin: 20px calc((100vw - var(--page-width))*5/9) 10px calc((100vw - var(--page-width))*4/9);
     box-shadow: 0 0 5px var(--bg-color-3);
     padding: 4.95vw 0 4.95vw 0;
