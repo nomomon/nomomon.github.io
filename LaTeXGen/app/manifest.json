@@ -18,7 +18,7 @@
     "display": "standalone",
     "background_color": "#fff",
     "theme_color": "#fff",
-    "orientation": "portrait",
+    "orientation": "landscape",
     "permissions": [
         "unlimitedStorage"
     ]

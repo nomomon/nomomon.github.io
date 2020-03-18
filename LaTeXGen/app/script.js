@@ -1,10 +1,16 @@
 const pages = document.getElementsByClassName("page");
 const page = pages[0];
+const fileName = document.getElementById("fileName");
 
 var clipboard ={
     "md":"",
     "js":""
 }
+
+fileName.addEventListener("input", function(){
+    if(fileName.value != "") document.title = fileName.value + " | LaTeXGen";
+    else document.title = "New File | LaTeXGen";
+});
 
 function addCell(){
     unselectAll();
@@ -60,6 +66,10 @@ function pasteCell(){
     }
 }
 
+function printPage(){
+    unselectAll();
+    setTimeout(window.print, 1000);
+}
 
 page.addEventListener("click", e =>{
     e = parentCell(e.toElement);
@@ -82,10 +92,10 @@ function cellElement(){
         inner_cell.className = "inner_cell";
     let input_type_js = document.createElement("div");
         input_type_js.className = "input_type";
-        input_type_js.innerText = "[javascript]";
+        input_type_js.innerText = "[js]";
     let input_type_md = document.createElement("div");
         input_type_md.className = "input_type";
-        input_type_md.innerText = "[markdown]";
+        input_type_md.innerText = "[md]";
     let input_area = document.createElement("div");
         input_area.className = "input_area";
     let md = document.createElement("div");
@@ -130,7 +140,6 @@ function convert(c){
     eval(j);
 
     j = j.split("var ").join("@").split("let ").join("@").split("const ").join("@").split(" =").join("@").split("=").join("@").split("@");
-    console.log(j)
     for(let i = 1; i < j.length + 1; i+=2){
         m = m.split('#'+ j[i] + '#').join(eval(j[i]));
     }
