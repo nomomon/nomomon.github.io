@@ -18,7 +18,8 @@ function addCell(){
 }
 function unselectAll(){
     removeEmptyCells();
-    page.querySelectorAll(".cell").forEach(c =>{
+    if(page.querySelector(".selected") != undefined)
+    page.querySelectorAll(".selected").forEach(c =>{
         renderCell(c)
         c.className = "cell unselected";
     });
@@ -64,6 +65,12 @@ function pasteCell(){
         c.querySelector(".md").innerText = clipboard.md;
         c.querySelector(".js").innerText = clipboard.js;
     }
+}
+function changeAll(){
+    unselectAll();
+    page.querySelectorAll(".cell").forEach(c =>{
+        renderCell(c);
+    });
 }
 
 function printPage(){
