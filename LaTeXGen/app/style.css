@@ -31,6 +31,10 @@
 :root{
     --fa-primary-color:#FF7600;
     --fa-secondary-color:#FF9400;
+    
+    --one:#FF7600;
+    --two:#FF9400;;
+    
     --bg-color:#FFFFFF;
     --bg-color-1:#DCE4F2;
     --bg-color-2:#99A0A8;
@@ -62,6 +66,7 @@ body{
 .top input{
     font-family: 'Sen', sans-serif;
     font-size:2.5vh;
+    width:30vw;
     border:none;
     outline: none;
     color:#425066;
@@ -82,6 +87,28 @@ nav .settings{
 }
 nav .settings i{
     font-size:14px;
+}
+#install{
+    float:right;
+    border-radius: 2vh;
+    text-align: center;
+    font-size: 2vh;
+    font-family: Roboto;
+    padding: 0.1875vh 0.75vh 0.1875vh 0.75vh;
+    color:white;
+    background: linear-gradient(45deg, var(--two) 45%, var(--one) 65%);
+    display: none;
+
+    --fa-primary-color:var(--one);
+    --fa-secondary-color:white;
+    --fa-secondary-opacity:1;
+}
+#install, nav button{
+    transition: 200ms;
+}
+#install:hover, nav button:hover{
+    transition: 200ms;
+    opacity:0.8;
 }
 /* ======================Main and Page ========================= */
 main{
@@ -174,6 +201,11 @@ cell selected
         --page-width:96vw;
         --page-font-size:6px;
     }    
+}
+@media all and (display-mode: standalone) {
+  #install{
+      display:none !important;
+  }
 }
 @media print{
     nav, ::-webkit-scrollbar{
