@@ -1,1 +1,0 @@
-# Orama Visual Assistant
