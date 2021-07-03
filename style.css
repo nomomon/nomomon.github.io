@@ -26,6 +26,10 @@ hr{
     border: 0px solid black;
 }
 
+section{
+    color:#9B9B9B;
+}
+
 a:link, a:visited {
     color: #1367a7;
     text-decoration: none;
