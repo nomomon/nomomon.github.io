@@ -1,0 +1,38 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+main{
+    width:60vw;
+    margin:auto;
+    margin-bottom:10vh;
+}
+
+hr{
+    border:none;
+    height: 1px;
+    background-color: #d3dbdf;
+}
+
+.teaser-img{
+    width: 256px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 0px solid black;
+}
+
+a:link, a:visited {
+    color: #1367a7;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+    main{
+        width:95vw;
+    }    
+}
