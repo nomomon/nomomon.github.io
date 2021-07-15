@@ -50,3 +50,15 @@ a:link, a:visited {
         width:1000px;
     }    
 }
+
+@media print{
+    body{
+        width: 100vw;
+    }
+    main{
+        width:95vw;
+    }
+    .telegram{
+        display: none;
+    }
+}
