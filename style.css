@@ -42,13 +42,16 @@ a:link, a:visited {
     text-decoration: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1200px) {
     body{
-        width:1200px;
+        width:100vw;
     }
     main{
-        width:1000px;
+        width:95vw;
     }    
+    .teaser-img{
+        width:40vw;
+    }
 }
 
 @media print{
