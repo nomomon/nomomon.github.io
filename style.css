@@ -7,7 +7,6 @@ body{
 main{
     width:60vw;
     margin:auto;
-    margin-bottom:10vh;
 }
 
 hr{
@@ -64,4 +63,9 @@ a:link, a:visited {
     .telegram{
         display: none;
     }
+}
+
+footer{
+    padding:3rem 0;
+    text-align: center;
 }
