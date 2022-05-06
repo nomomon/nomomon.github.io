@@ -16,6 +16,19 @@ hr{
     width:100%;
 }
 
+#photo-of-me{
+    width: 200px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    filter: brightness(1.05);
+    margin:20px 20px 0 0 ;
+    border-radius:50%;
+}
+#personal-info{
+    display: inline-block;
+}
+
+
 td{
     padding-bottom: 10px;
     padding-top: 10px;
