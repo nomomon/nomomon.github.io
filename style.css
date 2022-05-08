@@ -54,7 +54,7 @@ a:link, a:visited {
     text-decoration: none;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1110px) {
     body{
         width:100vw;
     }
@@ -63,6 +63,38 @@ a:link, a:visited {
     }    
     .teaser-img{
         width:40vw;
+    }
+    #preview{
+        display: none;
+    }
+}
+@media only screen and (max-width: 700px) {
+    #photo-of-me{
+        margin:10px auto 0 auto;
+        display: block;
+        width:200px;
+    }
+    #personal-info{
+        display: block;
+    }
+    table{
+        border-collapse:separate;
+        border-spacing:0 15px;
+    }
+    tr{
+        box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+        border-radius: 10px;
+    }
+    td{
+        float: left; 
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+        padding: 10px 10px;
+    }
+    .teaser-img{
+        width:80%;
+        max-width: 350px;
     }
 }
 
