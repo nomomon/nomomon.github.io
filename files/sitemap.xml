@@ -5,26 +5,31 @@
 	<loc>https://nomomon.github.io/</loc>
 	<lastmod>2022-05-16T21:59:09+01:00</lastmod>
 	<priority>1.0</priority>
+    <changefreq>monthly</changefreq>
 </url>
 <url>
 	<loc>https://nomomon.github.io/files/Mansur%20Nurmukhambetov%20%E2%80%93%20CV.pdf</loc>
 	<lastmod>2022-05-16T21:59:09+01:00</lastmod>
-	<priority>0.8</priority>
+	<priority>1</priority>
+    <changefreq>monthly</changefreq>
 </url>
 <url>
 	<loc>https://nomomon.github.io/molecule-energy-rucode-5.0/</loc>
 	<lastmod>2022-05-16T21:59:09+01:00</lastmod>
 	<priority>0.8</priority>
+    <changefreq>monthly</changefreq>
 </url>
 <url>
 	<loc>https://nomomon.github.io/OramaVA/</loc>
 	<lastmod>2022-05-16T21:59:09+01:00</lastmod>
 	<priority>0.8</priority>
+    <changefreq>monthly</changefreq>
 </url>
 <url>
 	<loc>https://nomomon.github.io/card-2-phone</loc>
 	<lastmod>2022-05-16T21:59:09+01:00</lastmod>
 	<priority>0.8</priority>
+    <changefreq>monthly</changefreq>
 </url>
 <url>
 	<loc>https://nomomon.github.io/LaTeXGen/</loc>
@@ -35,25 +40,30 @@
 	<loc>https://nomomon.github.io/card-2-phone/</loc>
 	<lastmod>2022-05-16T21:59:14+01:00</lastmod>
 	<priority>0.8</priority>
+    <changefreq>monthly</changefreq>
 </url>
 <url>
 	<loc>https://nomomon.github.io/LaTeXGen/learn</loc>
 	<lastmod>2022-05-16T21:59:16+01:00</lastmod>
 	<priority>0.6</priority>
+    <changefreq>monthly</changefreq>
 </url>
 <url>
 	<loc>https://nomomon.github.io/LaTeXGen/app</loc>
 	<lastmod>2022-05-16T21:59:16+01:00</lastmod>
 	<priority>0.6</priority>
+    <changefreq>monthly</changefreq>
 </url>
 <url>
 	<loc>https://nomomon.github.io/LaTeXGen/learn/</loc>
 	<lastmod>2022-05-16T21:59:17+01:00</lastmod>
 	<priority>0.6</priority>
+    <changefreq>monthly</changefreq>
 </url>
 <url>
 	<loc>https://nomomon.github.io/LaTeXGen/app/</loc>
 	<lastmod>2022-05-16T21:59:17+01:00</lastmod>
 	<priority>0.6</priority>
+    <changefreq>monthly</changefreq>
 </url>
 </urlset>
