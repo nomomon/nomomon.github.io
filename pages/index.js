@@ -66,6 +66,7 @@ function About() {
                                     <Tooltip
                                         title="Numpy, Pandas, Scikit Learn, Tensorflow, Keras, etc."
                                         placement="top"
+                                        key={index}
                                     >
                                         <Chip
                                             key={index}
