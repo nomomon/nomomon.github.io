@@ -7,7 +7,7 @@ import { StyledEngineProvider } from '@mui/material/styles';
 
 function MyApp({ Component, pageProps }) {
     return (
-        <StyledEngineProvider injectFirst>
+        <StyledEngineProvider>
             <Header />
             <Container maxWidth='lg'>
                 <Navbar />
