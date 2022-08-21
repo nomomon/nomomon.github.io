@@ -1,0 +1,29 @@
+{
+  "name": "nomomon.github.io",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next build && next export"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
+    "@mui/material": "^5.10.1",
+    "gray-matter": "^4.0.3",
+    "highlight.js": "^11.6.0",
+    "katex": "^0.16.0",
+    "markdown-it": "^13.0.1",
+    "next": "12.2.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.4.0"
+  },
+  "devDependencies": {
+    "eslint": "8.22.0",
+    "eslint-config-next": "12.2.5"
+  }
+}
