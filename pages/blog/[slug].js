@@ -37,7 +37,7 @@ function BlogPost({ frontmatter, content }) {
             </Head>
             <Container maxWidth='md'>
                 <h1>{frontmatter.title}</h1>
-                <div dangerouslySetInnerHTML={{ __html: markdown }} />
+                <div className='markdown-body' dangerouslySetInnerHTML={{ __html: markdown }} />
 
                 <Stack direction='row' spacing={1} sx={{ mt: 6, mb: -6 }}>
                     {
