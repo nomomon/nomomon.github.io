@@ -1,6 +1,6 @@
 import fs from 'fs';
 import matter from 'gray-matter';
-import { Typography, Card, CardContent, Grid, CardMedia, Button, Stack, Chip, Badge } from '@mui/material';
+import { Typography, Card, CardContent, Grid, CardMedia, Button, Stack, Chip } from '@mui/material';
 import Link from '../../components/Link';
 import { AiOutlineCalendar } from 'react-icons/ai';
 import { FiGithub, FiPlay } from 'react-icons/fi';
