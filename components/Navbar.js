@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import { Divider, Stack, Typography } from '@mui/material';
-import Link from 'next/link';
+import Link from './Link';
 function Navbar() {
     const router = useRouter();
 
@@ -52,7 +52,6 @@ function Navbar() {
                                 transition: 'color 0.2s ease-in-out',
                                 '&:hover': {
                                     color: 'info.main',
-                                    cursor: 'pointer',
                                 }
                             }}
                         >

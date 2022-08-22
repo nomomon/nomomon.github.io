@@ -61,7 +61,6 @@ function ProjectCard({
                             transition: 'color 0.2s ease-in-out',
                             '&:hover': {
                                 color: 'info.main',
-                                cursor: 'pointer',
                             }
                         }}
                     >

@@ -1,9 +1,9 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import { Typography, Card, CardContent, Grid, CardMedia } from '@mui/material';
-import Link from 'next/link'
 import { AiOutlineCalendar } from 'react-icons/ai';
 import Head from 'next/head';
+import Link from '../../components/Link';
 
 function sortByDate(a, b) {
     let a_ = new Date(a.frontmatter.date), b_ = new Date(b.frontmatter.date);
@@ -49,8 +49,7 @@ function PostCard({ title, metaDesc, socialImage, date, tags, slug }) {
                         sx={{
                             transition: 'color 0.2s ease-in-out',
                             '&:hover': {
-                                color: 'info.main',
-                                cursor: 'pointer',
+                                color: 'info.main'
                             }
                         }}
                     >

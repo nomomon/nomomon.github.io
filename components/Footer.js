@@ -1,5 +1,6 @@
-import { Stack, Link } from '@mui/material';
+import { Stack } from '@mui/material';
 import { BsLinkedin, BsGithub, BsTelegram } from 'react-icons/bs'
+import Link from './Link';
 
 function Footer() {
     return (
@@ -26,7 +27,6 @@ function Footer() {
                     sx={{
                         transition: 'color 0.2s ease-in-out',
                         color: 'black',
-                        cursor: 'pointer',
                         '&:hover': {
                             color: 'info.main',
                         }

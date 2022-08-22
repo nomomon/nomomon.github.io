@@ -1,7 +1,8 @@
-import { Avatar, Typography, Chip, Stack, Tooltip, useMediaQuery, Link } from '@mui/material';
+import { Avatar, Typography, Chip, Stack, Tooltip, useMediaQuery } from '@mui/material';
 import { MdOutlinePlace, MdWorkOutline } from 'react-icons/md';
 import { BsLinkedin, BsGithub, BsStackOverflow, BsTelegram } from 'react-icons/bs';
 import Head from 'next/head';
+import Link from '../components/Link';
 
 function About() {
     const desktop = useMediaQuery('(min-width:700px)');
@@ -113,7 +114,6 @@ function About() {
                             sx={{
                                 transition: 'color 0.2s ease-in-out',
                                 color: 'black',
-                                cursor: 'pointer',
                                 '&:hover': {
                                     color: 'info.main',
                                 }
