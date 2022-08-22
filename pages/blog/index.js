@@ -28,6 +28,7 @@ function PostCard({ title, metaDesc, socialImage, date, tags, slug }) {
                     component="img"
                     sx={{
                         width: { lg: 270, md: 200, sm: 150, xs: 150 },
+                        height: '100%',
                         transition: 'transform .2s',
                         '&:hover': {
                             transform: 'scale(1.01)'
