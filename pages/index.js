@@ -1,4 +1,4 @@
-import { Avatar, Typography, Chip, Stack, Tooltip, useMediaQuery } from '@mui/material';
+import { Avatar, Typography, Chip, Stack, Tooltip, Badge, useMediaQuery } from '@mui/material';
 import { MdOutlinePlace, MdWorkOutline } from 'react-icons/md';
 import { BsLinkedin, BsGithub, BsStackOverflow, BsTelegram } from 'react-icons/bs';
 import Head from 'next/head';
@@ -71,10 +71,15 @@ function About() {
                                         placement="top"
                                         key={index}
                                     >
-                                        <Chip
-                                            key={index}
-                                            label={item}
-                                        />
+                                        <Badge
+                                            badgeContent={':з'}
+                                            color="primary"
+                                        >
+                                            <Chip
+                                                key={index}
+                                                label={item}
+                                            />
+                                        </Badge>
                                     </Tooltip>
                                 )
                             } else {
