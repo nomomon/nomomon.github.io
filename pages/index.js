@@ -109,17 +109,13 @@ function About() {
                         <Link
                             href={href}
                             target="_blank"
-                            color="inherit"
                             key={index}
                             sx={{
                                 transition: 'color 0.2s ease-in-out',
                                 color: 'black',
+                                cursor: 'pointer',
                                 '&:hover': {
                                     color: 'info.main',
-                                    cursor: 'pointer',
-                                },
-                                '&:visited': {
-                                    color: 'black'
                                 }
                             }}
                         >
