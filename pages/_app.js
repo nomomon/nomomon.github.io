@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
     useEffect(() => {
         const handleRouteChange = (url) => {
             // Send pageview with a custom path
-            ReactGA.send({ hitType: "pageview", page: "/my-path" });
+            ReactGA.send({ hitType: "pageview", page: url });
         }
         router.events.on('routeChangeComplete', handleRouteChange)
 
