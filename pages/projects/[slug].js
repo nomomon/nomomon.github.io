@@ -29,6 +29,8 @@ function ProjectPost({ frontmatter, content }) {
                 <title>
                     nomomon | {frontmatter.title.toLowerCase()}
                 </title>
+                <meta name="title" content={frontmatter.title} />
+                <meta name="description" content={frontmatter.metaDesc} />
             </Head>
             <Container maxWidth='md'>
                 <h1>{frontmatter.title}</h1>

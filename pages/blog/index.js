@@ -89,6 +89,8 @@ function Blog({ posts }) {
             <title>
                 nomomon | blog
             </title>
+            <meta name="title" content="nomomon's projects" />
+            <meta name="description" content="Nurmukhambetov Mansur's technical blog on data science, machine learning and web development." />
         </Head>
         <Typography
             variant="h4"

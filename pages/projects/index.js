@@ -143,6 +143,8 @@ function Projects({ projects }) {
     return (<>
         <Head>
             <title>nomomon | projects</title>
+            <meta name="title" content="nomomon's projects" />
+            <meta name="description" content="List of Nurmukhambetov Mansur's technical projects on data science, machine learning and web development." />
         </Head>
         <Typography
             variant="h4"
