@@ -32,7 +32,7 @@ function ProjectCard({
     return (
         <Card elevation={3}>
             <Link
-                href={'#'}
+                href={slug}
             >
                 <CardMedia
                     component="img"
@@ -50,7 +50,7 @@ function ProjectCard({
             </Link>
             <CardContent>
                 <Link
-                    href={'#'}
+                    href={slug}
                     color="inherit"
                     underline='none'
                 >
