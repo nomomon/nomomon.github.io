@@ -1,7 +1,7 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import md from 'markdown-it';
-import katex from 'katex';
+import * as mdk from 'markdown-it-katex';
 import { Container, Chip } from '@mui/material';
 import { Stack } from '@mui/system';
 import Head from 'next/head';
@@ -11,16 +11,17 @@ const mdSettings = {
     linkify: true,
 }
 
+const katexSettings = {
+    throwOnError: false,
+    delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false }
+    ],
+    ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code", "p"]
+}
+
 function ProjectPost({ frontmatter, content }) {
-    const markdown = md(mdSettings).render(content);
-    const latex = katex.renderToString(markdown, {
-        throwOnError: false,
-        delimiters: [
-            { left: "$$", right: "$$", display: true },
-            { left: "$", right: "$", display: false }
-        ],
-        ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code", "p"]
-    })
+    const markdown = md(mdSettings).use(mdk, katexSettings).render(content);
 
     return (
         <>
@@ -32,7 +33,7 @@ function ProjectPost({ frontmatter, content }) {
             <Container maxWidth='md'>
                 <h1>{frontmatter.title}</h1>
 
-                <div dangerouslySetInnerHTML={{ __html: latex }} />
+                <div dangerouslySetInnerHTML={{ __html: markdown }} />
 
                 <Stack direction='row' spacing={1} sx={{ mt: 6, mb: -6 }}>
                     {
