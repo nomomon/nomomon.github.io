@@ -9,22 +9,32 @@
 
 <url>
   <loc>https://nomomon.github.io/</loc>
-  <lastmod>2022-08-22T06:23:12+00:00</lastmod>
+  <lastmod>2022-08-22T09:29:16+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://nomomon.github.io/projects/</loc>
-  <lastmod>2022-08-22T06:23:12+00:00</lastmod>
+  <lastmod>2022-08-22T09:29:16+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://nomomon.github.io/blog/</loc>
-  <lastmod>2022-08-22T06:23:12+00:00</lastmod>
+  <lastmod>2022-08-22T09:29:16+00:00</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://nomomon.github.io/projects/inversion-geometry/</loc>
+  <lastmod>2022-08-22T09:29:16+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://nomomon.github.io/inversion-geometry/</loc>
   <lastmod>2022-08-18T05:05:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://nomomon.github.io/projects/markov-chain-text/</loc>
+  <lastmod>2022-08-22T09:29:16+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
@@ -33,18 +43,73 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://nomomon.github.io/projects/pipe-thickness-calculator/</loc>
+  <lastmod>2022-08-22T09:29:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://nomomon.github.io/pipe-thickness-calculator/</loc>
   <lastmod>2022-06-11T09:59:06+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://nomomon.github.io/projects/molecule-energy-estimator/</loc>
+  <lastmod>2022-08-22T09:29:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://nomomon.github.io/projects/yandex-practicum/</loc>
+  <lastmod>2022-08-22T09:29:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://nomomon.github.io/projects/felony-felines/</loc>
+  <lastmod>2022-08-22T09:29:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://nomomon.github.io/projects/anime-rec-sys/</loc>
+  <lastmod>2022-08-22T09:29:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://nomomon.github.io/projects/amazon-product-description/</loc>
+  <lastmod>2022-08-22T09:29:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://nomomon.github.io/projects/kamernet-puppteer/</loc>
+  <lastmod>2022-08-22T09:29:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://nomomon.github.io/projects/soft-skills-ai/</loc>
+  <lastmod>2022-08-22T09:29:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://nomomon.github.io/projects/latex-gen/</loc>
+  <lastmod>2022-08-22T09:29:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://nomomon.github.io/projects/orama-va/</loc>
+  <lastmod>2022-08-22T09:29:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://nomomon.github.io/OramaVA/</loc>
-  <lastmod>2022-05-11T10:05:53+00:00</lastmod>
+  <lastmod>2022-08-22T06:46:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://nomomon.github.io/blog/2022-08-22-katex-test/</loc>
+  <lastmod>2022-08-22T09:29:16+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://nomomon.github.io/blog/2022-08-20-first-blog-post/</loc>
-  <lastmod>2022-08-22T06:23:12+00:00</lastmod>
+  <lastmod>2022-08-22T09:29:16+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
