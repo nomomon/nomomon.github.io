@@ -1,9 +1,9 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import { Typography, Card, CardContent, Grid, CardMedia, Button, Stack, Chip, Badge } from '@mui/material';
-import Link from 'next/link'
+import Link from '../../components/Link';
 import { AiOutlineCalendar } from 'react-icons/ai';
-import { FiGithub, FiPlay, FiAward } from 'react-icons/fi';
+import { FiGithub, FiPlay } from 'react-icons/fi';
 import Head from 'next/head';
 
 function sortByDate(a, b) {
@@ -105,7 +105,10 @@ function ProjectCard({
                 <Stack direction={'row'} spacing={2} minHeight={"2.2em"}>
                     {
                         demoLink && (
-                            <Link href={demoLink}>
+                            <Link
+                                href={demoLink}
+                                underline='none'
+                            >
                                 <Button variant="outlined" color="info">
                                     <FiPlay
                                         style={{ marginBottom: 0, marginRight: 4 }}
@@ -116,7 +119,11 @@ function ProjectCard({
                     }
                     {
                         sourceLink && (
-                            <Link href={sourceLink}>
+                            <Link
+                                href={sourceLink}
+                                target='_blank'
+                                underline='none'
+                            >
                                 <Button variant="outlined" color="info">
                                     <FiGithub
                                         style={{ marginBottom: 0, marginRight: 4 }}
