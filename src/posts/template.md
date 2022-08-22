@@ -1,8 +1,8 @@
 ---
 title:
+date:
 metaDesc:
 socialImage:
-date:
-sourceLink:
-tools:
+tags:
+  - ""
 ---
