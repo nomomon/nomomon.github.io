@@ -9,3 +9,5 @@ tools:
   - "React"
   - "Node.js"
 ---
+
+![banner](https://github.com/nomomon/markov-chain-text/raw/master/screenshot.png)

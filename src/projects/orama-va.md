@@ -9,3 +9,5 @@ tools:
   - "Tensorflow.js"
   - "React"
 ---
+
+![orama-va](/images/projects/oramava-preview.jpeg)

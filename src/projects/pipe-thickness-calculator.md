@@ -10,3 +10,7 @@ tools:
   - "Electron"
   - "Github Actions"
 ---
+
+![title_screen](https://github.com/nomomon/pipe-thickness-calculator/raw/v1.0.0/assets/preview/title_screen.png)
+
+![output_document](https://github.com/nomomon/pipe-thickness-calculator/raw/v1.0.0/assets/preview/output_document.png)

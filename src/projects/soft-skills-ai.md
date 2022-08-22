@@ -9,3 +9,5 @@ tools:
   - "GPT-3"
   - "Telegram bot"
 ---
+
+![banner](/images/projects/softskillai-preview.jpeg)

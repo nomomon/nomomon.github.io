@@ -10,3 +10,5 @@ tools:
   - "JavaScript"
   - "KaTeX"
 ---
+
+![banner](/images/projects/latexgen-preview.jpeg)

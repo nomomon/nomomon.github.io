@@ -8,3 +8,5 @@ tools:
   - "Node.js"
   - "Puppeteer"
 ---
+
+![banner](/images/projects/kamernet-puppeteer.jpeg)

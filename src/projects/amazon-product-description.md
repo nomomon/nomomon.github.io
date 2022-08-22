@@ -10,3 +10,5 @@ tools:
   - "GPT-Neo"
   - "Web scraping"
 ---
+
+![amazon logo](https://ru.bitcoinwiki.org/upload/ru/images/d/db/Amazon.png)
