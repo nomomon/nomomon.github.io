@@ -2,7 +2,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import md from 'markdown-it';
 import katex from 'katex';
-import { Container, Divider, Chip } from '@mui/material';
+import { Container, Chip } from '@mui/material';
 import { Stack } from '@mui/system';
 import Head from 'next/head';
 
