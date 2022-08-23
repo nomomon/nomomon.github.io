@@ -5,6 +5,8 @@ import * as mdk from 'markdown-it-katex';
 import * as mdh from 'markdown-it-highlightjs';
 import { Container, Chip } from '@mui/material';
 import { Stack } from '@mui/system';
+import { FiAward, FiGithub, FiPlay } from 'react-icons/fi';
+import Link from '../../components/Link';
 import Head from 'next/head';
 
 const mdSettings = {
@@ -41,6 +43,42 @@ function ProjectPost({ frontmatter, content }) {
             <Container maxWidth='md'>
                 <h1>{frontmatter.title}</h1>
 
+                <Stack spacing={1} direction='row' sx={{ mb: 2 }}>
+                    {
+                        'sourceLink' in frontmatter && frontmatter.sourceLink &&
+                        <Link href={frontmatter.sourceLink} underline={'none'}>
+                            <Chip
+                                icon={<FiGithub style={{ marginLeft: 8 }} />}
+                                label={'Github'}
+                                variant='outlined'
+                                sx={{ cursor: 'pointer' }}
+                            />
+                        </Link>
+                    }
+                    {
+                        'demoLink' in frontmatter && frontmatter.demoLink &&
+                        <Link href={frontmatter.demoLink} underline={'none'}>
+                            <Chip
+                                icon={<FiPlay style={{ marginLeft: 8 }} />}
+                                label={'Demo'}
+                                variant='outlined'
+                                sx={{ cursor: 'pointer' }}
+                            />
+                        </Link>
+                    }
+                    {
+                        'achievements' in frontmatter && frontmatter.achievements > 0 &&
+                        <Link href={'#achievements'} underline={'none'}>
+                            <Chip
+                                icon={<FiAward style={{ marginLeft: 8 }} />}
+                                label={'Achievements'}
+                                variant='outlined'
+                                sx={{ cursor: 'pointer' }}
+                            />
+                        </Link>
+                    }
+                </Stack >
+
                 <div className='markdown-body' dangerouslySetInnerHTML={{ __html: markdown }} />
 
                 <Stack direction='row' spacing={1} sx={{ mt: 6, mb: -6 }}>
@@ -50,7 +88,7 @@ function ProjectPost({ frontmatter, content }) {
                         ))
                     }
                 </Stack>
-            </Container>
+            </Container >
         </>
     );
 }
