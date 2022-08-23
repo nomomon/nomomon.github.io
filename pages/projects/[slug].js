@@ -40,7 +40,7 @@ function ProjectPost({ frontmatter, content }) {
                 <meta name="title" content={frontmatter.title} />
                 <meta name="description" content={frontmatter.metaDesc} />
             </Head>
-            <Container maxWidth='md'>
+            <Container maxWidth='md' className='markdown-body'>
                 <h1>{frontmatter.title}</h1>
 
                 <Stack spacing={1} direction='row' sx={{ mb: 2 }}>
@@ -79,7 +79,7 @@ function ProjectPost({ frontmatter, content }) {
                     }
                 </Stack >
 
-                <div className='markdown-body' dangerouslySetInnerHTML={{ __html: markdown }} />
+                <div dangerouslySetInnerHTML={{ __html: markdown }} />
 
                 <Stack direction='row' spacing={1} sx={{ mt: 6, mb: -6 }}>
                     {
