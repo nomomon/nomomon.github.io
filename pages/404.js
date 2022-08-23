@@ -4,7 +4,7 @@ import Head from 'next/head';
 export default function NotFound() {
     return <>
         <Head>
-            <title>nomomon | not found {':('}</title>
+            <title>{'nomomon | not found :('}</title>
             <meta name="title" content="nomomon's website, but ..." />
             <meta name="description" content="... page not found :c" />
         </Head>

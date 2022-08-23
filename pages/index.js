@@ -9,7 +9,7 @@ function About() {
 
     return (<>
         <Head>
-            <title>nomomon | about</title>
+            <title>{'nomomon | about'}</title>
             <meta name="title" content="nomomon's website" />
             <meta name="description" content="I'm Mansur – data scientist with two years of experience. I analyse data, develop machine learning models and deploy them to websites." />
         </Head>

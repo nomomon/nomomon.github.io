@@ -29,9 +29,7 @@ function BlogPost({ frontmatter, content }) {
     return (
         <>
             <Head>
-                <title>
-                    nomomon | {frontmatter.title.toLowerCase()}
-                </title>
+                <title>{`nomomon | ${frontmatter.title.toLowerCase()}`}</title>
                 <meta name="title" content={frontmatter.title} />
                 <meta name="description" content={frontmatter.metaDesc} />
             </Head>
