@@ -2,6 +2,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import md from 'markdown-it';
 import * as mdk from 'markdown-it-katex';
+import * as mdh from 'markdown-it-highlightjs';
 import { Container, Chip } from '@mui/material';
 import { Stack } from '@mui/system';
 import Head from 'next/head';
@@ -20,8 +21,15 @@ const katexSettings = {
     ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code", "p"]
 }
 
+const highlightSettings = {
+    inline: false,
+}
+
 function ProjectPost({ frontmatter, content }) {
-    const markdown = md(mdSettings).use(mdk, katexSettings).render(content);
+    const markdown = md(mdSettings)
+        .use(mdk, katexSettings)
+        .use(mdh, highlightSettings)
+        .render(content);
 
     return (
         <>

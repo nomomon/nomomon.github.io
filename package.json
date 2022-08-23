@@ -16,6 +16,7 @@
     "gray-matter": "^4.0.3",
     "highlight.js": "^11.6.0",
     "markdown-it": "^13.0.1",
+    "markdown-it-highlightjs": "^4.0.1",
     "markdown-it-katex": "^2.0.3",
     "next": "canary",
     "react": "18.2.0",

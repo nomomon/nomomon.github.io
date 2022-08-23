@@ -20,7 +20,11 @@ function Header() {
             />
             <link
                 rel="stylesheet"
-                href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"
+                href="/styles/github-markdown.css"
+            />
+            <link
+                rel='stylesheet'
+                href='/styles/mono-blue.css'
             />
         </Head>
     </>)
