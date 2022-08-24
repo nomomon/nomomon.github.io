@@ -123,7 +123,7 @@ function ProjectCard({
                 <br />
                 <Stack direction="row" spacing={1}>
                     {
-                        tools.map(tool => (
+                        tools.filter((tool, i) => i < 3).map(tool => (
                             <Chip key={tool} label={tool} />
                         ))
                     }
