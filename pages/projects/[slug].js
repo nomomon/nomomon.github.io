@@ -100,12 +100,12 @@ function ProjectPost({ frontmatter: fm, content }) {
                 image={fm.imageURL}
                 pageType='article'
             />
-            <Container maxWidth='md' className='markdown-body' component={'article'}>
+            <Container maxWidth='md' className='markdown-body' >
                 <h1>{fm.title}</h1>
 
                 <ChipLinks frontmatter={fm} />
 
-                <div dangerouslySetInnerHTML={{ __html: markdown }} />
+                <article dangerouslySetInnerHTML={{ __html: markdown }} />
 
                 <Tools tools={fm.tools} />
             </Container >

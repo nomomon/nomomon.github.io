@@ -35,9 +35,9 @@ function BlogPost({ frontmatter: fm, content }) {
                 image={fm.imageURL}
                 pageType='article'
             />
-            <Container maxWidth='md' component={'article'}>
+            <Container maxWidth='md' >
                 <h1>{fm.title}</h1>
-                <div className='markdown-body' dangerouslySetInnerHTML={{ __html: markdown }} />
+                <article className='markdown-body' dangerouslySetInnerHTML={{ __html: markdown }} />
 
                 <Stack direction='row' spacing={1} sx={{ mt: 6, mb: -6 }}>
                     {
