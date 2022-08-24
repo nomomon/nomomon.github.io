@@ -27,7 +27,65 @@ const highlightSettings = {
     inline: false,
 }
 
-function ProjectPost({ frontmatter, content }) {
+function ChipLinks({ frontmatter: fm }) {
+    const showSourceLink = ('sourceLink' in fm) && fm.sourceLink;
+    const showDemoLink = ('demoLink' in fm) && fm.demoLink;
+    const showAchievementsLink = ('achievements' in fm) && fm.achievements > 0;
+
+    function ChipLink({ label, link, icon }) {
+        const renderedIcon = icon({
+            style: {
+                marginLeft: '0.5em',
+            }
+        })
+
+        return (
+            <Link href={link} underline={'none'}>
+                <Chip
+                    icon={renderedIcon}
+                    label={label}
+                    variant='outlined'
+                    sx={{ cursor: 'pointer' }}
+                />
+            </Link>
+        );
+    }
+
+    return (
+        <Stack spacing={1} direction='row' sx={{ mb: 2 }}>
+            {
+                [
+                    [showSourceLink, 'Github', fm.sourceLink, FiGithub],
+                    [showDemoLink, 'Demo', fm.demoLink, FiPlay],
+                    [showAchievementsLink, 'Achievements', '#achievements', FiAward],
+                ].map(([show, label, link, icon], index) => (<>
+                    {show && (
+                        <ChipLink
+                            label={label}
+                            link={link}
+                            icon={icon}
+                            key={index}
+                        />
+                    )}
+                </>))
+            }
+        </Stack >
+    )
+}
+
+function Tools({ tools }) {
+    return (
+        <Stack direction='row' spacing={1} sx={{ mt: 6, mb: -6 }}>
+            {
+                tools.map((tool, index) => (
+                    <Chip label={tool} key={index} />
+                ))
+            }
+        </Stack>
+    )
+}
+
+function ProjectPost({ frontmatter: fm, content }) {
     const markdown = md(mdSettings)
         .use(mdk, katexSettings)
         .use(mdh, highlightSettings)
@@ -36,58 +94,18 @@ function ProjectPost({ frontmatter, content }) {
     return (
         <>
             <Head>
-                <title>{`nomomon | ${frontmatter.title.toLowerCase()}`}</title>
-                <meta name="title" content={frontmatter.title} />
-                <meta name="description" content={frontmatter.description} />
+                <title>{`nomomon | ${fm.title.toLowerCase()}`}</title>
+                <meta name="title" content={fm.title} />
+                <meta name="description" content={fm.description} />
             </Head>
             <Container maxWidth='md' className='markdown-body'>
-                <h1>{frontmatter.title}</h1>
+                <h1>{fm.title}</h1>
 
-                <Stack spacing={1} direction='row' sx={{ mb: 2 }}>
-                    {
-                        'sourceLink' in frontmatter && frontmatter.sourceLink &&
-                        <Link href={frontmatter.sourceLink} underline={'none'}>
-                            <Chip
-                                icon={<FiGithub style={{ marginLeft: 8 }} />}
-                                label={'Github'}
-                                variant='outlined'
-                                sx={{ cursor: 'pointer' }}
-                            />
-                        </Link>
-                    }
-                    {
-                        'demoLink' in frontmatter && frontmatter.demoLink &&
-                        <Link href={frontmatter.demoLink} underline={'none'}>
-                            <Chip
-                                icon={<FiPlay style={{ marginLeft: 8 }} />}
-                                label={'Demo'}
-                                variant='outlined'
-                                sx={{ cursor: 'pointer' }}
-                            />
-                        </Link>
-                    }
-                    {
-                        'achievements' in frontmatter && frontmatter.achievements > 0 &&
-                        <Link href={'#achievements'} underline={'none'}>
-                            <Chip
-                                icon={<FiAward style={{ marginLeft: 8 }} />}
-                                label={'Achievements'}
-                                variant='outlined'
-                                sx={{ cursor: 'pointer' }}
-                            />
-                        </Link>
-                    }
-                </Stack >
+                <ChipLinks frontmatter={fm} />
 
                 <div dangerouslySetInnerHTML={{ __html: markdown }} />
 
-                <Stack direction='row' spacing={1} sx={{ mt: 6, mb: -6 }}>
-                    {
-                        frontmatter.tools.map((tag, index) => (
-                            <Chip label={tag} key={index} />
-                        ))
-                    }
-                </Stack>
+                <Tools tools={fm.tools} />
             </Container >
         </>
     );
