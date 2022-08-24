@@ -1,7 +1,7 @@
 ---
 title: "Molecule Energy Estimator"
 description: "The chemical and physical properties of a molecule are determined not only by its structural formula, but also by its conformation – positions of atoms in 3d space."
-socialImage: "/images/projects/rucode-5.0-preview.gif"
+imageURL: "/images/projects/rucode-5.0-preview.gif"
 startDate: "1 Apr, 2022"
 endDate: "1 Jul, 2022"
 sourceLink: "https://github.com/nomomon/molecule-energy-prediction"

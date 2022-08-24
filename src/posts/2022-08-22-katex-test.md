@@ -2,7 +2,7 @@
 title: "This is a test to see if the katex is working"
 date: "22 Aug, 2022"
 description: "Is there math here?"
-socialImage: "/images/posts/2022-08-22/katex.png"
+imageURL: "/images/posts/2022-08-22/katex.png"
 tags:
   - "KaTeX"
   - "Node.js"

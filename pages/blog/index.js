@@ -16,7 +16,7 @@ function sortByDate(a, b) {
     return 0;
 }
 
-function PostCard({ title, description, socialImage, date, tags, slug }) {
+function PostCard({ title, description, imageURL, date, tags, slug }) {
     const dateObj = new Date(date);
 
     return (
@@ -34,7 +34,7 @@ function PostCard({ title, description, socialImage, date, tags, slug }) {
                             transform: 'scale(1.01)'
                         }
                     }}
-                    image={socialImage}
+                    image={imageURL}
                     alt={title}
                 />
             </Link>

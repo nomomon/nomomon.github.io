@@ -1,7 +1,7 @@
 ---
 title: "Markov Chain Text Generator"
 description: "Text generator written in React.js that uses Markov chains to generate text based on a given input."
-socialImage: "/images/projects/markov-chain-text.jpeg"
+imageURL: "/images/projects/markov-chain-text.jpeg"
 startDate: "Aug 6, 2022"
 endDate: "Aug 7, 2022"
 demoLink: "https://nomomon.github.io/markov-chain-text/"

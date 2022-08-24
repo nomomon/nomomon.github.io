@@ -2,7 +2,7 @@
 title:
 date:
 description:
-socialImage:
+imageURL:
 tags:
   - ""
 ---

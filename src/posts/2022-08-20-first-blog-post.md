@@ -2,7 +2,7 @@
 title: "My first blog post"
 date: "2022-08-20"
 description: "This is my first blog post. Hope you enjoy it! :)"
-socialImage: "/images/posts/2022-08-20/screenshot.png"
+imageURL: "/images/posts/2022-08-20/screenshot.png"
 tags:
   - "me"
 ---

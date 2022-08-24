@@ -1,7 +1,7 @@
 ---
 title: "Kamernet Puppeteer"
 description: "Automatic message sender to new adverts on Kamernet using puppeteer."
-socialImage: "/images/projects/kamernet-puppeteer.jpeg"
+imageURL: "/images/projects/kamernet-puppeteer.jpeg"
 startDate: "May 2021"
 endDate: "Aug 2021"
 sourceLink: "https://github.com/nomomon/Kamernet-Puppeteer"

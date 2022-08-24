@@ -1,7 +1,7 @@
 ---
 title:
 description:
-socialImage:
+imageURL:
 startDate:
 endDate:
 demoLink:

@@ -63,7 +63,7 @@ function DateRow({ startDate, endDate }) {
 function ProjectCard({
     title,
     description,
-    socialImage,
+    imageURL,
     startDate,
     endDate = "",
     tools = [],
@@ -86,7 +86,7 @@ function ProjectCard({
                             transform: 'scale(1.01)'
                         }
                     }}
-                    image={socialImage}
+                    image={imageURL}
                     alt={title}
                 />
             </Link>
