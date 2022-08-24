@@ -5,7 +5,7 @@ import Link from '../../components/Link';
 import { AiOutlineCalendar } from 'react-icons/ai';
 import { FiGithub, FiPlay } from 'react-icons/fi';
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
-import Head from 'next/head';
+import TitleMetaTags from '../../components/TitleMetaTags';
 
 function sortByDate(a, b, date = 'startDate') {
     let a_ = new Date(a.frontmatter[date]), b_ = new Date(b.frontmatter[date]);
@@ -168,11 +168,12 @@ function ProjectCard({
 
 function Projects({ projects }) {
     return (<>
-        <Head>
-            <title>{'nomomon | projects'}</title>
-            <meta name="title" content="nomomon's projects" />
-            <meta name="description" content="List of Nurmukhambetov Mansur's technical projects on data science, machine learning and web development." />
-        </Head>
+        <TitleMetaTags
+            pageTitle={'nomomon | projects'}
+            title={'nomomon\'s projects'}
+            description={'Nurmukhambetov Mansur\'s technical projects on data science, machine learning and web dev.'}
+            pageType='website'
+        />
         <Typography
             variant="h4"
             sx={{ fontWeight: 800, textTransform: 'uppercase', mb: 6 }}

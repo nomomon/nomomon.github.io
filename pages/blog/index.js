@@ -2,7 +2,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import { Typography, Card, CardContent, Grid, CardMedia } from '@mui/material';
 import { AiOutlineCalendar } from 'react-icons/ai';
-import Head from 'next/head';
+import TitleMetaTags from '../../components/TitleMetaTags';
 import Link from '../../components/Link';
 
 function sortByDate(a, b) {
@@ -82,14 +82,13 @@ function PostCard({ title, description, imageURL, date, tags, slug }) {
 
 
 function Blog({ posts }) {
-
-
     return (<>
-        <Head>
-            <title>{'nomomon | blog'}</title>
-            <meta name="title" content="nomomon's projects" />
-            <meta name="description" content="Nurmukhambetov Mansur's technical blog on data science, machine learning and web development." />
-        </Head>
+        <TitleMetaTags
+            pageTitle={'nomomon | blog'}
+            title={'nomomon\'s blog'}
+            description={'Nurmukhambetov Mansur\'s technical blog on data science, machine learning and web dev.'}
+            pageType='website'
+        />
         <Typography
             variant="h4"
             sx={{ fontWeight: 800, textTransform: 'uppercase', mb: 6 }}

@@ -7,7 +7,7 @@ import { Container, Chip } from '@mui/material';
 import { Stack } from '@mui/system';
 import { FiAward, FiGithub, FiPlay } from 'react-icons/fi';
 import Link from '../../components/Link';
-import Head from 'next/head';
+import TitleMetaTags from '../../components/TitleMetaTags';
 
 const mdSettings = {
     html: true,
@@ -93,11 +93,13 @@ function ProjectPost({ frontmatter: fm, content }) {
 
     return (
         <>
-            <Head>
-                <title>{`nomomon | ${fm.title.toLowerCase()}`}</title>
-                <meta name="title" content={fm.title} />
-                <meta name="description" content={fm.description} />
-            </Head>
+            <TitleMetaTags
+                pageTitle={`nomomon | ${fm.title.toLowerCase()}`}
+                title={fm.title}
+                description={fm.description}
+                image={fm.imageURL}
+                pageType='article'
+            />
             <Container maxWidth='md' className='markdown-body'>
                 <h1>{fm.title}</h1>
 

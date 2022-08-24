@@ -1,18 +1,19 @@
 import { Avatar, Typography, Chip, Stack, Tooltip, Badge, useMediaQuery } from '@mui/material';
 import { MdOutlinePlace, MdWorkOutline } from 'react-icons/md';
 import { BsLinkedin, BsGithub, BsStackOverflow, BsTelegram } from 'react-icons/bs';
-import Head from 'next/head';
+import TitleMetaTags from '../components/TitleMetaTags';
 import Link from '../components/Link';
 
 function About() {
     const desktop = useMediaQuery('(min-width:700px)');
 
     return (<>
-        <Head>
-            <title>{'nomomon | about'}</title>
-            <meta name="title" content="nomomon's website" />
-            <meta name="description" content="I'm Mansur – data scientist with two years of experience. I analyse data, develop machine learning models and deploy them to websites." />
-        </Head>
+        <TitleMetaTags
+            pageTitle={'nomomon | about'}
+            title={'nomomon\'s website'}
+            description={'I\'m Mansur – data scientist with two years of experience. I analyse data, develop machine learning models and deploy them to websites.'}
+            pageType='website'
+        />
         <Stack
             direction={desktop ? 'row' : 'column'}
             spacing={1}

@@ -4,7 +4,7 @@ import md from 'markdown-it';
 import * as mdk from 'markdown-it-katex';
 import { Container, Chip } from '@mui/material';
 import { Stack } from '@mui/system';
-import Head from 'next/head';
+import TitleMetaTags from '../../components/TitleMetaTags';
 
 
 // const styles = require('../../styles/Notebook.css')
@@ -28,11 +28,13 @@ function BlogPost({ frontmatter, content }) {
 
     return (
         <>
-            <Head>
-                <title>{`nomomon | ${frontmatter.title.toLowerCase()}`}</title>
-                <meta name="title" content={frontmatter.title} />
-                <meta name="description" content={frontmatter.description} />
-            </Head>
+            <TitleMetaTags
+                pageTitle={`nomomon | ${fm.title.toLowerCase()}`}
+                title={fm.title}
+                description={fm.description}
+                image={fm.imageURL}
+                pageType='article'
+            />
             <Container maxWidth='md'>
                 <h1>{frontmatter.title}</h1>
                 <div className='markdown-body' dangerouslySetInnerHTML={{ __html: markdown }} />
