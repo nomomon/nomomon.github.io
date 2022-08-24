@@ -4,10 +4,11 @@ import { Typography, Card, CardContent, Grid, CardMedia, Button, Stack, Chip } f
 import Link from '../../components/Link';
 import { AiOutlineCalendar } from 'react-icons/ai';
 import { FiGithub, FiPlay } from 'react-icons/fi';
+import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
 import Head from 'next/head';
 
-function sortByDate(a, b) {
-    let a_ = new Date(a.frontmatter.date), b_ = new Date(b.frontmatter.date);
+function sortByDate(a, b, date = 'startDate') {
+    let a_ = new Date(a.frontmatter[date]), b_ = new Date(b.frontmatter[date]);
     if (a_ < b_) {
         return 1;
     }
@@ -17,18 +18,59 @@ function sortByDate(a, b) {
     return 0;
 }
 
+function DateRow({ startDate, endDate }) {
+    const startDateObj = new Date(startDate);
+    const endDateObj = (endDate == 'now') ? new Date() : new Date(endDate);
+
+    // show end date if it exists and the month is different from the start date
+    const showEndDate = endDate && (
+        endDateObj.getMonth() !== startDateObj.getMonth() ||
+        endDateObj.getFullYear() !== startDateObj.getFullYear()
+    );
+
+    return (
+        <Typography
+            sx={{ mt: 1, mb: 1.5 }}
+            variant="subtitle1"
+            color="text.secondary"
+        >
+            <AiOutlineCalendar
+                style={{ marginBottom: -2, marginRight: 4 }}
+            />
+            {
+                startDateObj.toLocaleDateString('en-En', {
+                    month: 'short',
+                    year: 'numeric'
+                })
+            }
+            {
+                showEndDate && (<>
+                    <HiOutlineArrowNarrowRight
+                        style={{ marginBottom: -2, marginRight: 2, marginLeft: 1 }}
+                    />
+                    {
+                        endDateObj.toLocaleDateString('en-En', {
+                            month: 'short',
+                            year: 'numeric'
+                        })
+                    }
+                </>)
+            }
+        </Typography>
+    )
+}
+
 function ProjectCard({
     title,
-    metaDesc,
+    description,
     socialImage,
-    date,
+    startDate,
+    endDate = "",
     tools = [],
     demoLink = "",
     sourceLink = "",
     slug
 }) {
-    const dateObj = new Date(date);
-
     return (
         <Card elevation={3}>
             <Link
@@ -67,22 +109,7 @@ function ProjectCard({
                         {title}
                     </Typography>
                 </Link>
-                <Typography
-                    sx={{ mt: 1, mb: 1.5 }}
-                    variant="subtitle1"
-                    color="text.secondary"
-                >
-                    <AiOutlineCalendar
-                        style={{ marginBottom: -2, marginRight: 4 }}
-                    />
-                    {
-                        dateObj.toLocaleDateString('en-En', {
-                            month: 'short',
-                            day: 'numeric',
-                            year: 'numeric'
-                        })
-                    }
-                </Typography>
+                <DateRow startDate={startDate} endDate={endDate} />
                 <Typography variant="body2" sx={{
                     height: '4.5em',
                     overflow: "hidden",
@@ -91,7 +118,7 @@ function ProjectCard({
                     WebkitLineClamp: 3,
                     WebkitBoxOrient: "vertical",
                 }}>
-                    {metaDesc}
+                    {description}
                 </Typography>
                 <br />
                 <Stack direction="row" spacing={1}>

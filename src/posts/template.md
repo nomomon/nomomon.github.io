@@ -1,7 +1,7 @@
 ---
 title:
 date:
-metaDesc:
+description:
 socialImage:
 tags:
   - ""

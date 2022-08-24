@@ -1,7 +1,7 @@
 ---
 title: "This is a test to see if the katex is working"
 date: "22 Aug, 2022"
-metaDesc: "Is there math here?"
+description: "Is there math here?"
 socialImage: "/images/posts/2022-08-22/katex.png"
 tags:
   - "KaTeX"

@@ -31,7 +31,7 @@ function BlogPost({ frontmatter, content }) {
             <Head>
                 <title>{`nomomon | ${frontmatter.title.toLowerCase()}`}</title>
                 <meta name="title" content={frontmatter.title} />
-                <meta name="description" content={frontmatter.metaDesc} />
+                <meta name="description" content={frontmatter.description} />
             </Head>
             <Container maxWidth='md'>
                 <h1>{frontmatter.title}</h1>

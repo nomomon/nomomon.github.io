@@ -1,8 +1,9 @@
 ---
 title:
-metaDesc:
+description:
 socialImage:
-date:
+startDate:
+endDate:
 demoLink:
 sourceLink:
 tools:

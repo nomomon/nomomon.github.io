@@ -1,8 +1,9 @@
 ---
 title: Inversive Geometry
-metaDesc: "This is a simple React.js app that demonstrates the inversive geometry of a point in a circle."
+description: "This is a simple React.js app that demonstrates the inversive geometry of a point in a circle."
 socialImage: "/images/projects/inversive-geometry.jpeg"
-date: "12 Aug, 2022"
+startDate: "12 Aug, 2022"
+endDate: "14 Aug, 2022"
 demoLink: "https://nomomon.github.io/inversive-geometry/"
 sourceLink: "https://github.com/nomomon/inversive-geometry"
 tools:

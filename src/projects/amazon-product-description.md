@@ -1,8 +1,9 @@
 ---
 title: "Amazon description generator"
-metaDesc: "A proof of concept, Amazon product description generator using GPT-Neo for Texta.ai"
+description: "A proof of concept, Amazon product description generator using GPT-Neo for Texta.ai"
 socialImage: "/images/projects/amazon-product-description-3.jpeg"
-date: "Aug 15, 2021"
+startDate: "Aug 15, 2021"
+endDate: "Aug 17, 2021"
 demoLink:
 sourceLink: "https://github.com/nomomon/Amazon-Product-Description"
 tools:

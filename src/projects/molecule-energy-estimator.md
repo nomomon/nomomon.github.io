@@ -1,8 +1,9 @@
 ---
 title: "Molecule Energy Estimator"
-metaDesc: "Machine learning algorithm that can predict the energy of a molecule based on its three-dimensional representation (conformation)."
+description: "Machine learning algorithm that can predict the energy of a molecule based on its three-dimensional representation (conformation)."
 socialImage: "/images/projects/rucode-5.0-preview.gif"
-date: "2022-05-16"
+startDate: "1 Apr, 2022"
+endDate: "1 Jul, 2022"
 sourceLink: "https://github.com/nomomon/molecule-energy-prediction"
 demoLink: ""
 tools:

@@ -16,7 +16,7 @@ function sortByDate(a, b) {
     return 0;
 }
 
-function PostCard({ title, metaDesc, socialImage, date, tags, slug }) {
+function PostCard({ title, description, socialImage, date, tags, slug }) {
     const dateObj = new Date(date);
 
     return (
@@ -73,7 +73,7 @@ function PostCard({ title, metaDesc, socialImage, date, tags, slug }) {
                     }
                 </Typography>
                 <Typography variant="body2">
-                    {metaDesc}
+                    {description}
                 </Typography>
             </CardContent>
         </Card>

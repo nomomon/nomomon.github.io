@@ -1,8 +1,9 @@
 ---
 title: "Data Science Bootcamp"
-metaDesc: "Collection of final projects from data science bootcamp from Yandex Practicum."
+description: "Collection of final projects from data science bootcamp from Yandex Practicum."
 socialImage: "/images/projects/yandex-practicum.png"
-date: "27 Feb, 2022"
+startDate: "27 Feb, 2022"
+endDate: "now"
 demoLink:
 sourceLink:
 tools:

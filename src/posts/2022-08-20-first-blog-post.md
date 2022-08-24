@@ -1,7 +1,7 @@
 ---
 title: "My first blog post"
 date: "2022-08-20"
-metaDesc: "This is my first blog post. Hope you enjoy it! :)"
+description: "This is my first blog post. Hope you enjoy it! :)"
 socialImage: "/images/posts/2022-08-20/screenshot.png"
 tags:
   - "me"

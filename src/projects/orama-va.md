@@ -1,8 +1,9 @@
 ---
 title: "Orama Visual Assistant"
-metaDesc: "Orama Visual Assistant is an app for visually impaired people that announces objects detected using user's phone camera."
+description: "Orama Visual Assistant is an app for visually impaired people that announces objects detected using user's phone camera."
 socialImage: "/images/projects/oramava-preview.jpeg"
-date: "2019-11-08"
+startDate: "8 Nov 2019"
+endDate: "5 Jan 2022"
 demoLink: "https://nomomon.github.io/OramaVA/"
 sourceLink: "https://github.com/nomomon/OramaVA"
 tools:

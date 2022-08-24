@@ -1,8 +1,8 @@
 ---
 title: "LaTeXGen"
-metaDesc: "Webapp that allows creation of self-generating mathematical problems in LaTeX and markdown languages using JavaScript."
+description: "Webapp that allows creation of self-generating mathematical problems in LaTeX and markdown languages using JavaScript."
 socialImage: "/images/projects/latexgen-preview.jpeg"
-date: "2020-03-05"
+startDate: "2020-03-05"
 demoLink: "https://nomomon.github.io/LaTeXGen/"
 sourceLink: "https://github.com/nomomon/LaTeXGen"
 tools:
