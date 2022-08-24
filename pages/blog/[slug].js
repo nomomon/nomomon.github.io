@@ -23,7 +23,7 @@ const katexSettings = {
     ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code", "p"]
 }
 
-function BlogPost({ frontmatter, content }) {
+function BlogPost({ frontmatter: fm, content }) {
     const markdown = md(mdSettings).use(mdk, katexSettings).render(content);
 
     return (
@@ -36,12 +36,12 @@ function BlogPost({ frontmatter, content }) {
                 pageType='article'
             />
             <Container maxWidth='md'>
-                <h1>{frontmatter.title}</h1>
+                <h1>{fm.title}</h1>
                 <div className='markdown-body' dangerouslySetInnerHTML={{ __html: markdown }} />
 
                 <Stack direction='row' spacing={1} sx={{ mt: 6, mb: -6 }}>
                     {
-                        frontmatter.tags.map((tag, index) => (
+                        fm.tags.map((tag, index) => (
                             <Chip label={tag} key={index} />
                         ))
                     }
