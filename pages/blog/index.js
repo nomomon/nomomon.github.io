@@ -81,7 +81,7 @@ function PostCard({ title, description, imageURL, date, tags, slug }) {
             </CardContent>
         </Card>
     )
-} s
+}
 
 function Blog({ posts }) {
     return (<>
