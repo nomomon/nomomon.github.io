@@ -1,9 +1,12 @@
 import fs from 'fs';
 import matter from 'gray-matter';
-import { Typography, Card, CardContent, Grid, CardMedia } from '@mui/material';
+import { Typography, Card, CardContent, Grid, CardMedia, Stack, Menu } from '@mui/material';
 import { AiOutlineCalendar } from 'react-icons/ai';
-import TitleMetaTags from '../../components/TitleMetaTags';
+import { BiPlanet, BiFilter } from 'react-icons/bi';
 import Link from '../../components/Link';
+import ChipLink from '../../components/ChipLink';
+import TitleMetaTags from '../../components/TitleMetaTags';
+
 
 function sortByDate(a, b) {
     let a_ = new Date(a.frontmatter.date), b_ = new Date(b.frontmatter.date);
@@ -78,8 +81,7 @@ function PostCard({ title, description, imageURL, date, tags, slug }) {
             </CardContent>
         </Card>
     )
-}
-
+} s
 
 function Blog({ posts }) {
     return (<>
@@ -91,10 +93,30 @@ function Blog({ posts }) {
         />
         <Typography
             variant="h4"
-            sx={{ fontWeight: 800, textTransform: 'uppercase', mb: 6 }}
+            sx={{ fontWeight: 800, textTransform: 'uppercase', mb: 3 }}
         >
             Blog
         </Typography>
+        <Stack direction={'row'} alignItems={'baseline'} sx={{ width: '100%' }}>
+            {
+                [
+                    [
+                        'Telegram channel',
+                        'https://t.me/pigeorge',
+                        BiPlanet
+                    ]
+                ].map(([label, link, icon], index) => (
+                    <ChipLink
+                        label={label}
+                        link={link}
+                        icon={icon}
+                        key={index}
+                        sx={{ mb: 3, '&:hover': { textDecoration: 'underline' } }}
+                        props
+                    />
+                ))
+            }
+        </Stack >
         <Grid
             container
             spacing={5}
