@@ -6,7 +6,7 @@ import * as mdh from 'markdown-it-highlightjs';
 import { Container, Chip } from '@mui/material';
 import { Stack } from '@mui/system';
 import { FiAward, FiGithub, FiPlay } from 'react-icons/fi';
-import Link from '../../components/Link';
+import ChipLink from '../../components/ChipLink';
 import TitleMetaTags from '../../components/TitleMetaTags';
 
 const mdSettings = {
@@ -32,24 +32,6 @@ function ChipLinks({ frontmatter: fm }) {
     const showDemoLink = ('demoLink' in fm) && fm.demoLink;
     const showAchievementsLink = ('achievements' in fm) && fm.achievements > 0;
 
-    function ChipLink({ label, link, icon }) {
-        const renderedIcon = icon({
-            style: {
-                marginLeft: '0.5em',
-            }
-        })
-
-        return (
-            <Link href={link} underline={'none'}>
-                <Chip
-                    icon={renderedIcon}
-                    label={label}
-                    variant='outlined'
-                    sx={{ cursor: 'pointer' }}
-                />
-            </Link>
-        );
-    }
 
     return (
         <Stack spacing={1} direction='row' sx={{ mb: 2 }}>
