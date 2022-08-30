@@ -47,11 +47,12 @@ function ChipLinks({ frontmatter: fm }) {
                     [showAchievementsLink, 'Achievements', '#achievements', FiAward],
                 ]
                     .filter(([show]) => show)
-                    .map(([show, label, link, icon]) => (
+                    .map(([show, label, link, icon], index) => (
                         <ChipLink
                             label={label}
                             link={link}
                             icon={icon}
+                            key={index}
                         />)
                     )
             }
