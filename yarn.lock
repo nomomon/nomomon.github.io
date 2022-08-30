@@ -1789,6 +1789,11 @@
   dependencies:
     "highlight.js" "^11.5.1"
 
+"markdown-it-id-and-toc@^3.6.2":
+  "integrity" "sha512-3TsAesXbvLROzKuNGpFrJnCkj2sTuO3Gav9ksIFpiA37sTxtdt10aLIAVmBtPThTfa9EjGFqliUplxmCNw7mRw=="
+  "resolved" "https://registry.npmjs.org/markdown-it-id-and-toc/-/markdown-it-id-and-toc-3.6.2.tgz"
+  "version" "3.6.2"
+
 "markdown-it-katex@^2.0.3":
   "integrity" "sha512-nUkkMtRWeg7OpdflamflE/Ho/pWl64Lk9wNBKOmaj33XkQdumhXAIYhI0WO03GeiycPCsxbmX536V5NEXpC3Ng=="
   "resolved" "https://registry.npmjs.org/markdown-it-katex/-/markdown-it-katex-2.0.3.tgz"
@@ -1796,7 +1801,7 @@
   dependencies:
     "katex" "^0.6.0"
 
-"markdown-it@^13.0.1":
+"markdown-it@^13.0.1", "markdown-it@>=8.2.2":
   "integrity" "sha512-lTlxriVoy2criHP0JKRhO2VDG9c2ypWCsT237eDiLqi09rmbKoUetyGHq2uOIRoRS//kfoJckS0eUzzkDR+k2Q=="
   "resolved" "https://registry.npmjs.org/markdown-it/-/markdown-it-13.0.1.tgz"
   "version" "13.0.1"

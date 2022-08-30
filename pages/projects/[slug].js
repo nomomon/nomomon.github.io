@@ -3,6 +3,7 @@ import matter from 'gray-matter';
 import md from 'markdown-it';
 import * as mdk from 'markdown-it-katex';
 import * as mdh from 'markdown-it-highlightjs';
+import * as mdi from 'markdown-it-id-and-toc';
 import { Container, Chip } from '@mui/material';
 import { Stack } from '@mui/system';
 import { FiAward, FiGithub, FiPlay } from 'react-icons/fi';
@@ -12,6 +13,10 @@ import TitleMetaTags from '../../components/TitleMetaTags';
 const mdSettings = {
     html: true,
     linkify: true,
+}
+
+const idSettings = {
+    idPrefix: ''
 }
 
 const katexSettings = {
@@ -68,6 +73,7 @@ function Tools({ tools }) {
 
 function ProjectPost({ frontmatter: fm, content }) {
     const markdown = md(mdSettings)
+        .use(mdi, idSettings)
         .use(mdk, katexSettings)
         .use(mdh, highlightSettings)
         .render(content);
@@ -82,7 +88,7 @@ function ProjectPost({ frontmatter: fm, content }) {
                 pageType='article'
             />
             <Container maxWidth='md' className='markdown-body' >
-                <h1>{fm.title}</h1>
+                <h1 id={fm.title.toLowerCase().split(' ').join('-')}>{fm.title}</h1>
 
                 <ChipLinks frontmatter={fm} />
 
