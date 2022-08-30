@@ -40,16 +40,15 @@ function ChipLinks({ frontmatter: fm }) {
                     [showSourceLink, 'Github', fm.sourceLink, FiGithub],
                     [showDemoLink, 'Demo', fm.demoLink, FiPlay],
                     [showAchievementsLink, 'Achievements', '#achievements', FiAward],
-                ].map(([show, label, link, icon], index) => (<>
-                    {show && (
+                ]
+                    .filter(([show]) => show)
+                    .map(([show, label, link, icon]) => (
                         <ChipLink
                             label={label}
                             link={link}
                             icon={icon}
-                            key={index}
-                        />
-                    )}
-                </>))
+                        />)
+                    )
             }
         </Stack >
     )
