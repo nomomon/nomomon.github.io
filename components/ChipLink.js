@@ -9,7 +9,7 @@ function ChipLink({ label, link, icon, ...props }) {
     })
 
     return (
-        <Link href={link} underline={'none'}>
+        <Link href={link} underline={'none'} key={label}>
             <Chip
                 icon={renderedIcon}
                 label={label}
