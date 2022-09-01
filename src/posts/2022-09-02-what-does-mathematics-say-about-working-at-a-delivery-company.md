@@ -19,7 +19,7 @@ But, "What is the wage of a delivery driver?", I thought. Sure, it cannot be con
 
 First let's formulate the problem in a mathematical way.
 
-> Monkey is the imaginary grocery delivery service. Their wearhouse is located in the center of a city with radius $R$. The clients are uniformly distributed in the circle. What is the expected value of delivery time?
+> Monkeys is the imaginary grocery delivery service. Their wearhouse is located in the center of a city with radius $R$. The clients are uniformly distributed in the circle. What is the expected value of delivery time?
 
 So, the delivery man starts off in the center (wearhouse), brings the groceries to the customer and comes back to get ready for the next delivery.
 
