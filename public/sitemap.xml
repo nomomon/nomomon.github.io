@@ -9,42 +9,42 @@
 
 <url>
   <loc>https://nomomon.github.io/</loc>
-  <lastmod>2022-08-22T09:29:16+00:00</lastmod>
+  <lastmod>2022-08-30T16:19:20+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://nomomon.github.io/projects/</loc>
-  <lastmod>2022-08-22T09:29:16+00:00</lastmod>
+  <lastmod>2022-08-30T16:19:20+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://nomomon.github.io/blog/</loc>
-  <lastmod>2022-08-22T09:29:16+00:00</lastmod>
+  <lastmod>2022-08-30T16:19:20+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://nomomon.github.io/projects/inversion-geometry/</loc>
-  <lastmod>2022-08-22T09:29:16+00:00</lastmod>
+  <loc>https://nomomon.github.io/projects/inversive-geometry/</loc>
+  <lastmod>2022-08-30T16:19:20+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://nomomon.github.io/inversion-geometry/</loc>
-  <lastmod>2022-08-18T05:05:19+00:00</lastmod>
+  <loc>https://nomomon.github.io/inversive-geometry/</loc>
+  <lastmod>2022-08-22T15:17:40+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://nomomon.github.io/projects/markov-chain-text/</loc>
-  <lastmod>2022-08-22T09:29:16+00:00</lastmod>
+  <lastmod>2022-08-30T16:19:20+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://nomomon.github.io/markov-chain-text/</loc>
-  <lastmod>2022-08-18T04:45:44+00:00</lastmod>
+  <lastmod>2022-08-23T04:20:49+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://nomomon.github.io/projects/pipe-thickness-calculator/</loc>
-  <lastmod>2022-08-22T09:29:16+00:00</lastmod>
+  <lastmod>2022-08-30T16:19:20+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
@@ -54,47 +54,57 @@
 </url>
 <url>
   <loc>https://nomomon.github.io/projects/molecule-energy-estimator/</loc>
-  <lastmod>2022-08-22T09:29:16+00:00</lastmod>
+  <lastmod>2022-08-30T16:19:20+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://nomomon.github.io/projects/yandex-practicum/</loc>
-  <lastmod>2022-08-22T09:29:16+00:00</lastmod>
+  <lastmod>2022-08-30T16:19:20+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://nomomon.github.io/projects/felony-felines/</loc>
-  <lastmod>2022-08-22T09:29:16+00:00</lastmod>
+  <lastmod>2022-08-30T16:19:20+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://nomomon.github.io/projects/anime-rec-sys/</loc>
-  <lastmod>2022-08-22T09:29:16+00:00</lastmod>
+  <lastmod>2022-08-30T16:19:20+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://nomomon.github.io/projects/amazon-product-description/</loc>
-  <lastmod>2022-08-22T09:29:16+00:00</lastmod>
+  <lastmod>2022-08-30T16:19:20+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://nomomon.github.io/projects/kamernet-puppteer/</loc>
-  <lastmod>2022-08-22T09:29:16+00:00</lastmod>
+  <loc>https://nomomon.github.io/projects/potato-cashback/</loc>
+  <lastmod>2022-08-30T16:19:20+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://nomomon.github.io/projects/soft-skills-ai/</loc>
-  <lastmod>2022-08-22T09:29:16+00:00</lastmod>
+  <lastmod>2022-08-30T16:19:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://nomomon.github.io/projects/kamernet-puppteer/</loc>
+  <lastmod>2022-08-30T16:19:20+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://nomomon.github.io/projects/latex-gen/</loc>
-  <lastmod>2022-08-22T09:29:16+00:00</lastmod>
+  <lastmod>2022-08-30T16:19:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://nomomon.github.io/LaTeXGen/</loc>
+  <lastmod>2021-11-19T13:03:11+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://nomomon.github.io/projects/orama-va/</loc>
-  <lastmod>2022-08-22T09:29:16+00:00</lastmod>
+  <lastmod>2022-08-30T16:19:20+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
@@ -104,13 +114,28 @@
 </url>
 <url>
   <loc>https://nomomon.github.io/blog/2022-08-22-katex-test/</loc>
-  <lastmod>2022-08-22T09:29:16+00:00</lastmod>
+  <lastmod>2022-08-30T16:19:20+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://nomomon.github.io/blog/2022-08-20-first-blog-post/</loc>
-  <lastmod>2022-08-22T09:29:16+00:00</lastmod>
+  <lastmod>2022-08-30T16:19:20+00:00</lastmod>
   <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://nomomon.github.io/molecule-energy-prediction/report/report.pdf</loc>
+  <lastmod>2022-07-14T04:36:43+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://nomomon.github.io/LaTeXGen/learn/</loc>
+  <lastmod>2021-11-19T13:03:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://nomomon.github.io/LaTeXGen/app/</loc>
+  <lastmod>2021-11-19T13:03:11+00:00</lastmod>
+  <priority>0.51</priority>
 </url>
 
 
