@@ -63,7 +63,4 @@ An average e-bike has a velocity of $\approx 6_\text{~m/s}$, plug that in
 
 $$E(t) = \frac{4}{3} \cdot 4000 / 6 = 889 \text{~sec} = 14 \text{~min}$$
 
-To deliver one order! Therefore, on average a person can deliver 4 orders per hour.
-
-$$
-$$
+To deliver one order! Therefore, on average a person can deliver 4 orders per hour. In other words, the minimum hourly rate.
