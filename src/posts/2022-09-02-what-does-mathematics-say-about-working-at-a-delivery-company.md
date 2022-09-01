@@ -8,7 +8,7 @@ tags:
   - "delivery"
 ---
 
-Last year one of my friends worked in a delivery company. Their job was to deliver groceries to customers. In their company, the wage was based on the amount of orders per hour they delivered. For example:
+Last year my friend worked at a delivery company. Their job was to deliver groceries to customers on a bicycle. In their company, the wage was based on the amount of orders per hour they delivered. For example:
 
 - X euros for 4 orders per hour
 - Y euros for 6 orders per hour
@@ -16,6 +16,8 @@ Last year one of my friends worked in a delivery company. Their job was to deliv
 - Ω euros for 10 orders per hour
 
 But, "What is the wage of a delivery driver?", I thought. Sure, it cannot be consistent, but on average it should be similar.
+
+_**TL;DR**: most-likely the wage rate won't be above the minimum hourly rate._
 
 First let's formulate the problem in a mathematical way.
 
@@ -29,7 +31,7 @@ The expected value of delivery time is the expected value of the distance to the
 
 $$E(t) = 2 \cdot \frac{E(d)}{v}$$
 
-The value of $E(d)$ can be interpreted as the the expected value of distance between the center and a random uniform point in the circle.
+The value of $E(d)$ can be interpreted as the expected value of distance between the center and a random uniform point in the circle.
 
 To calculate it, let's cut the circle into thin rings with radius $r$ and width $\Delta r$. Then the area of these rings is $2\pi r \Delta r$. The probability of getting a point inside this ring is the area of the ring divided by the area of the whole circle.
 
@@ -61,4 +63,6 @@ An average e-bike has a velocity of $\approx 6_\text{~m/s}$, plug that in
 
 $$E(t) = \frac{4}{3} \cdot 4000 / 6 = 889 \text{~sec} = 14 \text{~min}$$
 
-To deliver one order! Therefore, on average a person can deliver 4 orders per hour. In other words, the rates above the minimum hourly rate are hardly reachable.
+to deliver one order! Therefore, on average a person can deliver 4 orders per hour. This is not accounting for the paths being not straight lines, the time to walk to the customer and incidents that might happen.
+
+In other words, the rates above the minimum hourly rate are hardly reachable.
