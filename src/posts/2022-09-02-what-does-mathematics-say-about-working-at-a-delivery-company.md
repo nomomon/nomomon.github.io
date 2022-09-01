@@ -1,7 +1,7 @@
 ---
 title: What does mathematics say about working at a delivery company?
 date: 2 Sep 2022
-description: This is some mathy content
+description: How to use mathematics to determine the wage and make a decision about working at a delivery company.
 imageURL: "/images/posts/2022-09-02/groningen.png"
 tags:
   - "math"
