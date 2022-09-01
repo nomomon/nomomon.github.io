@@ -40,7 +40,11 @@ $$\frac{2\pi r \Delta r}{\pi \cdot R^2}$$
 Hence, the expected value of $d$ is
 
 $$
-E(d) = \int_{0}^{R}{\frac{2\pi r dr}{\pi \cdot R^2} \cdot r } = \int_{0}^{R}{\frac{2 r^2}{ R^2} dr } = \frac{2}{3} (R^3 - 0) / R^2 = \frac{2}{3} R .
+E(d) = \int_{0}^{R}{\frac{2\pi r dr}{\pi \cdot R^2} \cdot r } =
+$$
+
+$$
+= \int_{0}^{R}{\frac{2 r^2}{ R^2} dr } = \frac{2}{3} (R^3 - 0) / R^2 = \frac{2}{3} R .
 $$
 
 This means that the expected value of time is
@@ -60,3 +64,6 @@ An average e-bike has a velocity of $\approx 6_\text{~m/s}$, plug that in
 $$E(t) = \frac{4}{3} \cdot 4000 / 6 = 889 \text{~sec} = 14 \text{~min}$$
 
 To deliver one order! Therefore, on average a person can deliver 4 orders per hour.
+
+$$
+$$
