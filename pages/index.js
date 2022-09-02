@@ -48,7 +48,7 @@ function About() {
                 <Typography
                     sx={{ fontWeight: 'fontWeightLight', mb: 1 }}
                 >
-                    About me in 2 words
+                    I also do magic tricks :-)
                 </Typography>
                 <Typography
                     sx={{ fontWeight: 'fontWeightLight', mb: 1 }}
@@ -135,7 +135,11 @@ function About() {
         </Stack >
 
         <Typography sx={{ mt: 4, fontWeight: 'fontWeightLight' }}>
-            {"I'm Mansur, team-oriented and creative data scientist with two years of experience in data processing and machine learning. Certified student pursuing a bachelor’s degree in artificial intelligence offering expertise in statistics and mathematics, research and data analysis. I develop ML models and deploy them to progressive web apps (PWAs). I like to find and make interesting applications of existing machine learning models."}
+            {"Beep boop, Mansur speaking. I'm a data scientist  working at "}
+            <Link href="https://researchable.nl">Researchable</Link>
+            {". I analyse data, develop machine learning models and, sometimes, deploy them to websites. I'm also a developer, I build websites and web apps. Also, I write a blog about data science related topics. You can find it "}
+            <Link href="blog/">here</Link>
+            {"."}
         </Typography>
     </>)
 }
