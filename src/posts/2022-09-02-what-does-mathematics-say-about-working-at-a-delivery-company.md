@@ -17,11 +17,11 @@ Last year my friend worked at a delivery company. Their job was to deliver groce
 
 But, "What is the wage of a delivery driver?", I thought. Sure, it cannot be consistent, but on average it should be similar.
 
-_**TL;DR**: most-likely the wage rate won't be above the minimum hourly rate._
+_**TL;DR**: most-likely the wage rate won't be above the minimal (X euros for 4 orders per hour)._
 
 First let's formulate the problem in a mathematical way.
 
-> Monkeys is the imaginary grocery delivery service. Their wearhouse is located in the center of a city with radius $R$. The clients are uniformly distributed in the circle. What is the expected value of delivery time?
+> Monkeys is an imaginary grocery delivery service. Their wearhouse is located in the center of a city with radius $R$. The clients are uniformly distributed in the circle. What is the expected value of delivery time?
 
 So, the delivery man starts off in the center (wearhouse), brings the groceries to the customer and comes back to get ready for the next delivery.
 
@@ -63,6 +63,15 @@ An average e-bike has a velocity of $\approx 6_\text{~m/s}$, plug that in
 
 $$E(t) = \frac{4}{3} \cdot 4000 / 6 = 889 \text{~sec} = 14 \text{~min}$$
 
-to deliver one order! Therefore, on average a person can deliver 4 orders per hour. This is not accounting for the paths being not straight lines, the time to walk to the customer and incidents that might happen.
+14 minutes to deliver one order! Therefore, on average a person can deliver 4 orders per hour. This is not accounting for the paths being not straight lines, the time to walk to the customer and incidents that might happen.
 
 In other words, the rates above the minimum hourly rate are hardly reachable.
+
+<details>
+<summary>
+What if they take multiple orders at a time?
+</summary>
+
+Sometimes, 2-3 orders are bundled when they are located in the same area. This way a worker may earn more than the minimum. There is a problem – in the end of the day, the wage rate is selected from the average orders per hour done during the shift. Implying they have to be lucky to get these bundled orders to keep up the streak.
+
+</details>
