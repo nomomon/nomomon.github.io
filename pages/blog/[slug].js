@@ -2,8 +2,11 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import md from 'markdown-it';
 import * as mdk from 'markdown-it-katex';
-import { Container, Chip } from '@mui/material';
+import * as mdh from 'markdown-it-highlightjs';
+import * as mdi from 'markdown-it-id-and-toc';
+import { Container, Chip, Typography } from '@mui/material';
 import { Stack } from '@mui/system';
+import { AiOutlineCalendar } from 'react-icons/ai'
 import TitleMetaTags from '../../components/TitleMetaTags';
 
 
@@ -12,6 +15,10 @@ import TitleMetaTags from '../../components/TitleMetaTags';
 const mdSettings = {
     html: true,
     linkify: true,
+}
+
+const idSettings = {
+    idPrefix: ''
 }
 
 const katexSettings = {
@@ -23,8 +30,49 @@ const katexSettings = {
     ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code", "p"]
 }
 
+const highlightSettings = {
+    inline: false,
+}
+
+function Tags({ tags }) {
+    return (
+        <Stack direction='row' spacing={1} sx={{ mt: 6, mb: -6 }}>
+            {
+                tags.map((tool, index) => (
+                    <Chip label={tool} key={index} />
+                ))
+            }
+        </Stack>
+    )
+}
+
+function DateRow({ date }) {
+    const dateObj = new Date(date);
+
+    return <Typography
+        sx={{ mt: 1, mb: 1.5 }}
+        variant="subtitle1"
+        color="text.secondary"
+    >
+        <AiOutlineCalendar
+            style={{ marginBottom: -2, marginRight: 4 }}
+        />
+        {
+            dateObj.toLocaleDateString('en-En', {
+                day: 'numeric',
+                month: 'short',
+                year: 'numeric'
+            })
+        }
+    </Typography>
+}
+
 function BlogPost({ frontmatter: fm, content }) {
-    const markdown = md(mdSettings).use(mdk, katexSettings).render(content);
+    const markdown = md(mdSettings)
+        .use(mdi, idSettings)
+        .use(mdk, katexSettings)
+        .use(mdh, highlightSettings)
+        .render(content);
 
     return (
         <>
@@ -36,16 +84,13 @@ function BlogPost({ frontmatter: fm, content }) {
                 pageType='article'
             />
             <Container maxWidth='md' >
-                <h1>{fm.title}</h1>
+                <h1 id={fm.title.toLowerCase().split(' ').join('-')}>{fm.title}</h1>
+
+                <DateRow date={fm.date} />
+
                 <article className='markdown-body' dangerouslySetInnerHTML={{ __html: markdown }} />
 
-                <Stack direction='row' spacing={1} sx={{ mt: 6, mb: -6 }}>
-                    {
-                        fm.tags.map((tag, index) => (
-                            <Chip label={tag} key={index} />
-                        ))
-                    }
-                </Stack>
+                <Tags tags={fm.tags} />
             </Container>
         </>
     );
