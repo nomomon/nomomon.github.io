@@ -6,9 +6,11 @@ import * as mdh from 'markdown-it-highlightjs';
 import * as mdi from 'markdown-it-id-and-toc';
 import { Container, Chip, Typography } from '@mui/material';
 import { Stack } from '@mui/system';
-import { AiOutlineCalendar } from 'react-icons/ai'
+import { AiOutlineCalendar } from 'react-icons/ai';
+import { FiAward } from 'react-icons/fi';
+import { BsQuestion } from 'react-icons/bs';
 import TitleMetaTags from '../../components/TitleMetaTags';
-
+import ChipLink from '../../components/ChipLink'
 
 // const styles = require('../../styles/Notebook.css')
 
@@ -34,6 +36,31 @@ const highlightSettings = {
     inline: false,
 }
 
+function ChipLinks({ frontmatter: fm }) {
+    const showNotebookLink = ('notebookLink' in fm) && fm.notebookLink;
+    const showAchievementsLink = ('achievements' in fm) && fm.achievements > 0;
+
+
+    return (
+        <Stack spacing={1} direction='row' sx={{ mb: 2 }}>
+            {
+                [
+                    [showNotebookLink, 'Colab', fm.notebookLink, BsQuestion],
+                    [showAchievementsLink, 'Achievements', '#achievements', FiAward],
+                ]
+                    .filter(([show]) => show)
+                    .map(([show, label, link, icon], index) => (
+                        <ChipLink
+                            label={label}
+                            link={link}
+                            icon={icon}
+                            key={index}
+                        />)
+                    )
+            }
+        </Stack >
+    )
+}
 function Tags({ tags }) {
     return (
         <Stack direction='row' spacing={1} sx={{ mt: 6, mb: -6 }}>
@@ -52,6 +79,7 @@ function DateRow({ date }) {
     return <Typography
         sx={{ mt: 1, mb: 1.5 }}
         variant="subtitle1"
+        component="p"
         color="text.secondary"
     >
         <AiOutlineCalendar
@@ -83,12 +111,13 @@ function BlogPost({ frontmatter: fm, content }) {
                 image={fm.imageURL}
                 pageType='article'
             />
-            <Container maxWidth='md' >
+            <Container maxWidth='md' className='markdown-body' >
                 <h1 id={fm.title.toLowerCase().split(' ').join('-')}>{fm.title}</h1>
 
                 <DateRow date={fm.date} />
+                <ChipLinks frontmatter={fm} />
 
-                <article className='markdown-body' dangerouslySetInnerHTML={{ __html: markdown }} />
+                <article dangerouslySetInnerHTML={{ __html: markdown }} />
 
                 <Tags tags={fm.tags} />
             </Container>
