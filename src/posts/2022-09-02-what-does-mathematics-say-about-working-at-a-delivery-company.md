@@ -75,3 +75,12 @@ What if they take multiple orders at a time?
 Sometimes, 2-3 orders are bundled when they are located in the same area. This way a worker may earn more than the minimum. There is a problem – in the end of the day, the wage rate is selected from the average orders per hour done during the shift. Implying they have to be lucky to get these bundled orders to keep up the streak.
 
 </details>
+
+<details>
+<summary>
+Isn't more benefitial for the company to bundel orders?
+</summary>
+
+I think so. It is better to pay on 1-2 euros more to one person, than pay extra X euros (~8) to another. However, they don't control how many, when and where orders are made. Data about customer behaviour is required to make conclusions whether it is benefitial or not.
+
+</details>
