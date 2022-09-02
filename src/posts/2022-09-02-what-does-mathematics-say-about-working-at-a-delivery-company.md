@@ -21,9 +21,9 @@ _**TL;DR**: most-likely the wage rate won't be above the minimal (X euros for 4 
 
 First let's formulate the problem in a mathematical way.
 
-> Monkeys is an imaginary grocery delivery service. Their wearhouse is located in the center of a city with radius $R$. The clients are uniformly distributed in the circle. What is the expected value of delivery time?
+> Monkeys is an imaginary grocery delivery service. Their warehouse is located in the center of a city with radius $R$. The clients are uniformly distributed in the circle. What is the expected value of delivery time?
 
-So, the delivery man starts off in the center (wearhouse), brings the groceries to the customer and comes back to get ready for the next delivery.
+So, the delivery man starts off in the center (warehouse), brings the groceries to the customer and comes back to get ready for the next delivery.
 
 ![problem setting](/images/posts/2022-09-02/problem-setting.png)
 
