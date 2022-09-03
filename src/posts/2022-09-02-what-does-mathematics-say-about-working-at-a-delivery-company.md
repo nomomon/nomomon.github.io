@@ -78,7 +78,7 @@ Sometimes, 2-3 orders are bundled when they are located in the same area. This w
 
 <details>
 <summary>
-Isn't more benefitial for the company to bundel orders?
+Isn't more benefitial for the company to bundle orders?
 </summary>
 
 I think so. It is better to pay on 1-2 euros more to one person, than pay extra X euros (~8) to another. However, they don't control how many, when and where orders are made. Data about customer behaviour is required to make conclusions whether it is benefitial or not.
