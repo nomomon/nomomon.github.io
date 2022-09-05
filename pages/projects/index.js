@@ -7,8 +7,13 @@ import { FiGithub, FiPlay } from 'react-icons/fi';
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
 import TitleMetaTags from '../../components/TitleMetaTags';
 
-function sortByDate(a, b, date = 'startDate') {
-    let a_ = new Date(a.frontmatter[date]), b_ = new Date(b.frontmatter[date]);
+function sortByDate(a, b) {
+    if (a.frontmatter.endDate == 'now') return -1;
+    if (b.frontmatter.endDate == 'now') return 1;
+
+    let a_ = new Date(('endDate' in a.frontmatter) ? a.frontmatter.endDate : a.frontmatter.startDate);
+    let b_ = new Date(('endDate' in b.frontmatter) ? b.frontmatter.endDate : b.frontmatter.startDate);
+
     if (a_ < b_) {
         return 1;
     }
