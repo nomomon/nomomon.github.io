@@ -91,7 +91,8 @@ function BlogPost({ frontmatter: fm, content }) {
         .use(mdi, idSettings)
         .use(mdmj, {})
         .use(mdh, highlightSettings)
-        .render(content);
+        .render(content)
+        .replaceAll('mjx-container', 'span');
 
     return (
         <>
