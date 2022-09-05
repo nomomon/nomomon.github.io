@@ -1,14 +1,14 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import md from 'markdown-it';
-import * as mdk from 'markdown-it-katex';
+import * as mdmj from 'markdown-it-mathjax3';
 import * as mdh from 'markdown-it-highlightjs';
 import * as mdi from 'markdown-it-id-and-toc';
 import { Container, Chip, Typography } from '@mui/material';
 import { Stack } from '@mui/system';
 import { AiOutlineCalendar } from 'react-icons/ai';
 import { FiAward } from 'react-icons/fi';
-import { BsQuestion } from 'react-icons/bs';
+import { SiGooglecolab } from 'react-icons/si';
 import TitleMetaTags from '../../components/TitleMetaTags';
 import ChipLink from '../../components/ChipLink'
 
@@ -21,15 +21,6 @@ const mdSettings = {
 
 const idSettings = {
     idPrefix: ''
-}
-
-const katexSettings = {
-    throwOnError: false,
-    delimiters: [
-        { left: "$$", right: "$$", display: true },
-        { left: "$", right: "$", display: false }
-    ],
-    ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code", "p"]
 }
 
 const highlightSettings = {
@@ -45,7 +36,7 @@ function ChipLinks({ frontmatter: fm }) {
         <Stack spacing={1} direction='row' sx={{ mb: 2 }}>
             {
                 [
-                    [showNotebookLink, 'Colab', fm.notebookLink, BsQuestion],
+                    [showNotebookLink, 'Open in Colab', fm.notebookLink, SiGooglecolab],
                     [showAchievementsLink, 'Achievements', '#achievements', FiAward],
                 ]
                     .filter(([show]) => show)
@@ -98,7 +89,7 @@ function DateRow({ date }) {
 function BlogPost({ frontmatter: fm, content }) {
     const markdown = md(mdSettings)
         .use(mdi, idSettings)
-        .use(mdk, katexSettings)
+        .use(mdmj, {})
         .use(mdh, highlightSettings)
         .render(content);
 

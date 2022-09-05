@@ -1,7 +1,7 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import md from 'markdown-it';
-import * as mdk from 'markdown-it-katex';
+import * as mdmj from 'markdown-it-mathjax3';
 import * as mdh from 'markdown-it-highlightjs';
 import * as mdi from 'markdown-it-id-and-toc';
 import { Container, Chip } from '@mui/material';
@@ -17,15 +17,6 @@ const mdSettings = {
 
 const idSettings = {
     idPrefix: ''
-}
-
-const katexSettings = {
-    throwOnError: false,
-    delimiters: [
-        { left: "$$", right: "$$", display: true },
-        { left: "$", right: "$", display: false }
-    ],
-    ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code", "p"]
 }
 
 const highlightSettings = {
@@ -75,7 +66,7 @@ function Tools({ tools }) {
 function ProjectPost({ frontmatter: fm, content }) {
     const markdown = md(mdSettings)
         .use(mdi, idSettings)
-        .use(mdk, katexSettings)
+        .use(mdmj, {})
         .use(mdh, highlightSettings)
         .render(content);
 
