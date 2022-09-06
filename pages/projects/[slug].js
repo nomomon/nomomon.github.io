@@ -4,9 +4,11 @@ import md from 'markdown-it';
 import * as mdmj from 'markdown-it-mathjax3';
 import * as mdh from 'markdown-it-highlightjs';
 import * as mdi from 'markdown-it-id-and-toc';
-import { Container, Chip } from '@mui/material';
+import { Container, Chip, Typography } from '@mui/material';
 import { Stack } from '@mui/system';
 import { FiAward, FiGithub, FiPlay } from 'react-icons/fi';
+import { AiOutlineCalendar } from 'react-icons/ai';
+import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
 import ChipLink from '../../components/ChipLink';
 import TitleMetaTags from '../../components/TitleMetaTags';
 
@@ -63,6 +65,51 @@ function Tools({ tools }) {
     )
 }
 
+function DateRow({ startDate, endDate }) {
+    const startDateObj = new Date(startDate);
+    const endDateObj = (endDate == 'now') ? new Date() : new Date(endDate);
+
+    // show end date if it exists and the month is different from the start date
+    const showEndDate = endDate && (
+        endDateObj.getMonth() !== startDateObj.getMonth() ||
+        endDateObj.getFullYear() !== startDateObj.getFullYear()
+    );
+
+    return (
+        <Typography
+            sx={{ mt: 1, mb: 1.5 }}
+            variant="subtitle1"
+            color="text.secondary"
+            component={'span'}
+        >
+            <AiOutlineCalendar
+                style={{ marginBottom: -2, marginRight: 4 }}
+            />
+            {
+                startDateObj.toLocaleDateString('en-En', {
+                    day: 'numeric',
+                    month: 'short',
+                    year: 'numeric'
+                })
+            }
+            {
+                showEndDate && (<>
+                    <HiOutlineArrowNarrowRight
+                        style={{ marginBottom: -2, marginRight: 2, marginLeft: 1 }}
+                    />
+                    {
+                        endDateObj.toLocaleDateString('en-En', {
+                            day: 'numeric',
+                            month: 'short',
+                            year: 'numeric'
+                        })
+                    }
+                </>)
+            }
+        </Typography>
+    )
+}
+
 function ProjectPost({ frontmatter: fm, content }) {
     const markdown = md(mdSettings)
         .use(mdi, idSettings)
@@ -83,6 +130,7 @@ function ProjectPost({ frontmatter: fm, content }) {
             <Container maxWidth='md' className='markdown-body' >
                 <h1 id={fm.title.toLowerCase().split(' ').join('-')}>{fm.title}</h1>
 
+                <DateRow startDate={fm.startDate} endDate={fm.endDate} />
                 <ChipLinks frontmatter={fm} />
 
                 <article dangerouslySetInnerHTML={{ __html: markdown }} />
