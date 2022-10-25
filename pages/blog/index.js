@@ -1,12 +1,12 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import { Typography, Card, CardContent, Grid, CardMedia, Stack, Menu } from '@mui/material';
-import { AiOutlineCalendar } from 'react-icons/ai';
-import { BiPlanet, BiFilter } from 'react-icons/bi';
+import { AiOutlineCalendar, AiOutlineClockCircle } from 'react-icons/ai';
+import { BiPlanet } from 'react-icons/bi';
 import Link from '../../components/Link';
 import ChipLink from '../../components/ChipLink';
 import TitleMetaTags from '../../components/TitleMetaTags';
-
+import readingTime from '../../scripts/readingTime';
 
 function sortByDate(a, b) {
     let a_ = new Date(a.frontmatter.date), b_ = new Date(b.frontmatter.date);
@@ -19,7 +19,7 @@ function sortByDate(a, b) {
     return 0;
 }
 
-function PostCard({ title, description, imageURL, date, tags, slug }) {
+function PostCard({ title, description, readTime, imageURL, date, tags, slug }) {
     const dateObj = new Date(date);
 
     return (
@@ -74,6 +74,12 @@ function PostCard({ title, description, imageURL, date, tags, slug }) {
                             year: 'numeric'
                         })
                     }
+                    {readTime && (
+                        <span style={{ marginLeft: 10 }}>
+                            <AiOutlineClockCircle style={{ marginBottom: -2, marginRight: 4 }} />
+                            {readTime} min read
+                        </span>
+                    )}
                 </Typography>
                 <Typography variant="body2">
                     {description}
@@ -137,7 +143,9 @@ export async function getStaticProps() {
     const posts = files.map((fileName) => {
         const slug = fileName.replace('.md', '');
         const readFile = fs.readFileSync(`src/posts/${fileName}`, 'utf-8');
-        const { data: frontmatter } = matter(readFile);
+        const { data: frontmatter, content } = matter(readFile);
+        const readTime = readingTime(content);
+        frontmatter.readTime = readTime;
         return {
             slug,
             frontmatter,
