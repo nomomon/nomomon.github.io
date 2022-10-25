@@ -77,43 +77,40 @@ function ProjectCard({
     slug
 }) {
     return (
-        <Card elevation={3}>
-            <Link
-                href={slug}
-            >
-                <CardMedia
-                    component="img"
+        <Card elevation={3} sx={{
+            transition: '300ms ease-in-out',
+            '&:hover': {
+                transform: 'translateY(-10px)',
+                boxShadow: 6,
+                cursor: 'pointer'
+            }
+        }}
+            onClick={() => {
+                window.location.href = slug;
+            }}
+        >
+            <CardMedia
+                component="img"
+                sx={{
+                    width: "100%",
+                    height: "7rem"
+                }}
+                image={imageURL}
+                alt={title}
+            />
+            <CardContent>
+                <Typography
+                    variant="h5"
+                    component="div"
                     sx={{
-                        width: "100%",
-                        height: "6rem",
-                        transition: 'transform .2s',
+                        transition: 'color 0.2s ease-in-out',
                         '&:hover': {
-                            transform: 'scale(1.01)'
+                            color: 'info.main',
                         }
                     }}
-                    image={imageURL}
-                    alt={title}
-                />
-            </Link>
-            <CardContent>
-                <Link
-                    href={slug}
-                    color="inherit"
-                    underline='none'
                 >
-                    <Typography
-                        variant="h5"
-                        component="div"
-                        sx={{
-                            transition: 'color 0.2s ease-in-out',
-                            '&:hover': {
-                                color: 'info.main',
-                            }
-                        }}
-                    >
-                        {title}
-                    </Typography>
-                </Link>
+                    {title}
+                </Typography>
                 <DateRow startDate={startDate} endDate={endDate} />
                 <Typography variant="body2" sx={{
                     height: '4.5em',
