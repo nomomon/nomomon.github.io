@@ -6,11 +6,12 @@ import * as mdh from 'markdown-it-highlightjs';
 import * as mdi from 'markdown-it-id-and-toc';
 import { Container, Chip, Typography } from '@mui/material';
 import { Stack } from '@mui/system';
-import { AiOutlineCalendar } from 'react-icons/ai';
+import { AiOutlineCalendar, AiOutlineClockCircle } from 'react-icons/ai';
 import { FiAward } from 'react-icons/fi';
 import { SiGooglecolab } from 'react-icons/si';
 import TitleMetaTags from '../../components/TitleMetaTags';
 import ChipLink from '../../components/ChipLink'
+import readingTime from '../../scripts/readingTime';
 
 // const styles = require('../../styles/Notebook.css')
 
@@ -67,12 +68,7 @@ function Tags({ tags }) {
 function DateRow({ date }) {
     const dateObj = new Date(date);
 
-    return <Typography
-        sx={{ mt: 1, mb: 1.5 }}
-        variant="subtitle1"
-        component="p"
-        color="text.secondary"
-    >
+    return <>
         <AiOutlineCalendar
             style={{ marginBottom: -2, marginRight: 4 }}
         />
@@ -83,7 +79,20 @@ function DateRow({ date }) {
                 year: 'numeric'
             })
         }
-    </Typography>
+    </>
+}
+
+function ReadingTimeRow({ content }) {
+    const time = readingTime(content);
+    const unit = time > 1 ? 'mins' : 'min';
+    return <>
+        <span style={{ marginLeft: 10 }}>
+            <AiOutlineClockCircle
+                style={{ marginBottom: -2, marginRight: 4 }}
+            />
+            {time} {unit} read
+        </span>
+    </>
 }
 
 function BlogPost({ frontmatter: fm, content }) {
@@ -106,7 +115,15 @@ function BlogPost({ frontmatter: fm, content }) {
             <Container maxWidth='md' className='markdown-body' >
                 <h1 id={fm.title.toLowerCase().split(' ').join('-')}>{fm.title}</h1>
 
-                <DateRow date={fm.date} />
+                <Typography
+                    sx={{ mt: 1, mb: 1.5 }}
+                    variant="subtitle1"
+                    component="p"
+                    color="text.secondary"
+                >
+                    <DateRow date={fm.date} />
+                    <ReadingTimeRow content={content} />
+                </Typography>
                 <ChipLinks frontmatter={fm} />
 
                 <article dangerouslySetInnerHTML={{ __html: markdown }} />
