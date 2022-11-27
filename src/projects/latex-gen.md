@@ -14,6 +14,8 @@ achievements: 2
 
 ![banner](/images/projects/latexgen-preview.jpeg)
 
+[Old version of the project](https://chickenburger.nomomon.repl.co/)
+
 ## Achievements
 
 1. [2nd place in the international competition in research by students «Research start 2019/2020»](https://eee-science.ru/item-work/2020-3535/)
