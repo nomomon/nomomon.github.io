@@ -1918,6 +1918,11 @@
   dependencies:
     "yallist" "^4.0.0"
 
+"markdown-it-container@^3.0.0":
+  "integrity" "sha512-y6oKTq4BB9OQuY/KLfk/O3ysFhB3IMYoIWhGJEidXt1NQFocFK2sA2t0NYZAMyMShAGL6x5OPIbrmXPIqaN9rw=="
+  "resolved" "https://registry.npmjs.org/markdown-it-container/-/markdown-it-container-3.0.0.tgz"
+  "version" "3.0.0"
+
 "markdown-it-highlightjs@^4.0.1":
   "integrity" "sha512-EPXwFEN6P5nqR3G4KjT20r20xbGYKMMA/360hhSYFmeoGXTE6hsLtJAiB/8ID8slVH4CWHHEL7GX0YenyIstVQ=="
   "resolved" "https://registry.npmjs.org/markdown-it-highlightjs/-/markdown-it-highlightjs-4.0.1.tgz"

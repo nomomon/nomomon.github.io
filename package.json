@@ -16,6 +16,7 @@
     "gray-matter": "^4.0.3",
     "highlight.js": "^11.6.0",
     "markdown-it": "^13.0.1",
+    "markdown-it-container": "^3.0.0",
     "markdown-it-highlightjs": "^4.0.1",
     "markdown-it-id-and-toc": "^3.6.2",
     "markdown-it-mathjax3": "^4.3.1",

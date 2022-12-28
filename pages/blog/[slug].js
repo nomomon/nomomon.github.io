@@ -4,6 +4,7 @@ import md from 'markdown-it';
 import * as mdmj from 'markdown-it-mathjax3';
 import * as mdh from 'markdown-it-highlightjs';
 import * as mdi from 'markdown-it-id-and-toc';
+import * as mdc from 'markdown-it-container';
 import { Container, Chip, Typography } from '@mui/material';
 import { Stack } from '@mui/system';
 import { AiOutlineCalendar, AiOutlineClockCircle } from 'react-icons/ai';
@@ -99,6 +100,7 @@ function BlogPost({ frontmatter: fm, content }) {
     const markdown = md(mdSettings)
         .use(mdi, idSettings)
         .use(mdmj, {})
+        .use(mdc, {})
         .use(mdh, highlightSettings)
         .render(content)
         .replaceAll('mjx-container', 'span');

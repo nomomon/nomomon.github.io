@@ -3,6 +3,7 @@ import matter from 'gray-matter';
 import md from 'markdown-it';
 import * as mdmj from 'markdown-it-mathjax3';
 import * as mdh from 'markdown-it-highlightjs';
+import * as mdc from 'markdown-it-container';
 import * as mdi from 'markdown-it-id-and-toc';
 import { Container, Chip, Typography } from '@mui/material';
 import { Stack } from '@mui/system';
@@ -114,6 +115,7 @@ function ProjectPost({ frontmatter: fm, content }) {
     const markdown = md(mdSettings)
         .use(mdi, idSettings)
         .use(mdmj, {})
+        .use(mdc, {})
         .use(mdh, highlightSettings)
         .render(content)
         .replaceAll('mjx-container', 'span');
