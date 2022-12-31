@@ -2,4 +2,4 @@
 title: Mansur N
 ---
 
-Hellow, I am Mansurю
+Hellow, I am Mansur.
