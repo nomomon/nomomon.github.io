@@ -25,18 +25,16 @@ jobs:
         run: rm -rf .obsidian
       - name: Create public folder and move files there
         run: mkdir pwb/public && find . -maxdepth 1 ! -name pwb -exec mv {} pwb/public/ \;
-      - name: Move to the website builder folder
-        run: cd pwb
       - name: Install packages
         run: npm --prefix pwb i
       - name: Make build
         run: npm --prefix pwb run export
       - name: Debuggin view
-        run: ls
+        run: ls pwd
       - name: Add .nojekyll file
-        run: touch out/.nojekyll
+        run: touch pwd/out/.nojekyll
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           branch: gh-pages
-          folder: out
+          folder: pwd/out
