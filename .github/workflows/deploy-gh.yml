@@ -31,6 +31,8 @@ jobs:
         run: npm --prefix pwb run export
       - name: Move out folder to workdir
         run: mv pwb/out .
+      - name: LS ALL
+        run: ls -a
       - name: Add .nojekyll file
         run: touch out/.nojekyll
       - name: Deploy
