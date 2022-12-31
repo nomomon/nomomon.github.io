@@ -19,8 +19,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-      - name: Move files and delete .obsidian folder
-        run: rm -rf .obsidian && mv -r * public
+      - name: Delete .obsidian folder
+        run: rm -rf .obsidian
+      -name: Create public folder and move files there
+        run: mv -T * public
       - name: Clone the website builder
         run: git clone https://github.com/nomomon/personal-website-builder
       - name: Install packages
