@@ -33,7 +33,7 @@ jobs:
         run: touch pwb/out/.nojekyll
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
-        working-directory: pwb
+        working-directory: ./pwb
         with:
           branch: gh-pages
           folder: out
