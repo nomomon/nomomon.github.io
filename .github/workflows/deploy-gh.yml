@@ -32,8 +32,8 @@ jobs:
       - name: Add .nojekyll file
         run: touch pwb/out/.nojekyll
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.1
         working-directory: ./pwb
+        uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           branch: gh-pages
           folder: out
