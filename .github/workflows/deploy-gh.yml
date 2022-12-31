@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: 18
       - name: Move files and delete .obsidian folder
-        run: mkdir public && mv * public && rm -rf public/.obsidian
+        run: rm -rf .obsidian && mv -r * public
       - name: Clone the website builder
         run: git clone https://github.com/nomomon/personal-website-builder
       - name: Install packages
