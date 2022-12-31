@@ -29,12 +29,12 @@ jobs:
         run: npm --prefix pwb i
       - name: Make build
         run: npm --prefix pwb run export
-      - name: Debuggin view
-        run: ls pwb
+      - name: Move out folder to workdir
+        run: mv pwb/out .
       - name: Add .nojekyll file
-        run: touch pwb/out/.nojekyll
+        run: touch out/.nojekyll
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           branch: gh-pages
-          folder: pwb/out
+          folder: out
