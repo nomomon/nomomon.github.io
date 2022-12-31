@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "fd1707657d0c5ef4",
+        "id": "5a89eb1257a0d5bf",
         "type": "tabs",
         "children": [
           {
-            "id": "62594083f323f95f",
+            "id": "6d020da2e0dc1285",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "node_modules/@ampproject/remapping/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +98,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "node_modules/@ampproject/remapping/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +121,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "node_modules/@ampproject/remapping/README.md"
               }
             }
           }
@@ -139,6 +135,8 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "62594083f323f95f",
-  "lastOpenFiles": []
+  "active": "57a1d3a347d97ff7",
+  "lastOpenFiles": [
+    "README.md"
+  ]
 }
