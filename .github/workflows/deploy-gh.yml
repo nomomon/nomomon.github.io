@@ -25,6 +25,8 @@ jobs:
         run: rm -rf .obsidian
       - name: Create public folder and move files there
         run: mkdir pwb/public && find . -maxdepth 1 ! -name pwb -exec mv {} pwb/public/ \;
+      - name: Move to the website builder folder
+        run: cd pwb
       - name: Install packages
         run: npm ci
       - name: Make build
