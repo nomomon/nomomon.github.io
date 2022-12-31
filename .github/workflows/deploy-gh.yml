@@ -21,7 +21,7 @@ jobs:
           node-version: 18
       - name: Delete .obsidian folder
         run: rm -rf .obsidian
-      -name: Create public folder and move files there
+      - name: Create public folder and move files there
         run: mv -T * public
       - name: Clone the website builder
         run: git clone https://github.com/nomomon/personal-website-builder
