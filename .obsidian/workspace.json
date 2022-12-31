@@ -1,19 +1,19 @@
 {
   "main": {
-    "id": "5dbcc6964ded57ec",
+    "id": "ae12aa53700928aa",
     "type": "split",
     "children": [
       {
-        "id": "fd1707657d0c5ef4",
+        "id": "0fd81d2bd1d7c99b",
         "type": "tabs",
         "children": [
           {
-            "id": "62594083f323f95f",
+            "id": "f51a06303b24d8c4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "projects/amazon-product-description.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "c29b25396b6f6c37",
+    "id": "0549518ea4a7e2e8",
     "type": "split",
     "children": [
       {
-        "id": "d1cc412b3427b038",
+        "id": "5d77d8c42747a7e4",
         "type": "tabs",
         "children": [
           {
-            "id": "57a1d3a347d97ff7",
+            "id": "b8714462ab63fe24",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,7 +43,7 @@
             }
           },
           {
-            "id": "f9ae106664d34aed",
+            "id": "126a6de9ef243126",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -58,7 +58,7 @@
             }
           },
           {
-            "id": "72a74f86e34ada6f",
+            "id": "3caf1283349de089",
             "type": "leaf",
             "state": {
               "type": "starred",
@@ -72,20 +72,20 @@
     "width": 300
   },
   "right": {
-    "id": "a07aa4103707b8fe",
+    "id": "910cb4b0cfc16606",
     "type": "split",
     "children": [
       {
-        "id": "a4baffadd79d7edc",
+        "id": "fa2d619dfa71bbe2",
         "type": "tabs",
         "children": [
           {
-            "id": "b834fe9ec1fb9413",
+            "id": "988549df6235d0fc",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "projects/amazon-product-description.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,19 +97,19 @@
             }
           },
           {
-            "id": "08ff57ad399b8fb4",
+            "id": "af3e615c67892589",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "projects/amazon-product-description.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "5fc13df4f3f77013",
+            "id": "c28cbc027f10432a",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -120,12 +120,12 @@
             }
           },
           {
-            "id": "927cc861bd0fdd36",
+            "id": "e48a1dc398b7a1c7",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "projects/amazon-product-description.md"
               }
             }
           }
@@ -139,6 +139,6 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "62594083f323f95f",
+  "active": "f51a06303b24d8c4",
   "lastOpenFiles": []
 }
