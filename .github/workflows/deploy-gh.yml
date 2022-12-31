@@ -28,7 +28,7 @@ jobs:
       - name: Move to the website builder folder
         run: cd pwb
       - name: Install packages
-        run: npm --prefix . i
+        run: npm --prefix pwb i
       - name: Make build
         run: npm run export
       - name: Add .nojekyll file
