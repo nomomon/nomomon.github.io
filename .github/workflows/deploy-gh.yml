@@ -24,7 +24,7 @@ jobs:
       - name: Create public folder and move files there
         run: mkdir public && find . -maxdepth 1 ! -name public -exec mv {} public/ \;
       - name: Clone the website builder
-        run: git clone https://github.com/nomomon/personal-website-builder
+        run: git clone https://github.com/nomomon/personal-website-builder .
       - name: Install packages
         run: npm ci
       - name: Make build
