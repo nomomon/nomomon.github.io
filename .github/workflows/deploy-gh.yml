@@ -19,20 +19,21 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-      - name: Clone the website builder
-        run: git clone https://github.com/nomomon/personal-website-builder pwb
       - name: Delete .obsidian folder
         run: rm -rf .obsidian
       - name: Create public folder and move files there
-        run: mkdir pwb/public && find . -maxdepth 1 ! -name pwb -exec mv {} pwb/public/ \;
+        run: mkdir public && find . -maxdepth 1 ! -name public -exec mv {} public/ \;
+      - name: Clone the website builder
+        run: git clone https://github.com/nomomon/personal-website-builder pwb
+      - name: Move files from the website builder
+        run: mv pwb/* . && rm -rf pwb
       - name: Install packages
-        run: npm --prefix pwb i
+        run: npm i
       - name: Make build
-        run: npm --prefix pwb run export
+        run: npm run export
       - name: Add .nojekyll file
-        run: touch pwb/out/.nojekyll
+        run: touch out/.nojekyll
       - name: Deploy
-        working-directory: ./pwb
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           branch: gh-pages
