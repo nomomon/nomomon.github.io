@@ -4,7 +4,7 @@ imageURL: amazon-product-description.jpeg
 date: Aug 15, 2021
 endDate: Aug 17, 2021
 source: https://github.com/nomomon/Amazon-Product-Description
-tags: [python, GPT-Neo, web scraping, project]
+tags: [python, GPT, web-scraping, project]
 publish: true
 ---
 

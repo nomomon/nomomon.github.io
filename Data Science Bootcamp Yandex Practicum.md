@@ -5,7 +5,7 @@ date: 27 Feb, 2022
 endDate: 27 Oct, 2022
 demo:
 source:
-tags: [python, numpy, pandas, sklearn, tensorflow, keras, compvis, npl, bootcamp]
+tags: [python, numpy, pandas, sklearn, tensorflow, keras, compvis, nlp, bootcamp, project]
 publish: true
 ---
 
