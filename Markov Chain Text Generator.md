@@ -9,7 +9,7 @@ tags: [react, node.js, markov-chain, project]
 publish: true
 ---
 
-![banner](/images/projects/markov-chain-text.jpeg)
+![[markov-chain-text.jpeg]]
 
 Recently, I was reading in the Y.Practicum blog and found a [group of posts](https://thecode.media/markov-chain/) there about Markov chains. The articles were written in a easy to understand and engaging way, and I thought it would be interesting to see for myself how the algorithm works.
 
@@ -25,7 +25,7 @@ const dataset = ["I am a human", "I am a programmer", "I am not a dog"];
 
 This dataset results in the following tree diagram:
 
-![](/images/projects/markov-chain-text/diagram.png)
+![[diagram.png]]
 
 In context of text generation, each word is an event. The next word is selected randomly from the words that stood after the last word. The probability of each word transition is determined by the frequency of the pair. After a random word is selected, the same thing is repeated with the sentence until the final word appears.
 
