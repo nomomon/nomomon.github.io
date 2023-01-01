@@ -26,7 +26,7 @@ jobs:
           mkdir public 
           mkdir public/attachments
           find . -name "*.md" -exec mv {} public/ \;
-          find . -name "attachments/*" -exec mv {} public/attachments/ \;
+          mv attachments/* public/attachments
       - name: Clone the website builder
         run: |
           git clone https://github.com/nomomon/personal-website-builder pwb
@@ -34,11 +34,11 @@ jobs:
           mv pwb/* . && rm -rf pwb
       - name: Debug view
         run: |
-          echo "root folder"
+          echo "\n📂 root folder"
           ls
-          echo "public folder"
+          echo "\n📂 public folder"
           ls public
-          echo "public attachmentts folder"
+          echo "\n📂 public attachments folder"
           ls public/attachments
       - name: Install packages
         run: npm ci
