@@ -22,7 +22,7 @@ jobs:
       - name: Delete .obsidian folder
         run: rm -rf .obsidian
       - name: Create public folder and move files there
-        run: mkdir public && find . -maxdepth 1 ! -name public -a ! -name ".git" -exec mv {} public/ ;
+        run: mkdir public && find . -maxdepth 1 ! -path "public" -o ! -path ".git" -exec mv {} public/ ;
       - name: Clone the website builder
         run: git clone https://github.com/nomomon/personal-website-builder pwb
       - name: Delete .git folder from the website builder
