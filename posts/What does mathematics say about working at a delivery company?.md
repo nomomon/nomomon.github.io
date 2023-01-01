@@ -1,11 +1,9 @@
 ---
-title: What does mathematics say about working at a delivery company?
 date: 2 Sep 2022
 description: How to use mathematics to determine the wage and make a decision about working at a delivery company.
-imageURL: "/images/posts/2022-09-02/groningen.png"
-tags:
-  - "math"
-  - "delivery"
+imageURL: groningen.png
+tags: [math, delivery]
+publish: true
 ---
 
 Last year my friend worked at a delivery company. Their job was to deliver groceries to customers on a bicycle. In their company, the wage was based on the amount of orders per hour they delivered. For example:
@@ -25,7 +23,7 @@ First let's formulate the problem in a mathematical way.
 
 So, the delivery man starts off in the center (warehouse), brings the groceries to the customer and comes back to get ready for the next delivery.
 
-![problem setting](/images/posts/2022-09-02/problem-setting.png)
+![[problem-setting.png]]
 
 The expected value of delivery time is the expected value of the distance to the customer divided by the velocity of the delivery man.
 
@@ -53,7 +51,7 @@ $$E(t) =\frac{4}{3} R/v$$
 
 But what does this say about the real world? Well, let's use the same formula, but on the city I live in (Groningen).
 
-![Map of Groningen, radius is 4km](/images/posts/2022-09-02/groningen.png)
+![[groningen.png]]
 
 By the formula above, the expected value of delivery time is
 

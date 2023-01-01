@@ -1,19 +1,15 @@
 ---
-title: "Data Science Bootcamp"
 description: "Collection of final projects from data science bootcamp from Yandex Practicum."
-imageURL: "/images/projects/yandex-practicum.png"
-startDate: "27 Feb, 2022"
-endDate: "27 Oct, 2022"
-demoLink:
-sourceLink:
-tools:
-    - "Python"
-    - "Numpy"
-    - "Pandas"
-    - "Scikit-learn"
+imageURL: yandex-practicum.png
+date: 27 Feb, 2022
+endDate: 27 Oct, 2022
+demo:
+source:
+tags: [python, numpy, pandas, sklearn, tensorflow, keras, compvis, npl, bootcamp]
+publish: true
 ---
 
-![banner](/images/projects/yandex-practicum.png)
+![[yandex-practicum.png]]
 
 Yandex Practicum is a data science bootcamp that I attended in 2022. The bootcamp is a 9-month long program that covers the basics of data science and machine learning. The program is divided into 3 modules:
 

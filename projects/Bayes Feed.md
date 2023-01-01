@@ -1,7 +1,7 @@
 ---
 description: An RSS feed with a Naive Bayes recommender that is learning online.
 imageURL: bayes-feed.jpeg
-startDate: 17 Dec, 2022
+date: 17 Dec, 2022
 endDate: 28 Dec, 2022
 demo: https://bayes-feed.vercel.app/
 source: https://github.com/nomomon/bayes-feed

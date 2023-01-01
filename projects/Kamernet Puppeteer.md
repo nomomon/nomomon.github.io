@@ -1,7 +1,7 @@
 ---
 description: Automatic message sender to new adverts on Kamernet using puppeteer.
 imageURL: kamernet-puppeteer.jpeg
-startDate: May 2021
+date: May 2021
 endDate: Aug 2021
 source: https://github.com/nomomon/Kamernet-Puppeteer
 tags: [node.js, puppeteer, project]

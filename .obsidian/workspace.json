@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "projects/Markov Chain Text Generator.md",
+                "file": "projects/Amazon Product Description.md",
                 "mode": "source",
                 "source": false
               }
@@ -57,8 +57,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -89,7 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "projects/Markov Chain Text Generator.md",
+                "file": "projects/Amazon Product Description.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,15 +119,15 @@
   },
   "active": "120deb1b3f52be1f",
   "lastOpenFiles": [
+    "projects/Anime RecSys.md",
+    "projects/Bayes Feed.md",
+    "projects/Data Science Bootcamp Yandex Practicum.md",
+    "projects/Felony Felines.md",
+    "projects/Inversive Geometry.md",
+    "projects/Kamernet Puppeteer.md",
     "projects/LaTeXGen.md",
-    "projects/Soft Skills AI.md",
-    "projects/Potato Cashback.md",
-    "1.md",
-    "H1.md",
-    "daily/H1.md",
-    "Getting more use out of neural language model's context for code generation.md",
-    "papers/Prefix-Tuning Optimizing Continuous Prompts for Generation.md",
-    "attachments/icon.png",
-    "attachments/Pasted image 20221229174433.png"
+    "projects/Markov Chain Text Generator.md",
+    "projects/Molecule Energy Estimator.md",
+    "projects/Orama Visual Assistant.md"
   ]
 }

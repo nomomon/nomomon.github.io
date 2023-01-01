@@ -1,12 +1,9 @@
 ---
-title: "What is a Bootstrapping?"
 date: "2022-09-16"
 description: "Bootstrap test is a "
-imageURL: "/images/posts/2022-09-16/bootstrap.png"
+imageURL: bootstrap.png
 notebookLink:
-tags:
-  - "math"
-  - "statistics"
+tags: [math statistics]
 ---
 
 A quick and simple way of ca

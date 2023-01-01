@@ -1,7 +1,7 @@
 ---
 description: "Application for calculating pipe thickness based on material properties and exporting calculations into a word document."
 imageURL: pipe-thickness-calculator.jpeg
-startDate: "Jun 5 2022"
+date: "Jun 5 2022"
 demo: "https://nomomon.github.io/pipe-thickness-calculator/"
 source: "https://github.com/nomomon/pipe-thickness-calculator"
 tags: [html&css, node.js, electron, github-actions, project]
