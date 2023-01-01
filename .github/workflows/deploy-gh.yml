@@ -26,7 +26,8 @@ jobs:
           mkdir public
           mkdir public/attachments
           find . -name "*.md" -exec mv {} public/ \;
-          find . -name "*.(png|gif|jpeg|jpg)" -exec mv {} public/attachments/ \;
+          mv attachments public/
+          find public/attachments -mindepth 2 -type f -exec mv -t public/attachments -i '{}' +
       - name: Clone the website builder
         run: |
           git clone https://github.com/nomomon/personal-website-builder pwb

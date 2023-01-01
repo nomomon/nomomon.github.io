@@ -4,17 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "ef262287fc301bec",
+        "id": "efa0428e39928409",
         "type": "tabs",
         "children": [
           {
-            "id": "1f2a297089680dce",
+            "id": "36fe28a62f77e02d",
             "type": "leaf",
             "state": {
-              "type": "image",
-              "state": {
-                "file": "attachments/posts/2022-08-20/screenshot.png"
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -86,7 +84,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "attachments/posts/2022-08-20/screenshot.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,8 +112,9 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "1f2a297089680dce",
+  "active": "36fe28a62f77e02d",
   "lastOpenFiles": [
+    "attachments/posts/2022-08-20/screenshot.png",
     "attachments/posts/2022-08-22/katex.png",
     "posts/What does mathematics say about working at a delivery company?.md",
     "posts/What is a Bootstrapping?.md",
@@ -125,7 +123,6 @@
     "projects/Pipe Thickness Calculator.md",
     "projects/Orama Visual Assistant.md",
     "projects/Molecule Energy Estimator.md",
-    "projects/Markov Chain Text Generator.md",
-    "projects/LaTeXGen.md"
+    "projects/Markov Chain Text Generator.md"
   ]
 }
