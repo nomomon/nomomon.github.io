@@ -8,7 +8,7 @@ tags: [math statistics]
 
 A quick and simple way of ca
 
-![Bootstrap cover image](/images/posts/2022-09-16/bootstrap.png)
+![[bootstrap.png]]
 
 When working with data there are times when certain values or metrics about the data have to be calculated. For example, the mean, standard deviation or F1, precicion, recall, etc. These values are called statistics. In order to calculate these statistics, we need to have a sample of the data. This sample is used to calculate the statistics. However, the sample is not always representative of the entire population. This is where bootstrapping comes in.
 
