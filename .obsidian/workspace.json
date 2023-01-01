@@ -11,9 +11,11 @@
             "id": "120deb1b3f52be1f",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "attachements/projects/markov-chain-text/diagram.png"
+                "file": "projects/Data Science Bootcamp Yandex Practicum.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -86,7 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "attachements/projects/markov-chain-text/diagram.png",
+                "file": "projects/Data Science Bootcamp Yandex Practicum.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,6 +119,8 @@
   },
   "active": "120deb1b3f52be1f",
   "lastOpenFiles": [
+    "README.md",
+    "attachements/projects/markov-chain-text/diagram.png",
     "projects/Amazon Product Description.md",
     "projects/Anime RecSys.md",
     "projects/Bayes Feed.md",
@@ -124,8 +128,6 @@
     "projects/Felony Felines.md",
     "projects/Inversive Geometry.md",
     "projects/Kamernet Puppeteer.md",
-    "projects/LaTeXGen.md",
-    "projects/Markov Chain Text Generator.md",
-    "projects/Molecule Energy Estimator.md"
+    "projects/LaTeXGen.md"
   ]
 }
