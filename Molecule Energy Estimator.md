@@ -5,7 +5,7 @@ date: 1 Apr, 2022
 endDate: 1 Jul, 2022
 source: "https://github.com/nomomon/molecule-energy-prediction"
 demo: ""
-tags: [tensoflow, pandas, numpy, csp, chemistry, competition, project]
+tags: [tensorflow, pandas, numpy, csp, chemistry, competition, project]
 publish: true
 ---
 
