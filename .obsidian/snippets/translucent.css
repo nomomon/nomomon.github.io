@@ -1,0 +1,39 @@
+.workspace-split.mod-root .view-content,
+.workspace-tab-header-container {
+	background: transparent !important;
+}
+
+.workspace-leaf,
+.workspace-split.mod-root,
+.workspace-split.mod-root .view-header {
+	background: transparent !important;
+}
+
+.view-header-title-container:not(.mod-at-end):after {
+	background: transparent !important;
+}
+
+body {
+	background: transparent !important;
+}
+
+@media (device-width: 100vw) and (device-height: 100vh) {
+	.workspace-split.mod-root .view-content,
+	.workspace-tab-header-container {
+		background: white;
+	}
+
+	.workspace-leaf,
+	.workspace-split.mod-root,
+	.workspace-split.mod-root .view-header {
+		background: white;
+	}
+
+	.view-header-title-container:not(.mod-at-end):after {
+		background: white;
+	}
+
+	body {
+		background: white;
+	}
+}

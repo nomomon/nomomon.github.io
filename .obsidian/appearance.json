@@ -1,3 +1,16 @@
 {
-  "accentColor": ""
+  "accentColor": "",
+  "cssTheme": "",
+  "theme": "obsidian",
+  "translucency": false,
+  "enabledCssSnippets": [
+    "image_position"
+  ],
+  "baseFontSize": 17,
+  "interfaceFontFamily": "Helvetica Neue",
+  "monospaceFontFamily": "Source Code Pro,Monaco",
+  "textFontFamily": "YS Text,Helvetica,Arial,Microsoft Sans Serif",
+  "nativeMenus": false,
+  "showViewHeader": false,
+  "baseFontSizeAction": true
 }

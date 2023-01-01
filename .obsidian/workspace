@@ -4,22 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "0ca0537fcb9bf831",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "120deb1b3f52be1f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "projects/Markov Chain Text Generator.md",
-                "mode": "source",
-                "source": false
-              }
-            }
+        "id": "9aa8654f117196f2",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Statistics/Statistics Assignment 2.md",
+            "mode": "source",
+            "source": false
           }
-        ]
+        }
       }
     ],
     "direction": "vertical"
@@ -37,9 +31,7 @@
             "type": "leaf",
             "state": {
               "type": "file-explorer",
-              "state": {
-                "sortOrder": "alphabetical"
-              }
+              "state": {}
             }
           },
           {
@@ -48,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#markov",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -57,12 +49,11 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 278.5
+    "width": 265
   },
   "right": {
     "id": "b5db35b7fd63bc29",
@@ -73,23 +64,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "35a457c98b476ea3",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
-              }
-            }
-          },
-          {
-            "id": "736d490edab2af09",
+            "id": "b31131c4eb9aadbc",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "projects/Markov Chain Text Generator.md",
+                "file": "Statistics/Statistics Assignment 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,34 +81,42 @@
             }
           },
           {
-            "id": "fd6f65daae65c70c",
+            "id": "6a37fcf649546105",
             "type": "leaf",
             "state": {
               "type": "advanced-tables-toolbar",
               "state": {}
             }
+          },
+          {
+            "id": "35a457c98b476ea3",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 186
   },
-  "ribbon": {
-    "mostRecentAction": ""
-  },
-  "active": "120deb1b3f52be1f",
+  "active": "9aa8654f117196f2",
   "lastOpenFiles": [
-    "projects/LaTeXGen.md",
-    "projects/Soft Skills AI.md",
-    "projects/Potato Cashback.md",
-    "1.md",
-    "H1.md",
-    "daily/H1.md",
-    "Getting more use out of neural language model's context for code generation.md",
-    "papers/Prefix-Tuning Optimizing Continuous Prompts for Generation.md",
-    "attachments/icon.png",
-    "attachments/Pasted image 20221229174433.png"
+    "Statistics/Statistics Assignment 1.md",
+    "Statistics/Statistics Assignment 2.md",
+    "Language Speech Technology/LST Assignment 4.md",
+    "Screen Shot 2022-10-12 at 20.20.56.png",
+    "Language Speech Technology/LST Assignment 3.md",
+    "attachements/sounds3_0.png",
+    "Users/mansurnurmukhambetov/Desktop/Uni/LST/Lab3/sounds2_2.png.md",
+    "Language Speech Technology/LST Assignment 1.md",
+    "attachements/Screen Shot 2022-09-23 at 20.41.40.png",
+    "attachements/Screen Shot 2022-09-23 at 20.34.38.png"
   ]
 }

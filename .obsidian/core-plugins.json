@@ -4,7 +4,6 @@
   "switcher",
   "graph",
   "backlink",
-  "outgoing-link",
   "tag-pane",
   "page-preview",
   "daily-notes",
@@ -12,8 +11,8 @@
   "note-composer",
   "command-palette",
   "editor-status",
-  "starred",
-  "outline",
+  "markdown-importer",
   "word-count",
+  "slides",
   "file-recovery"
 ]

@@ -1,0 +1,13 @@
+.workspace-ribbon {
+	padding-top: 40px;
+}
+
+.workspace-ribbon.mod-left:before {
+	display: none;
+}
+
+.workspace-ribbon .sidebar-toggle-button {
+	position: relative;
+	width: unset;
+    color: var(--icon-bu)
+}
