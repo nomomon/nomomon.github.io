@@ -1,11 +1,11 @@
 ---
 description: React.js app that visually demonstrates the inversive geometry transformation of a point in a circle on a given image.
-imageURL: attachements/inversive-geometry.jpeg
+imageURL: inversive-geometry.jpeg
 date: 12 Aug, 2022
 endDate: 14 Aug, 2022
 demo: https://nomomon.github.io/inversive-geometry/
 source: https://github.com/nomomon/inversive-geometry
-tags: [react, node.js, math]
+tags: [react, node.js, math, project]
 publish: true
 ---
 
@@ -20,7 +20,7 @@ Back in highschool, I tried to make a program that performs inversion on images.
 
 So, here I am, recreating my dream program as a webapp. This was an interesting project and along the way I came up with a nice optimization that makes the code easy to read.
 
-Working with pixels made the coordinates descrete and to improve the quality of the image I took an average of pixel colors that were mapped to a single point. Instead of taking their mean, I took the root mean squared because that is how pixel colors should be added [[1]](https://www.youtube.com/watch?v=LKnqECcg6Gw&ab_channel=minutephysics).
+Working with pixels made the coordinates descrete and to improve the quality of the image I took an average of pixel colors that were mapped to a single point. Instead of taking their mean, I took the root mean squared because that is [how pixel colors should be added](https://www.youtube.com/watch?v=LKnqECcg6Gw&ab_channel=minutephysics).
 
 ## A few notes
 

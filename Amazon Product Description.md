@@ -1,6 +1,6 @@
 ---
 description: A proof of concept, Amazon product description generator using GPT-Neo for Texta.ai
-imageURL: /attachements/amazon-product-description.jpeg
+imageURL: amazon-product-description.jpeg
 date: Aug 15, 2021
 endDate: Aug 17, 2021
 source: https://github.com/nomomon/Amazon-Product-Description
