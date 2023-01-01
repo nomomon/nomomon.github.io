@@ -10,13 +10,13 @@ publish: true
 
 This is a proof of concept for an AI that generates Amazon-like product descriptions **that sell**.
 
-![[amazon-product-description.jpeg]]
+![amazon-product-description](attachments/projects/amazon-product-description.jpeg)
 
-I was contacted by the founder of [Texta.ai](https://texta.ai/) and asked to recreate thier product that works cheaper. They used GPT-3 from Open AI to generate text descriptions and their price was not cheap enough to make the buisness profitable.
+I was contacted by the founder of [Texta.ai](https://texta.ai/) and asked to recreate their product that works cheaper. They used GPT-3 from Open AI to generate text descriptions and their price was not cheap enough to make the business profitable.
 
 I started of by scraping data with Puppeteer from top Amazon products, but that turned out to be a bit of a challenge. Their websites took a tremendous amount of time to load and the scraping process was not very efficient. That's why I changed to a scrapped [dataset](https://jmcauley.ucsd.edu/data/amazon/) by UCSD. All the collected data was cleaned and shaped into prompt templates.
 
-After the data was ready, I finetuned multiple [GPT-Neo](https://www.eleuther.ai/projects/gpt-neo/) models using the [Happy Transformer](https://happytransformer.com/) library on Google Colab.
+After the data was ready, I fine-tuned multiple [GPT-Neo](https://www.eleuther.ai/projects/gpt-neo/) models using the [Happy Transformer](https://happytransformer.com/) library on Google Colab.
 
 ## Results
 

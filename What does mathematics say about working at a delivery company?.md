@@ -23,7 +23,7 @@ First let's formulate the problem in a mathematical way.
 
 So, the delivery man starts off in the center (warehouse), brings the groceries to the customer and comes back to get ready for the next delivery.
 
-![[problem-setting.png]]
+![problem-setting](attachments/posts/2022-09-02/problem-setting.png)
 
 The expected value of delivery time is the expected value of the distance to the customer divided by the velocity of the delivery man.
 
