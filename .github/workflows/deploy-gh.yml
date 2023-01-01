@@ -37,10 +37,11 @@ jobs:
         run: npm run export
       - name: Add .nojekyll file
         run: touch out/.nojekyll
-      - name: Configure git to trust the workspace despite the different owner
-        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+      - name: Add github pages config
+        run: git config --global safe.directory '*'
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.4.0
+        uses: JamesIves/github-pages-deploy-action@4.4.1
+        if: always()
         with:
           branch: gh-pages
           folder: out
