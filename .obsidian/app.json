@@ -2,8 +2,8 @@
   "legacyEditor": false,
   "livePreview": true,
   "alwaysUpdateLinks": true,
-  "promptDelete": false,
-  "attachmentFolderPath": "./attachments",
+  "promptDelete": true,
+  "attachmentFolderPath": "attachments",
   "pdfExportSettings": {
     "includeName": true,
     "pageSize": "A4",
@@ -20,5 +20,6 @@
   "showFrontmatter": true,
   "newFileLocation": "current",
   "useMarkdownLinks": true,
-  "spellcheck": true
+  "spellcheck": true,
+  "newLinkFormat": "absolute"
 }

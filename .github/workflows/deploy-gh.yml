@@ -24,8 +24,9 @@ jobs:
       - name: Move files to public folder
         run: | 
           mkdir public
+          mkdir public/attachments
           find . -name "*.md" -exec mv {} public/ \;
-          mv attachments public/
+          find . -name "*.(png|gif|jpeg|jpg)" -exec mv {} public/attachments/ \;
       - name: Clone the website builder
         run: |
           git clone https://github.com/nomomon/personal-website-builder pwb

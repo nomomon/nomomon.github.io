@@ -41,6 +41,6 @@ It certainly doesn't compare to GPT-3 or Copilot, but the results are sure ridic
 
 ## Results
 
-Example in russian
+Example in Russian
 
 ![demo](https://github.com/nomomon/markov-chain-text/raw/master/screenshot.png)

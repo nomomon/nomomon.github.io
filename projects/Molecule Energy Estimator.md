@@ -37,7 +37,7 @@ This is the solution I used in the competition and got to the top 7th place. You
 
 <iframe width="560" height="315" style="display:block; margin:auto; margin-bottom:1em; max-width:100%;" src="https://www.youtube.com/embed/jGRQjQZg4Ck?start=8577" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-After the competition, I did deeper research into the problem and found that the problem is not simple. The problem is that the energy of a bond is not a constant. Actually, bonds has multiple **descrete** energy levels, which are determined by the distance between two atoms.
+After the competition, I did deeper research into the problem and found that the problem is not simple. The problem is that the energy of a bond is not a constant. Actually, bonds has multiple **discrete** energy levels, which are determined by the distance between two atoms.
 
 So, I used another way of determining the bond energy level with a constraint satisfaction solver. I proposed new task to my team and they we solved it. Passing the bond energy levels to the neural network gave better results.
 
