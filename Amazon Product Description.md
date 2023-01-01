@@ -1,20 +1,16 @@
 ---
-title: "Amazon description generator"
-description: "A proof of concept, Amazon product description generator using GPT-Neo for Texta.ai"
-imageURL: "/images/projects/amazon-product-description-3.jpeg"
-startDate: "Aug 15, 2021"
-endDate: "Aug 17, 2021"
-demoLink:
-sourceLink: "https://github.com/nomomon/Amazon-Product-Description"
-tools:
-  - "Python"
-  - "GPT-Neo"
-  - "Web scraping"
+description: A proof of concept, Amazon product description generator using GPT-Neo for Texta.ai
+imageURL: /attachements/amazon-product-description.jpeg
+date: Aug 15, 2021
+endDate: Aug 17, 2021
+github: https://github.com/nomomon/Amazon-Product-Description
+tags: [python, GPT-Neo, web scraping, project]
+publish: true
 ---
 
 This is a proof of concept for an AI that generates Amazon-like product descriptions **that sell**.
 
-![](/images/projects/amazon-product-description-3.jpeg)
+![[amazon-product-description.jpeg]]
 
 I was contacted by the founder of [Texta.ai](https://texta.ai/) and asked to recreate thier product that works cheaper. They used GPT-3 from Open AI to generate text descriptions and their price was not cheap enough to make the buisness profitable.
 
