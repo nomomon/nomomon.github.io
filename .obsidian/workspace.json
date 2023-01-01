@@ -4,16 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "0ca0537fcb9bf831",
+        "id": "ef262287fc301bec",
         "type": "tabs",
         "children": [
           {
-            "id": "120deb1b3f52be1f",
+            "id": "1f2a297089680dce",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "attachements/projects/potato-cashback.jpeg"
+                "file": "posts/What does mathematics say about working at a delivery company?.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -86,7 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "attachements/projects/potato-cashback.jpeg",
+                "file": "posts/What does mathematics say about working at a delivery company?.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,8 +117,9 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "120deb1b3f52be1f",
+  "active": "1f2a297089680dce",
   "lastOpenFiles": [
+    "attachements/projects/potato-cashback.jpeg",
     "attachements/posts/2022-09-16/bootstrap.png",
     "attachements/posts/2022-09-02/problem-setting.png",
     "attachements/posts/2022-09-02/groningen.png",
@@ -125,7 +128,6 @@
     "posts/What does mathematics say about working at a delivery company?.md",
     "projects/Data Science Bootcamp Yandex Practicum.md",
     "README.md",
-    "attachements/projects/markov-chain-text/diagram.png",
-    "projects/Amazon Product Description.md"
+    "attachements/projects/markov-chain-text/diagram.png"
   ]
 }
