@@ -26,7 +26,7 @@ jobs:
           mkdir public 
           mkdir public/attachments
           find . -name "*.md" -exec mv {} public/ \;
-          mv attachments/* public/attachments
+          mv attachments public/attachments
       - name: Clone the website builder
         run: |
           git clone https://github.com/nomomon/personal-website-builder pwb
