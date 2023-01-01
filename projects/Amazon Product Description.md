@@ -3,7 +3,7 @@ description: A proof of concept, Amazon product description generator using GPT-
 imageURL: /attachements/amazon-product-description.jpeg
 date: Aug 15, 2021
 endDate: Aug 17, 2021
-github: https://github.com/nomomon/Amazon-Product-Description
+source: https://github.com/nomomon/Amazon-Product-Description
 tags: [python, GPT-Neo, web scraping, project]
 publish: true
 ---

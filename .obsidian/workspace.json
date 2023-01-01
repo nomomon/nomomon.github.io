@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "d32f2dc56592cd74",
+        "id": "a77bc25d79122aab",
         "type": "tabs",
         "children": [
           {
-            "id": "09099045a43ff6b9",
+            "id": "0f71b815333661cd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "projects/Amazon Product Description.md",
+                "file": "projects/Molecule Energy Estimator.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "projects/Amazon Product Description.md",
+                "file": "projects/Molecule Energy Estimator.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "projects/Amazon Product Description.md",
+                "file": "projects/Molecule Energy Estimator.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "projects/Amazon Product Description.md"
+                "file": "projects/Molecule Energy Estimator.md"
               }
             }
           }
@@ -139,12 +139,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "09099045a43ff6b9",
+  "active": "0f71b815333661cd",
   "lastOpenFiles": [
-    "projects/Amazon Product Description.md",
-    "attachements/projects/amazon-product-description.jpeg",
-    "images/projects/amazon-product-description-3.jpeg.md",
-    "projects/anime-rec-sys.md",
-    "README.md"
+    "projects/Kamernet Puppeteer.md",
+    "projects/LaTeXGen.md",
+    "projects/Markov Chain Text Generator.md",
+    "projects/Inversive Geometry.md",
+    "projects/Felony Felines.md",
+    "images/projects/felony-felines.jpeg.md",
+    "images/projects/latexgen-preview.jpeg.md",
+    "projects/Bayes Feed.md",
+    "projects/Anime RecSys.md",
+    "projects/Amazon Product Description.md"
   ]
 }

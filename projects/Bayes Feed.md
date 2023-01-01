@@ -1,19 +1,15 @@
 ---
-title: Bayes Feed
 description: An RSS feed with a Naive Bayes recommender that is learning online.
-imageURL: /images/projects/bayes-feed.jpeg
+imageURL: attachements/bayes-feed.jpeg
 startDate: 17 Dec, 2022
 endDate: 28 Dec, 2022
-demoLink: https://bayes-feed.vercel.app/
-sourceLink: https://github.com/nomomon/bayes-feed
-tools: 
-    - Firebase
-    - MUI
-    - Next.js
-    - Vercel
+demo: https://bayes-feed.vercel.app/
+source: https://github.com/nomomon/bayes-feed
+tags: [next.js, firebase, materialui, vercel]
+publish: true
 ---
 
-![banner](/images/projects/bayes-feed.jpeg)
+![[bayes-feed.jpeg]]
 
 [RSS feeds](https://ru.wikipedia.org/wiki/RSS) are a convenient and old–fashioned way to follow blogs and websites. 
 

@@ -1,19 +1,15 @@
 ---
-title: "Molecule Energy Estimator"
 description: "The chemical and physical properties of a molecule are determined not only by its structural formula, but also by its conformation – positions of atoms in 3d space."
-imageURL: "/images/projects/rucode-5.0-preview.gif"
-startDate: "1 Apr, 2022"
-endDate: "1 Jul, 2022"
-sourceLink: "https://github.com/nomomon/molecule-energy-prediction"
-demoLink: ""
-tools:
-  - "Tensoflow"
-  - "Pandas"
-  - "Numpy"
-achievements: 2
+imageURL: attachements/rucode-5.0-preview.gif
+date: 1 Apr, 2022
+endDate: 1 Jul, 2022
+source: "https://github.com/nomomon/molecule-energy-prediction"
+demo: ""
+tags: [tensoflow, pandas, numpy, csp, chemistry, competition, project]
+publish: true
 ---
 
-![banner](/images/projects/rucode-5.0-preview.gif)
+![[rucode-5.0-preview.gif]]
 
 This project started off from me participating in the [RuCode 5.0](https://rucode.net/) hackathon and then led me to write a research report on the topic. Initially, the problem and data were provided by [Artificial Intelligence Research Institute](https://airi.net/).
 

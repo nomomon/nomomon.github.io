@@ -1,14 +1,12 @@
 ---
-title: Inversive Geometry
-description: "This is a simple React.js app that demonstrates the inversive geometry of a point in a circle."
-imageURL: "/images/projects/inversive-geometry.jpeg"
-startDate: "12 Aug, 2022"
-endDate: "14 Aug, 2022"
-demoLink: "https://nomomon.github.io/inversive-geometry/"
-sourceLink: "https://github.com/nomomon/inversive-geometry"
-tools:
-  - "React"
-  - "Node.js"
+description: React.js app that visually demonstrates the inversive geometry transformation of a point in a circle on a given image.
+imageURL: attachements/inversive-geometry.jpeg
+date: 12 Aug, 2022
+endDate: 14 Aug, 2022
+demo: https://nomomon.github.io/inversive-geometry/
+source: https://github.com/nomomon/inversive-geometry
+tags: [react, node.js, math]
+publish: true
 ---
 
 Geometrical inversion is defined as
