@@ -21,16 +21,19 @@ jobs:
           node-version: 18
       - name: Delete .obsidian folder
         run: rm -rf .obsidian
-      - name: Create public folder and move files there
-        run: mkdir public && find . -maxdepth 1 ! -path "public" -o ! -path ".git" -exec mv {} public/ ;
+      - name: Move files to public folder
+        run: | 
+          mkdir public 
+          mkdir public/attachments
+          find . -name "*.md" -exec mv {} public/ \;
+          find . -name "attachments/*" -exec mv {} public/attachments \;
       - name: Clone the website builder
-        run: git clone https://github.com/nomomon/personal-website-builder pwb
-      - name: Delete .git folder from the website builder
-        run: rm -rf pwb/.git
-      - name: Move files from the website builder
-        run: mv pwb/* . && rm -rf pwb
+        run: |
+          git clone https://github.com/nomomon/personal-website-builder pwb
+          rm -rf pwb/.git
+          mv pwb/* . && rm -rf pwb
       - name: Install packages
-        run: npm i
+        run: npm ci
       - name: Make build
         run: npm run export
       - name: Add .nojekyll file
