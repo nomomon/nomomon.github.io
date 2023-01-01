@@ -32,6 +32,11 @@ jobs:
           git clone https://github.com/nomomon/personal-website-builder pwb
           rm -rf pwb/.git
           mv pwb/* . && rm -rf pwb
+      - name: Debug view
+        run: |
+          ls
+          ls public
+          ls public/attachments
       - name: Install packages
         run: npm ci
       - name: Make build
