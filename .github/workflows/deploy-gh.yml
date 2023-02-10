@@ -32,11 +32,11 @@ jobs:
         run: |
           git clone https://github.com/nomomon/personal-website-builder pwb
           rm -rf pwb/.git
-          mv pwb/* . && rm -rf pwb
+          rsync -a pwb/* . && rm -rf pwb
       - name: Install packages
         run: npm ci
       - name: Make build
-        run: npm run export
+        run: npm run make
       - name: Add .nojekyll file
         run: touch out/.nojekyll
       - name: Add github pages config
