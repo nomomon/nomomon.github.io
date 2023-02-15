@@ -6,7 +6,7 @@ endDate: 1 Jul, 2022
 source: "https://github.com/nomomon/molecule-energy-prediction"
 demo: ""
 tags: [tensorflow, pandas, numpy, csp, chemistry, competition, project]
-publish: true
+
 ---
 
 ![[rucode-5.0-preview.gif]]

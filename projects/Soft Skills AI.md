@@ -6,7 +6,7 @@ endDate: 11 May 2021
 demo: ""
 source: "https://github.com/nomomon/Soft-Skill-AI"
 tags: [openai, GPT, telegram-bot, competition, project]
-publish: true
+
 ---
 
 ![[softskillai-preview.jpeg]]

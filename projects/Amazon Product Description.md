@@ -5,7 +5,7 @@ date: Aug 15, 2021
 endDate: Aug 17, 2021
 source: https://github.com/nomomon/Amazon-Product-Description
 tags: [python, GPT, web-scraping, project]
-publish: true
+
 ---
 
 This is a proof of concept for an AI that generates Amazon-like product descriptions **that sell**.

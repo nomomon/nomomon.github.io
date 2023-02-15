@@ -6,7 +6,7 @@ endDate: 5 Jan 2022
 demo: https://nomomon.github.io/OramaVA/
 source: https://github.com/nomomon/OramaVA
 tags: [tensorflow, mobilenet, react, competition, project]
-publish: true
+
 ---
 
 ![[oramava-preview.jpeg]]

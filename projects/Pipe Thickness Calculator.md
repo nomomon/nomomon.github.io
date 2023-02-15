@@ -5,7 +5,7 @@ date: "Jun 5 2022"
 demo: "https://nomomon.github.io/pipe-thickness-calculator/"
 source: "https://github.com/nomomon/pipe-thickness-calculator"
 tags: [html&css, node.js, electron, github-actions, project]
-publish: true
+
 ---
 
 ![[pipe-thickness-calculator.jpeg]]

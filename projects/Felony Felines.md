@@ -6,7 +6,7 @@ endDate: Mar 20, 2022
 demo: https://koshakidev.itch.io/felonyfelines
 source:
 tags: [ godot, project ]
-publish: true
+
 ---
 
 ![[felony-felines.jpeg]]

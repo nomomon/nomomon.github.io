@@ -6,7 +6,7 @@ endDate: 14 Aug, 2022
 demo: https://nomomon.github.io/inversive-geometry/
 source: https://github.com/nomomon/inversive-geometry
 tags: [react, node.js, math, project]
-publish: true
+
 ---
 
 Geometrical inversion is defined as

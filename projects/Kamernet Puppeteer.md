@@ -5,7 +5,7 @@ date: May 2021
 endDate: Aug 2021
 source: https://github.com/nomomon/Kamernet-Puppeteer
 tags: [node.js, puppeteer, project]
-publish: true
+
 ---
 
 ![[kamernet-puppeteer.jpeg]]

@@ -6,7 +6,7 @@ endDate: 28 Dec, 2022
 demo: https://bayes-feed.vercel.app/
 source: https://github.com/nomomon/bayes-feed
 tags: [next.js, firebase, material-ui, nlp, rss, vercel, project]
-publish: true
+
 ---
 
 ![[bayes-feed.jpeg]]

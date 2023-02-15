@@ -6,7 +6,7 @@ endDate: Aug 7, 2022
 demo: https://nomomon.github.io/markov-chain-text/
 source: https://github.com/nomomon/markov-chain-text
 tags: [react, node.js, nlp, markov-chain, project]
-publish: true
+
 ---
 
 ![[markov-chain-text.jpeg]]

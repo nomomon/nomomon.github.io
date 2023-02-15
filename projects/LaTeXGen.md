@@ -5,7 +5,7 @@ date: 2020-03-05
 demo: https://nomomon.github.io/LaTeXGen/
 source: https://github.com/nomomon/LaTeXGen
 tags: [html&css, javascript, latex, project, competition]
-publish: true
+
 ---
 
 ![[latexgen-preview.jpeg]]

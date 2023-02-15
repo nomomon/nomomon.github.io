@@ -3,7 +3,7 @@ date: 2 Sep 2022
 description: How to use mathematics to determine the wage and make a decision about working at a delivery company.
 imageURL: groningen.png
 tags: [math, delivery]
-publish: true
+
 ---
 
 Last year my friend worked at a delivery company. Their job was to deliver groceries to customers on a bicycle. In their company, the wage was based on the amount of orders per hour they delivered. For example:
