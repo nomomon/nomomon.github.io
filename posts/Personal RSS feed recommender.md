@@ -40,13 +40,13 @@ That formula is enough to compute the probability, however, we can improve it by
 - instead of computing the probability compute the likelihood ratio (ratio of the probabilities like and dislike)
 
 $$
-L = \ln \frac{p(❤️ | D)}{p(\neg ❤️ | D)} = \ln \frac{p(❤️)}{p(\neg ❤️)}  + \sum_i \ln \frac{p(w_i | ❤️)}{p(w_i | \neg ❤️)}
+L = \ln \frac{p(❤ | D)}{p(\neg ❤ | D)} = \ln \frac{p(❤)}{p(\neg ❤)}  + \sum_i \ln \frac{p(w_i | ❤)}{p(w_i | \neg ❤)}
 $$
-Due to the assumptions made in the beginning in reality the probabilities won't add up to one ($p(❤️ | D) + p(\neg ❤️ | D) \not= 1$) because they are not correct. 
+Due to the assumptions made in the beginning in reality the probabilities won't add up to one ($p(❤ | D) + p(\neg ❤ | D) \not= 1$) because they are not correct. 
 
 We'll get the probability back from the $L$
 $$
-p( ❤️ | D) = 1 - \frac{1}{1 + e ^ L}
+p( ❤ | D) = 1 - \frac{1}{1 + e ^ L}
 $$
 
 In code it would look something like this
