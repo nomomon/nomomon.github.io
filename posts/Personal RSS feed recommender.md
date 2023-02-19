@@ -33,27 +33,26 @@ Looks scary, but actually it's not. Let's break it down.
 
 We'll start off with making our first assumption, a document $D$ that is made up of words $w_i$ can be modeled as a bag of words that have independent distributions and that the $w_i$ appears in a document of class $C$ is $p(w_i | C)$. Then, we can claim that
 $$
-p(D|C) = \prod_{w_i \in D} p(w_i | C).
+\tag{1} p(D|C) = \prod_{w_i \in D} p(w_i | C).
 $$
 
-Using Bayes' theorem we get
+Bayes' theorem states tha
 $$
 p(C | D) = \frac{p(C) P(D | C)}{p(D)},
 $$
-and plugging in the result of our assumption we get
+and plugging in $(1)$,
 $$
-p(C | D) = \frac{p(C)}{p(D)} \prod_{w_i \in D} p(w_i | C).
+\tag{2} p(C | D) = \frac{p(C)}{p(D)} \prod_{w_i \in D} p(w_i | C).
 $$
 This is the standard formula for a naive Bayes classifier, all you have to do is count up the frequencies, multiply, and compare what probability is greater $p(C_1 | D)$ or $p(C_2 | D)$? 
 
-But, I want to modify it. First, let's take the logarithm of the probability
-
+But, I want to modify it. First, let's take the logarithm of the formula
 $$
-\ln p(C | D) = \ln \frac{p(C)}{p(D)} + \sum_{w_i \in D} \ln p(w_i | C).
+\tag{3} \ln p(C | D) = \ln \frac{p(C)}{p(D)} + \sum_{w_i \in D} \ln p(w_i | C).
 $$
 Taking the logarithm of the formula will make sure we avoid problems with small floating points [^log_expl] and also it allows to use addition and subtraction rather than multiplication and division. 
 
-[^log_expl] This is because probabilities themselves work in the range $[0, 1]$, but if we take the logarithm of the probability then it works in range $(-\infty, 0]$ giving  computer more space to work with and allowing it to be more accurate.
+[^log_expl]: This is because probabilities themselves work in the range $[0, 1]$, but if we take the logarithm of the probability then it works in range $(-\infty, 0]$ giving  computer more space to work with and allowing it to be more accurate.
 
 Second, instead of computing the probability, let's compute the likelihood ratio (ratio of the probabilities for like and not like):
 
