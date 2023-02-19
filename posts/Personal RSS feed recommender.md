@@ -57,8 +57,8 @@ Taking the logarithm of the formula will make sure we avoid problems with small 
 Second, instead of computing the probability, let's compute the likelihood ratio (ratio of the probabilities for like and not like):
 
 $$
-\tag{4} 
 \begin{align}
+\tag{4} 
 L 
 &= \ln p(❤ | D) - \ln p(\neg ❤ | D) \\
 &= \ln \frac{p(❤ | D)}{p(\neg ❤ | D)} \\
