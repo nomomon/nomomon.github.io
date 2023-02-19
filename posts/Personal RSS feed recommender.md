@@ -36,7 +36,7 @@ $$
 \tag{1} p(D|C) = \prod_{w_i \in D} p(w_i | C).
 $$
 
-Bayes' theorem states tha
+Bayes' theorem states that
 $$
 p(C | D) = \frac{p(C) P(D | C)}{p(D)},
 $$
@@ -57,11 +57,11 @@ Taking the logarithm of the formula will make sure we avoid problems with small 
 Second, instead of computing the probability, let's compute the likelihood ratio (ratio of the probabilities for like and not like):
 
 $$
-L = \ln \frac{p(❤ | D)}{p(\neg ❤ | D)} = \ln \frac{p(❤)}{p(\neg ❤)}  + \sum_i \ln \frac{p(w_i | ❤)}{p(w_i | \neg ❤)}.
+\tag{4} L = \ln p(❤ | D) - \ln p(\neg ❤ | D) = \ln \frac{p(❤ | D)}{p(\neg ❤ | D)} = \ln \frac{p(❤)}{p(\neg ❤)}  + \sum_{w_i \in D} \ln \frac{p(w_i | ❤)}{p(w_i | \neg ❤)}.
 $$
 Using that $p(❤ | D) + p(\neg ❤ | D) = 1$ we can get the probability of a like given a document:
 $$
-p( ❤ | D) = 1 - \frac{1}{1 + e ^ L}.
+\tag{5} p( ❤ | D) = 1 - \frac{1}{1 + e ^ L}.
 $$
 One might find it weird that I am taking a long way around to find the probability by introducing $L$ instead of using the formula derived earlier, however, there is a point to that. 
 
