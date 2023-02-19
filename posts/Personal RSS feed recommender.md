@@ -58,12 +58,11 @@ Second, instead of computing the probability, let's compute the likelihood ratio
 
 $$
 \begin{align}
-\tag{4} 
 L 
 &= \ln p(❤ | D) - \ln p(\neg ❤ | D) \\
 &= \ln \frac{p(❤ | D)}{p(\neg ❤ | D)} \\
 &= \ln \frac{p(❤)}{p(\neg ❤)}  + \sum_{w_i \in D} \ln \frac{p(w_i | ❤)}{p(w_i | \neg ❤)}.
-\end{align}
+\end{align} \tag{4}
 $$
 Using that $p(❤ | D) + p(\neg ❤ | D) = 1$ we can get the probability of a like given a document:
 $$
