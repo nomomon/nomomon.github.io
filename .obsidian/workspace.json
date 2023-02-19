@@ -11,11 +11,28 @@
             "id": "abe33bc7f6bf4fe0",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "posts/What is a Bootstrapping?.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2be99df3bdced4be",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/Personal RSS feed recommender.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -57,7 +74,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 278.5
+    "width": 278.5,
+    "collapsed": true
   },
   "right": {
     "id": "b5db35b7fd63bc29",
@@ -84,6 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "posts/Personal RSS feed recommender.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,17 +141,17 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "abe33bc7f6bf4fe0",
+  "active": "2be99df3bdced4be",
   "lastOpenFiles": [
+    "posts/What is a Bootstrapping?.md",
+    "posts/Personal RSS feed recommender.md",
     "attachments/posts/2022-09-02/groningen.png",
     "attachments/posts/2022-08-22/katex.png",
     "attachments/posts/2022-08-20/screenshot.png",
     "posts/What does mathematics say about working at a delivery company?.md",
-    "posts/What is a Bootstrapping?.md",
     "projects/Soft Skills AI.md",
     "projects/Potato Cashback.md",
     "projects/Pipe Thickness Calculator.md",
-    "projects/Orama Visual Assistant.md",
-    "projects/Molecule Energy Estimator.md"
+    "projects/Orama Visual Assistant.md"
   ]
 }
