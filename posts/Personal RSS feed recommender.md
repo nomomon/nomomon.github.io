@@ -82,6 +82,20 @@ For the implementation I use a tiny constant value `eps`, so that in some cases 
 
 ```typescript
 const eps = 1e-4;
+
+type Freq = {
+	like: number,
+	dislike: number
+}
+
+type Words = {
+    like: {
+        [word: string]: number
+    },
+    dislike: {
+        [word: string]: number
+    }
+}
 ```
 
 First I make a function to compute the sum of an array.
@@ -157,13 +171,35 @@ const NaiveBayesClassifier = (
 };
 ```
 
-## Application
+## Preprocessing
 
-### Frontend
+### Word Filtering (Stop-words)
 
+One way to improve the results of a naive Bayes classifier is to remove *stop-words* from the text. Stop-words are frequent words, like _"a"_ and _"the"_, that don't carry much meaning. This was done by filtering words from a list with ~ 100 words.
 
+I downloaded the stop-word lists from [NLTK](https://www.nltk.org/) , and cleaned the texts before passing to the classifier.
 
-### Backend
+```typescript
+const removeStopWords = (
+	words: string[], 
+	stopwords: string[]
+) => {
+    return words.filter(word => !stopwords.includes(word));
+}
+```
 
+### Lemmatisation
 
+Similarly, lemmatising words improves the classifier. I used the word maps from NLTK.
+
+```typescript
+type Lemmatizer = (word: string) => string;
+
+const lemmatize = (
+	words: string[], 
+	lemmatizer: Lemmatizer
+) => {
+    return words.map(word => lemmatizer(word));
+}
+```
 
