@@ -51,9 +51,9 @@ But, I want to modify it. First, let's take the logarithm of the probability
 $$
 \ln p(C | D) = \ln \frac{p(C)}{p(D)} + \sum_{w_i \in D} \ln p(w_i | C).
 $$
-Taking the logarithm of the formula will make sure we avoid problems with small floating points[^1] and also it allows to use addition and subtraction rather than multiplication and division. 
+Taking the logarithm of the formula will make sure we avoid problems with small floating points [^log_expl] and also it allows to use addition and subtraction rather than multiplication and division. 
 
-[^1] This is because probabilities themselves work in the range $[0, 1]$, but if we take the logarithm of the probability then it works in range $(-\infty, 0]$ giving  computer more space to work with and allowing it to be more accurate.
+[^log_expl] This is because probabilities themselves work in the range $[0, 1]$, but if we take the logarithm of the probability then it works in range $(-\infty, 0]$ giving  computer more space to work with and allowing it to be more accurate.
 
 Second, instead of computing the probability, let's compute the likelihood ratio (ratio of the probabilities for like and not like):
 
