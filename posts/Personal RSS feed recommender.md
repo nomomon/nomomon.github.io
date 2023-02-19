@@ -75,7 +75,7 @@ In classical naive Bayes classifier implementations sometimes the probabilities 
 
 The document does depend on the structure and ordering of the words. Disregarding that resulting in probabilities that are actually dependent and simply multiplying them will not cut. However, this doesn't make the classifier dysfunctional, it has proven itself working even with  such an assumption.
 
-By introducing $L$ and getting the $p(❤ | D)$ from $p(❤ | D) + p(\neg ❤ | D) = 1$, I make the probabilities follow the constraint of adding up to one.
+By introducing $L$ and deriving $p(❤ | D)$ from $p(❤ | D) + p(\neg ❤ | D) = 1$ the probabilities follow the constraint of adding up to one.
 
 ### Implementation
 
@@ -162,5 +162,9 @@ const NaiveBayesClassifier = (
 
 ### Frontend
 
+
+
 ### Backend
+
+
 
