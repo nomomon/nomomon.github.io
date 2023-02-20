@@ -4,6 +4,14 @@ date: "19 Feb 2023"
 tags: [draft]
 ---
 
+**Table of contents**
+- [Classifier](#classifier)
+	- [Theory](#theory)
+	- [Implementation](#implementation)
+- [Preprocessing](#preprocessing)
+	- [Stopwords](#Stopwords)
+	- [Lemmatisation](#lemmatisation)
+
 This year I've decided to revive in myself the habit of reading. I enjoy reading posts from Habr, Medium, Quanta magazine, Stack Exchange (hot questions) and many more. I had a problem that these platforms are separate and I had to open them one by one to find something I like.
 
 Then, I remembered that sometime ago I used RSS feeds, they share up to date information from a feed that you can subscribe to. However, applications for these feeds did not filter or rank any content that went through, so, I would have huge piles posts that I would try to read through and most of the posts weren't that interesting. 
@@ -64,21 +72,23 @@ L
 &= \ln \frac{p(❤)}{p(\neg ❤)}  + \sum_{w_i \in D} \ln \frac{p(w_i | ❤)}{p(w_i | \neg ❤)}.
 \end{align} \tag{4}
 $$
-Using that $p(❤ | D) + p(\neg ❤ | D) = 1$ we can get the probability of a like given a document:
+Using that $p(❤ | D) + p(\neg ❤ | D) = 1$ we get the probability of a like given a document:
 $$
 \tag{5} p( ❤ | D) = 1 - \frac{1}{1 + e ^ L}.
 $$
-One might find it weird that I am taking a long way around to find the probability by introducing $L$ instead of using the formula derived earlier, however, there is a point to that. 
+We got the formula from the beginning. [^L-expl] 
 
-In classical naive Bayes classifier implementations sometimes the probabilities are greater than one and don't even add up to one. This is because because _the assumption we made in the beginning was not true_.
-
-The document does depend on the structure and ordering of the words. Disregarding that resulting in probabilities that are actually dependent and simply multiplying them will not cut. However, this doesn't make the classifier dysfunctional, it has proven itself working even with  such an assumption.
-
-By introducing $L$ and deriving $p(❤ | D)$ from $p(❤ | D) + p(\neg ❤ | D) = 1$ the probabilities follow the constraint of adding up to one.
+[^L-expl]: One might find it weird that I am taking a long way around to find the probability by introducing $L$ instead of using the formula $(3)$ derived earlier, however, there is a point to that. 
+	
+	In classical naive Bayes classifier implementations sometimes the probabilities are greater than one and don't even add up to one. This is because because _the assumption we made in the beginning was not true_.
+	
+	The document does depend on the structure and ordering of the words. Disregarding that results in probabilities that are actually dependent and simply multiplying them will not cut. However, this doesn't make the classifier dysfunctional, even flawed it has proven itself working.
+	
+	By introducing $L$ and deriving $p(❤ | D)$ from $p(❤ | D) + p(\neg ❤ | D) = 1$ results in probabilities that add up to one.
 
 ### Implementation
 
-For the implementation I use a tiny constant value `eps`, so that in some cases I avoid division by zero.
+For the implementation I introduce a tiny constant value `eps`, so that in some cases I avoid division by zero.
 
 ```typescript
 const eps = 1e-4;
@@ -173,11 +183,11 @@ const NaiveBayesClassifier = (
 
 ## Preprocessing
 
-### Word Filtering (Stop-words)
+### Stopwords
 
 One way to improve the results of a naive Bayes classifier is to remove *stop-words* from the text. Stop-words are frequent words, like _"a"_ and _"the"_, that don't carry much meaning. This was done by filtering words from a list with ~ 100 words.
 
-I downloaded the stop-word lists from [NLTK](https://www.nltk.org/) , and cleaned the texts before passing to the classifier.
+I downloaded the stop-word lists from [NLTK](https://www.nltk.org/), and cleaned the texts before passing to the classifier.
 
 ```typescript
 const removeStopWords = (
