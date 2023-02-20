@@ -11,6 +11,7 @@ tags: [draft]
 - [Preprocessing](#preprocessing)
 	- [Stopwords](#Stopwords)
 	- [Lemmatisation](#lemmatisation)
+- [Application](#application)
 
 This year I've decided to revive in myself the habit of reading. I enjoy reading posts from Habr, Medium, Quanta magazine, Stack Exchange (hot questions) and many more. I had a problem that these platforms are separate and I had to open them one by one to find something I like.
 
