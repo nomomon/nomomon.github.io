@@ -213,3 +213,76 @@ const lemmatize = (
 }
 ```
 
+
+## Application
+
+The app was first build in the web and while it works fine on local host with API in Next.js to fetch the posts, it doesn't work just in browser because of CORS. 😒
+
+So, I switched to a React Native app (with expo). It was simple one page app that displayed posts in a card list.
+
+The list of subscribed feeds are in Firebase. Firebase also has a field for a dictionary that counts the frequencies: number of liked/disliked posts, for a word number of posts that are liked/dislike that include it.
+
+They are retrieved in two requests which can be big, but is better than making a thousand requests.
+
+```typescript
+export async function getUserRss(): Promise<string[]> {
+    const feedsRef = doc(db, `/users/${UID}/feeds/feeds`);
+    const feedsSnap = await getDoc(feedsRef);
+    const feeds = feedsSnap.data().feeds || [];
+
+    return feeds as string[];
+}
+
+async function getUserWords(): Promise<Words> {
+    const wordsRef = doc(db, `/users/${auth.currentUser.uid}/words/words`);
+    const wordsSnap = await getDoc(wordsRef);
+    const words = wordsSnap.data() || { like: {}, dislike: {} };
+
+    return words as Words;
+}
+
+async function getUserFreq(): Promise<Freq> {
+    const freqDoc = doc(db, 'users', auth.currentUser.uid);
+    const freqSnapshot = await getDoc(freqDoc);
+
+    const freq = freqSnapshot.data() || { like: 0, dislike: 0 };
+
+    return freq as Freq;
+}
+```
+
+When a post is liked/disliked, the frequencies for the words of the post are updated.
+
+```typescript
+async function patchUserWords(incrementedWords: Words) {
+    const wordsRef = doc(db, `/users/${auth.currentUser.uid}/words/words`);
+    const wordsSnap = await getDoc(wordsRef);
+    const wordsData = wordsSnap.data() as Words;
+
+    if (wordsData) {
+        setDoc(wordsRef, incrementedWords, { merge: true });
+    }
+    else {
+        setDoc(wordsRef, incrementedWords);
+    }
+}
+
+async function patchUserFreq(score: Score) {
+    const freqDoc = doc(db, 'users', auth.currentUser.uid);
+    const freqSnapshot = await getDoc(freqDoc);
+
+    if (freqSnapshot.exists()) {
+        setDoc(freqDoc, {
+            like: increment(score.like),
+            dislike: increment(score.dislike)
+        }, { merge: true });
+    }
+    else {
+        setDoc(freqDoc, {
+            like: score.like,
+            dislike: score.dislike
+        });
+    }
+}
+```
+
