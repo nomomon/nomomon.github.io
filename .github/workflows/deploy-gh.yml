@@ -18,32 +18,15 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
-      - name: Delete .obsidian folder
-        run: rm -rf .obsidian
-      - name: Move files to public folder
-        run: | 
-          mkdir _obsidian
-          find . -name "*.md" -exec mv {} _obsidian/ \;
-          mkdir public
-          mv attachments public/
-          find public -mindepth 2 -type f -exec mv -t public -i '{}' +
-      - name: Clone the website builder
-        run: |
-          git clone https://github.com/nomomon/personal-website-builder pwb
-          rm -rf pwb/.git
-          rsync -a pwb/* . && rm -rf pwb
+          node-version: 16
       - name: Install packages
         run: npm ci
       - name: Make build
-        run: npm run make
+        run: npm run export
       - name: Add .nojekyll file
-        run: touch out/.nojekyll
-      - name: Add github pages config
-        run: git config --global safe.directory '*'
+        run: touch ./out/.nojekyll
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
-        if: always()
         with:
           branch: gh-pages
           folder: out
