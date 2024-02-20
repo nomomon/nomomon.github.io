@@ -15,9 +15,14 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",
+    "@traptitech/markdown-it-katex": "^3.6.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "github-markdown-css": "^5.5.1",
+    "gray-matter": "^4.0.3",
     "lucide-react": "^0.331.0",
+    "markdown-it": "^14.0.0",
+    "markdown-it-highlightjs": "^4.0.1",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
@@ -25,6 +30,7 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@types/markdown-it": "^13.0.7",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

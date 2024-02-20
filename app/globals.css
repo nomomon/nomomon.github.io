@@ -75,3 +75,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+.markdown-body ol {
+  @apply list-decimal;
+}
+
+.markdown-body ul {
+  @apply list-disc;
+}
