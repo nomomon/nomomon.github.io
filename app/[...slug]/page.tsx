@@ -25,20 +25,18 @@ const Page = async ({ params }: { params: { slug: string[] } }) => {
 
   return (
     <div>
-      Page{" "}
-      <span className="font-mono text-sm bg-gray-100 p-1 rounded-sm">
-        {params.slug.join("/")}
-      </span>
-      <pre className="bg-gray-100 p-2 rounded-md overflow-auto text-sm my-2">
-        {JSON.stringify(data)
-          .replace(/,/g, ",\n\t")
-          .replace("{", "{\n\t")
-          .replace("}", "\n}")}
-      </pre>
       <div className="markdown-body">
         <h1>{data?.title}</h1>
         <article dangerouslySetInnerHTML={{ __html: markdown }} />
       </div>
+
+      <pre className="bg-gray-100 p-2 rounded-md overflow-auto text-sm my-2">
+        {Object.entries(data).map(([key, value]) => (
+          <div key={key}>
+            <strong>{key}</strong>: {JSON.stringify(value)}
+          </div>
+        ))}
+      </pre>
     </div>
   );
 };

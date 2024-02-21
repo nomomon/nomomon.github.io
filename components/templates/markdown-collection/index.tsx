@@ -1,15 +1,9 @@
 "use server";
 
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { parseMarkdown, walk } from "@/lib/utils";
 import { readFileSync } from "fs";
-import Link from "next/link";
 import { FC } from "react";
+import PreviewCardProject from "./preview-card-project";
 
 interface MarkdownCollectionProps {
   title?: string;
@@ -29,7 +23,7 @@ const MarkdownCollection: FC<MarkdownCollectionProps> = async ({
           const text = readFileSync(filepath, "utf-8");
           const { data } = parseMarkdown(text);
 
-          if (filter && !filter(data)) continue;
+          if ((filter && !filter(data)) || !data.title) continue;
 
           const link = filepath
             .replace("public/", "")
@@ -39,6 +33,11 @@ const MarkdownCollection: FC<MarkdownCollectionProps> = async ({
           posts.push(data);
         }
       }
+      posts.sort((a, b) => {
+        if (new Date(a.date) < new Date(b.date)) return 1;
+        if (new Date(a.date) > new Date(b.date)) return -1;
+        return 0;
+      });
       return posts;
     } catch (e) {
       return [];
@@ -50,16 +49,9 @@ const MarkdownCollection: FC<MarkdownCollectionProps> = async ({
   return (
     <div>
       <h1 className="text-2xl font-semibold mb-4">{title}</h1>
-      <div className="grid grid-cols-2 gap-4 max-sm:grid-cols-1">
+      <div className="grid grid-cols-3 gap-4 max-md:grid-cols-2 max-sm:grid-cols-1">
         {posts.map((post, i) => (
-          <Link key={i} href={`/${post.link.join("/")}`}>
-            <Card className="cursor-pointer bg-white duration-100 hover:shadow-md">
-              <CardHeader>
-                <CardTitle className="text-md">{post.title}</CardTitle>
-                <CardDescription>Card Description</CardDescription>
-              </CardHeader>
-            </Card>
-          </Link>
+          <PreviewCardProject key={i} post={post} />
         ))}
       </div>
     </div>
