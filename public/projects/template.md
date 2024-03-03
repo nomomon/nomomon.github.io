@@ -1,7 +1,7 @@
 ---
 title:
 description:
-imageURL:
+thumbnail:
 date:
 endDate:
 demoLink:

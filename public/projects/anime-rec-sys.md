@@ -1,7 +1,7 @@
 ---
 title: "Anime RecSys"
 description: "Development and comparison of user-item recommendation systems in TensorFlow on an anime dataset."
-imageURL: "https://github.com/nomomon/Anime-RecSys/raw/main/images/banner.png"
+thumbnail: "https://github.com/nomomon/Anime-RecSys/raw/main/images/banner.png"
 date: "Sep 1, 2021"
 endDate: "Sep 6, 2021"
 demoLink: ""

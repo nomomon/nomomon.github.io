@@ -1,7 +1,7 @@
 ---
 title: "Amazon description generator"
 description: "A proof of concept, Amazon product description generator using GPT-Neo for Texta.ai"
-imageURL: "/images/projects/amazon-product-description-3.jpeg"
+thumbnail: "/images/projects/amazon-product-description-3.jpeg"
 date: "Aug 15, 2021"
 endDate: "Aug 17, 2021"
 demoLink:

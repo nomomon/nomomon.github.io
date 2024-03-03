@@ -21,7 +21,7 @@ const PreviewCardProject: FC<PreviewCardProjectProps> = ({ post }) => {
       <Link href={`/${post.link.join("/")}`} className=" cursor-pointer">
         <div className=" z-10 rounded-t-lg overflow-clip h-20 max-md:h-24 max-sm:h-20">
           <img
-            src={post.imageURL || "/images/placeholder.png"}
+            src={post.thumbnail || "/images/placeholder.png"}
             alt={post.title}
             width={500}
             height={300}

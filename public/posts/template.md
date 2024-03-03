@@ -2,7 +2,7 @@
 title:
 date:
 description:
-imageURL:
+thumbnail:
 notebookLink:
 tags:
   - ""
