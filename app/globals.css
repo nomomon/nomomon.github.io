@@ -94,3 +94,23 @@
 .markdown-body aside p {
   @apply mb-0;
 }
+
+.markdown-body img {
+  @apply max-w-[100%] max-h-[50vh];
+  @apply mx-auto my-4;
+}
+
+/* img + em (caption) */
+.markdown-body img + em {
+  @apply block text-center text-xs text-muted-foreground;
+}
+
+.markdown-body iframe {
+  @apply max-w-[100%] max-h-[75vh];
+  @apply mx-auto my-4;
+}
+
+/* iframe + em (caption) */
+.markdown-body iframe + em {
+  @apply block text-center text-xs text-muted-foreground;
+}
