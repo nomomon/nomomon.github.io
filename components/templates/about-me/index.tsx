@@ -1,5 +1,4 @@
 import { FC } from "react";
-import Image from "next/image";
 import { CONFIG } from "@/lib/config";
 import { Briefcase, GraduationCap, MapPinned, Pin } from "lucide-react";
 import Link from "next/link";
@@ -9,7 +8,7 @@ export const AboutMe: FC = () => {
     <>
       <div className="flex flex-row items-center gap-8 max-md:flex-col">
         <div className="w-44 h-44">
-          <Image
+          <img
             src="/assets/me.jpg"
             alt="Me"
             width={200}

@@ -1,6 +1,7 @@
 import { parseMarkdown, walk } from "@/lib/utils";
 import { readFileSync, existsSync } from "fs";
 import { notFound } from "next/navigation";
+import { Metadata, ResolvingMetadata } from "next";
 
 const Page = async ({ params }: { params: { slug: string[] } }) => {
   async function create() {
@@ -59,4 +60,31 @@ export async function generateStaticParams() {
   }
 
   return slugs;
+}
+
+type Props = {
+  params: { slug: string[] };
+};
+
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata,
+): Promise<Metadata> {
+  // read route params
+  const slug = params.slug;
+
+  // Read the file
+  const filePath = `public/${slug.join("/")}.md`;
+  const text = readFileSync(filePath, "utf-8");
+  const { data } = parseMarkdown(text);
+
+  // optionally access and extend (rather than replace) parent metadata
+  const previousImages = (await parent).openGraph?.images || [];
+
+  return {
+    title: data.title || "Untitled",
+    openGraph: {
+      images: [data.thumbnail, ...previousImages],
+    },
+  };
 }
