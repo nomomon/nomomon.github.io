@@ -1,15 +1,17 @@
-# Groningen Machine Learning Month 2022 | Reflection
+---
+title: Groningen Machine Learning Month 2022 | Reflection
+description: In the end of 2022 I organized a month-long educational machine learning competition in my university, however since then I haven’t had time to reflected on it. Sooo, this is what this is about… :)
+date: 20 December 2022
+thumbnail: "/posts/2022-12-20-gmlm-reflection/assets/event_finale.jpg"
+tags:
+  - Competition
+  - Machine Learning
+  - University of Groningen
+  - Fully Connected Graph
+type: blog
+---
 
-date: May 1, 2023
-slug: gmlm-2022
-author: Mansur Nurmukhambetov
-status: PublicOnDetail
-tags: Competition
-summary: In the end of 2022 I organized a month-long educational machine learning competition in my university, however since then I haven’t had time to reflected on it. Sooo, this is what this is about… :)
-type: Post
-thumbnail: Groningen%20Machine%20Learning%20Month%202022%20Reflection%206104fe543bfd402c8e7de59c12431e09/DSC_9365.jpg
-updatedAt: April 29, 2023 5:26 AM
-category: 📊 DS/ML
+# Groningen Machine Learning Month 2022 | Reflection
 
 Machine Learning Month is month long educational ML competition that we hosted as Fully Connected Graph for the students of University of Groningen. We were joined by students from different studies, levels from first year bachelors to master students and summing up to over a 100 participants.
 
@@ -25,17 +27,17 @@ And knowing that my classmates are _hungry for real deal machine learning_ conte
 
 In the summer I brainstormed some ideas for the competition. Remembering the classical pain of finding accommodation in the Netherlands, I decided to stick to it. Plus, I quickly found a huge [Netherlands Rent Properties](https://www.kaggle.com/datasets/juangesino/netherlands-rent-properties) dataset on Kaggle.
 
-![Asking for ideas on what to make the competition about on my [Telegram channel](https://t.me/dinomomon/1446)](Groningen%20Machine%20Learning%20Month%202022%20Reflection%206104fe543bfd402c8e7de59c12431e09/Screenshot_2023-04-29_at_04.37.56.png)
+![Asking for ideas on what to make the competition about on my [Telegram channel](https://t.me/dinomomon/1446)](./assets/my_channel.png)
 
 Asking for ideas on what to make the competition about on my [Telegram channel](https://t.me/dinomomon/1446)
 
 I preprocessed the dataset and waited till the end of block one.
 
-![Machine Learning Month poster; I love it so much, it’s amazing ✨](Groningen%20Machine%20Learning%20Month%202022%20Reflection%206104fe543bfd402c8e7de59c12431e09/Untitled.jpeg)
+![Machine Learning Month poster; I love it so much, it’s amazing ✨](./assets/cover_poster.jpeg)
 
 Machine Learning Month poster; I love it so much, it’s amazing ✨
 
-![Jeremias and I on the last lecture (Introduction to Neural Networks)](Groningen%20Machine%20Learning%20Month%202022%20Reflection%206104fe543bfd402c8e7de59c12431e09/Photo_on_02.12.2022_at_15.00.jpg)
+![Jeremias and I on the last lecture (Introduction to Neural Networks)](./assets/jeremias_and_mansur.jpg)
 
 Jeremias and I on the last lecture (Introduction to Neural Networks)
 
@@ -53,15 +55,15 @@ Introduction to Natural Language Processing (ft. Gabriele Sarti)
 
 ## Results
 
-![1st place: Miruna Pop, Andrei Girjoaba](Groningen%20Machine%20Learning%20Month%202022%20Reflection%206104fe543bfd402c8e7de59c12431e09/Untitled.png)
+![1st place: Miruna Pop, Andrei Girjoaba](./assets/winners_place_1.png)
 
 1st place: Miruna Pop, Andrei Girjoaba
 
-![2nd place: Abe Brandsma, Bart van Marum, Ivo Steegstra](Groningen%20Machine%20Learning%20Month%202022%20Reflection%206104fe543bfd402c8e7de59c12431e09/Untitled%201.png)
+![2nd place: Abe Brandsma, Bart van Marum, Ivo Steegstra](./assets/winners_place_2.png)
 
 2nd place: Abe Brandsma, Bart van Marum, Ivo Steegstra
 
-![3rd place: Cezar Bulancea, Alexander Muller](Groningen%20Machine%20Learning%20Month%202022%20Reflection%206104fe543bfd402c8e7de59c12431e09/Untitled%202.png)
+![3rd place: Cezar Bulancea, Alexander Muller](./assets/winners_place_3.png)
 
 3rd place: Cezar Bulancea, Alexander Muller
 

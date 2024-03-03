@@ -1,4 +1,4 @@
-import { parseMarkdown, walk } from "@/lib/utils";
+import { parseMarkdown, walk } from "@/lib/server_utils";
 import { readFileSync } from "fs";
 import { FC } from "react";
 import PreviewCardProject from "./preview-card-project";

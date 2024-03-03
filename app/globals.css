@@ -83,3 +83,14 @@
 .markdown-body ul {
   @apply list-disc;
 }
+
+.markdown-body aside {
+  @apply bg-muted text-muted-foreground;
+  @apply border border-border rounded-sm;
+  @apply my-4 p-4;
+  @apply flex flex-col gap-2;
+}
+
+.markdown-body aside p {
+  @apply mb-0;
+}
