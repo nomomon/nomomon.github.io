@@ -1,39 +1,43 @@
 import { parseMarkdown, walk } from "@/lib/utils";
-import { readFileSync } from "fs";
+import { readFileSync, existsSync } from "fs";
 import { notFound } from "next/navigation";
 
 const Page = async ({ params }: { params: { slug: string[] } }) => {
   async function create() {
     try {
-      const file = `public/${params.slug.join("/")}.md`;
-      const text = readFileSync(file, "utf-8");
-      return parseMarkdown(text);
-    } catch (e) {
-      return { data: {}, markdown: "" };
+      let filePath = "public/index.md";
+
+      if (params.slug) {
+        const slugPath = params.slug.join("/");
+        filePath = existsSync(`public/${slugPath}.md`)
+          ? `public/${slugPath}.md`
+          : `public/${slugPath}/index.md`;
+      }
+
+      if (!existsSync(filePath)) {
+        throw new Error(`File not found, ${filePath}`);
+      }
+
+      const text = readFileSync(filePath, "utf-8");
+
+      return { ...parseMarkdown(text), error: null };
+    } catch (error) {
+      console.error("Error:", error);
+      return { error: JSON.stringify(error), data: null, markdown: null };
     }
   }
 
-  const { data, markdown } = await create();
+  const { data, markdown, error } = await create();
 
-  if (markdown === "") {
-    // TODO: add if publish is false
+  if (error || !data || !markdown) {
     return notFound();
   }
 
   return (
     <div>
       <div className="markdown-body">
-        <h1>{data?.title}</h1>
         <article dangerouslySetInnerHTML={{ __html: markdown }} />
       </div>
-
-      <pre className="bg-gray-100 p-2 rounded-md overflow-auto text-sm my-2">
-        {Object.entries(data).map(([key, value]) => (
-          <div key={key}>
-            <strong>{key}</strong>: {JSON.stringify(value)}
-          </div>
-        ))}
-      </pre>
     </div>
   );
 };
@@ -47,6 +51,10 @@ export async function generateStaticParams() {
     if (file.endsWith(".md")) {
       const slug = file.replace("public/", "").replace(".md", "").split("/");
       slugs.push({ slug });
+
+      if (slug[slug.length - 1] === "index") {
+        slugs.push({ slug: slug.slice(0, -1) });
+      }
     }
   }
 

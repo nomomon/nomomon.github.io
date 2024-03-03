@@ -1,4 +1,4 @@
-import fs from "fs";
+import fs, { existsSync, readFileSync } from "fs";
 import path from "path";
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
@@ -38,4 +38,28 @@ export function parseMarkdown(text: string) {
     .render(content);
 
   return { data, markdown };
+}
+
+export async function create(params: { slug?: string[] } = {}) {
+  try {
+    let filePath = "public/index.md";
+
+    if (params.slug) {
+      const slugPath = params.slug.join("/");
+      filePath = existsSync(`public/${slugPath}.md`)
+        ? `public/${slugPath}.md`
+        : `public/${slugPath}/index.md`;
+    }
+
+    if (!existsSync(filePath)) {
+      throw new Error(`File not found, ${filePath}`);
+    }
+
+    const text = readFileSync(filePath, "utf-8");
+
+    return { ...parseMarkdown(text), error: null };
+  } catch (error) {
+    console.error("Error:", error);
+    return { error: JSON.stringify(error), data: null, markdown: null };
+  }
 }
