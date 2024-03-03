@@ -83,3 +83,29 @@
 .markdown-body ul {
   @apply list-disc;
 }
+
+.markdown-body aside {
+  @apply bg-muted text-muted-foreground;
+  @apply border border-border rounded-sm;
+  @apply my-4 p-4;
+  @apply flex flex-col gap-2;
+}
+
+.markdown-body aside p {
+  @apply mb-0;
+}
+
+.markdown-body img {
+  @apply max-w-[100%] max-h-[50vh];
+  @apply mx-auto my-4;
+}
+
+/* img + em (caption) */
+.markdown-body img + em {
+  @apply block text-center text-xs text-muted-foreground;
+}
+
+.markdown-body iframe {
+  @apply max-w-[100%] max-h-[75vh];
+  @apply mx-auto my-4;
+}

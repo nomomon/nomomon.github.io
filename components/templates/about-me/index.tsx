@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { CONFIG } from "@/lib/config";
-import { Briefcase, GraduationCap, MapPinned, Pin } from "lucide-react";
+import { Briefcase, GraduationCap, MapPinned } from "lucide-react";
 import Link from "next/link";
 
 export const AboutMe: FC = () => {

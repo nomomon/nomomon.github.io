@@ -1,4 +1,4 @@
-import { parseMarkdown, walk } from "@/lib/utils";
+import { parseMarkdown, walk } from "@/lib/server_utils";
 import { readFileSync } from "fs";
 import { FC } from "react";
 import PreviewCardProject from "./preview-card-project";
@@ -24,6 +24,7 @@ const MarkdownCollection: FC<MarkdownCollectionProps> = async ({
 
           const link = filepath
             .replace("public/", "")
+            .replace("index.md", "")
             .replace(".md", "")
             .split("/");
           data.link = link;

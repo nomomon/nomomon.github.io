@@ -1,4 +1,4 @@
-import { create, parseMarkdown, walk } from "@/lib/utils";
+import { create, parseMarkdown, walk } from "@/lib/server_utils";
 import { readFileSync, existsSync } from "fs";
 import { notFound } from "next/navigation";
 import { Metadata, ResolvingMetadata } from "next";
