@@ -24,6 +24,7 @@ const MarkdownCollection: FC<MarkdownCollectionProps> = async ({
 
           const link = filepath
             .replace("public/", "")
+            .replace("index.md", "")
             .replace(".md", "")
             .split("/");
           data.link = link;

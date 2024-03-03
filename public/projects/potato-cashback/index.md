@@ -1,7 +1,7 @@
 ---
 title: "Potato Cashback"
 description: "Accessible loyalty program for stores using just a phone app. Apart from rise of number and average of receipts and analytics, a database of clients is collected, to whom polls and news can sent and special offers can be made."
-thumbnail: "/images/projects/potato-cashback.jpeg"
+thumbnail: "/projects/potato-cashback/assets/potato-cashback.jpeg"
 date: "Jul 17, 2021"
 endDate: "Aug 31, 2021"
 demoLink: ""

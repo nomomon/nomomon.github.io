@@ -1,7 +1,7 @@
 ---
 title: "Kamernet Puppeteer"
 description: "Automatic message sender to new adverts on Kamernet using puppeteer."
-thumbnail: "/images/projects/kamernet-puppeteer.jpeg"
+thumbnail: "/projects/kamernet-puppeteer/assets/kamernet-puppeteer.jpeg"
 date: "May 2021"
 endDate: "Aug 2021"
 sourceLink: "https://github.com/nomomon/Kamernet-Puppeteer"
@@ -11,7 +11,7 @@ tools:
 type: "project"
 ---
 
-![banner](/images/projects/kamernet-puppeteer.jpeg)
+![banner](./assets/kamernet-puppeteer.jpeg)
 
 Dutch universities do not provide accommodation, but help international students in their search. They provide services like SSH, funda, Pararius, ROOM, ect.
 

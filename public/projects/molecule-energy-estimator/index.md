@@ -1,7 +1,7 @@
 ---
 title: "Molecule Energy Estimator"
 description: "The chemical and physical properties of a molecule are determined not only by its structural formula, but also by its conformation – positions of atoms in 3d space."
-thumbnail: "/images/projects/rucode-5.0-preview.gif"
+thumbnail: "/projects/molecule-energy-estimator/assets/rucode-5.0-preview.gif"
 date: "1 Apr, 2022"
 endDate: "1 Jul, 2022"
 sourceLink: "https://github.com/nomomon/molecule-energy-prediction"
@@ -14,7 +14,7 @@ achievements: 2
 type: "project"
 ---
 
-![banner](/images/projects/rucode-5.0-preview.gif)
+![banner](./assets/rucode-5.0-preview.gif)
 
 This project started off from me participating in the [RuCode 5.0](https://rucode.net/) hackathon and then led me to write a research report on the topic. Initially, the problem and data were provided by [Artificial Intelligence Research Institute](https://airi.net/).
 

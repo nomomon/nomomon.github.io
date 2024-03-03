@@ -9,6 +9,8 @@ tags:
 type: "blog"
 ---
 
+# Mathematics of working at a delivery company
+
 Last year my friend worked at a delivery company. Their job was to deliver groceries to customers on a bicycle. In their company, the wage was based on the amount of orders per hour they delivered. For example:
 
 - X euros for 4 orders per hour
