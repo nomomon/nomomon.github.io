@@ -1,5 +1,3 @@
-"use server";
-
 import { parseMarkdown, walk } from "@/lib/utils";
 import { readFileSync } from "fs";
 import { FC } from "react";
@@ -15,7 +13,6 @@ const MarkdownCollection: FC<MarkdownCollectionProps> = async ({
   filter,
 }) => {
   async function create() {
-    "use server";
     try {
       const posts = [];
       for await (const filepath of walk("public/")) {

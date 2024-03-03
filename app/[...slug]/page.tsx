@@ -1,12 +1,9 @@
-"use server";
-
 import { parseMarkdown, walk } from "@/lib/utils";
 import { readFileSync } from "fs";
 import { notFound } from "next/navigation";
 
 const Page = async ({ params }: { params: { slug: string[] } }) => {
   async function create() {
-    "use server";
     try {
       const file = `public/${params.slug.join("/")}.md`;
       const text = readFileSync(file, "utf-8");
