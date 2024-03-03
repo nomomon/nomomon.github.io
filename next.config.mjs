@@ -4,6 +4,7 @@ const nextConfig = {
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
   distDir: "dist",
+  basePath: "https://nomomon.github.io/",
 };
 
 export default nextConfig;
