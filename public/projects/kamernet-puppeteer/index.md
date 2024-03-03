@@ -11,7 +11,9 @@ tools:
 type: "project"
 ---
 
-![banner](./assets/kamernet-puppeteer.jpeg)
+![thumbnail](./assets/kamernet-puppeteer.jpeg)
+
+# Kamernet Puppeteer
 
 Dutch universities do not provide accommodation, but help international students in their search. They provide services like SSH, funda, Pararius, ROOM, ect.
 

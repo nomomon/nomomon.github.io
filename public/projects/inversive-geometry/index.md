@@ -12,6 +12,10 @@ tools:
 type: "project"
 ---
 
+![thumbnail](./assets/inversive-geometry.jpeg)
+
+# Inversive Geometry
+
 Geometrical inversion is defined as
 
 > For some point $O$, and radius $R$, geometrical inversion – is a plane transformation where each point $P$ is mapped to a point $P'$, which lies on ray $OP$ and satisfies

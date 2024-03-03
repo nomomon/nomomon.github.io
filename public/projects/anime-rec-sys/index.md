@@ -12,4 +12,6 @@ tools:
 type: "project"
 ---
 
-![banner](https://github.com/nomomon/Anime-RecSys/raw/main/images/banner.png)
+![thumbnail](https://github.com/nomomon/Anime-RecSys/raw/main/images/banner.png)
+
+# Anime RecSys

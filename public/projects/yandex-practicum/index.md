@@ -14,4 +14,6 @@ tools:
 type: "project"
 ---
 
-![banner](./assets/yandex-practicum.png)
+![thumbnail](./assets/yandex-practicum.png)
+
+# Data Science Bootcamp

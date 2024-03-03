@@ -12,7 +12,9 @@ tools:
 type: "project"
 ---
 
-![banner](./assets/pipe-thickness-calculator.jpeg)
+# Pipe Thickness Calculator
+
+![thumbnail](./assets/pipe-thickness-calculator.jpeg)
 
 ## Preview
 

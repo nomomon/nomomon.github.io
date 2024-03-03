@@ -12,4 +12,6 @@ tools:
 type: "project"
 ---
 
-![banner](./assets/softskillai-preview.jpeg)
+![thumbnail](./assets/softskillai-preview.jpeg)
+
+# Soft Skills AI

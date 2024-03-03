@@ -13,7 +13,9 @@ achievements: 2
 type: "project"
 ---
 
-![banner](./assets/latexgen-preview.jpeg)
+# LaTeXGen
+
+![thumbnail](./assets/latexgen-preview.jpeg)
 
 ## Achievements
 

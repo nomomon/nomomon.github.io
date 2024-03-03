@@ -12,4 +12,6 @@ tools:
 type: "project"
 ---
 
+# Orama Visual Assistant
+
 ![orama-va](./assets/oramava-preview.jpeg)

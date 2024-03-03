@@ -12,7 +12,9 @@ tools:
 type: "project"
 ---
 
-![banner](./assets/markov-chain-text.jpeg)
+![thumbnail](./assets/markov-chain-text.jpeg)
+
+# Markov Chain Text Generator
 
 Recently, I was reading in the Y.Practicum blog and found a [group of posts](https://thecode.media/markov-chain/) there about Markov chains. The articles were written in a easy to understand and engaging way, and I thought it would be interesting to see for myself how the algorithm works.
 

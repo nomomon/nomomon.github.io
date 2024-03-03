@@ -11,4 +11,6 @@ tools:
 type: "project"
 ---
 
-![banner](./assets/felony-felines.jpeg)
+![thumbnail](./assets/felony-felines.jpeg)
+
+# Felony Felines

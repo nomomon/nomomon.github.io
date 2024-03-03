@@ -14,7 +14,9 @@ achievements: 2
 type: "project"
 ---
 
-![banner](./assets/rucode-5.0-preview.gif)
+# Molecule Energy Estimator (RuCode 5.0)
+
+![thumbnail](./assets/rucode-5.0-preview.gif)
 
 This project started off from me participating in the [RuCode 5.0](https://rucode.net/) hackathon and then led me to write a research report on the topic. Initially, the problem and data were provided by [Artificial Intelligence Research Institute](https://airi.net/).
 
