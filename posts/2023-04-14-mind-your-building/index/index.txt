@@ -1,0 +1,148 @@
+3:I[5613,[],""]
+5:I[1778,[],""]
+6:I[9553,["250","static/chunks/250-d4164d91bfac7d8a.js","185","static/chunks/app/layout-82a10fef5eb86752.js"],"NavBar"]
+4:["slug","posts/2023-04-14-mind-your-building/index","oc"]
+0:["NIKovF6prcF1Manpz4QVl",[[["",{"children":[["slug","posts/2023-04-14-mind-your-building/index","oc"],{"children":["__PAGE__?{\"slug\":[\"posts\",\"2023-04-14-mind-your-building\",\"index\"]}",{}]}]},"$undefined","$undefined",true],["",{"children":[["slug","posts/2023-04-14-mind-your-building/index","oc"],{"children":["__PAGE__",{},["$L1","$L2",null]]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},[null,["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_aaf875","children":[["$","$L6",null,{}],["$","main",null,{"className":"mt-2 m-auto max-w-4xl py-16 max-md:px-4 max-md:max-w-full","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}]]}]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/af35e6bd8f5544cf.css","precedence":"next","crossOrigin":""}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/087d32dc7477722f.css","precedence":"next","crossOrigin":""}]],"$L7"]]]]
+8:T350e,<h1>Mind Your Building Hackathon</h1>
+<p>Recently as a company, <a href="https://researchable.nl/">Researchable</a>, we won the <em>Mind your Building</em> <em>hackathon</em>. It was a month-long competition organized by <em>TNO</em> in collaboration with the <em>Hanze University of Applied Sciences</em>, <em>DFKI</em>, and <em>AIMZ</em>, and supported by the <em>European Tailor-network</em> project.</p>
+<p><img src="./assets/DSCF6378.jpg" alt="DSCF6378.JPG"></p>
+<p><img src="./assets/DSCF6366.jpg" alt="DSCF6366.JPG"></p>
+<p><img src="./assets/DSCF6981.jpg" alt="DSCF6981.JPG"></p>
+<p>The challenge was to identify behavioural patterns related to building occupancy using sensor data and locate &quot;missing&quot; sensors in the building. Participants were provided with a floorplan, sensor-overview, and sensor data.</p>
+<p>There were 4 types of sensors: basic, CO2, sound and door. The basic, sound and co2 sensors had data on temperature, humidity, light and motion. Some specific sensors had extra data such as CO2 and sound levels. The door sensors measured the if the door was closed or not.</p>
+<p><img src="./assets/Screenshot_2023-04-18_at_16.16.48.png" alt="Screenshot 2023-04-18 at 16.16.48.png"></p>
+<p><img src="./assets/Screenshot_2023-04-18_at_16.11.03.png" alt="Building floor plan with sensors located"></p>
+<p>Building floor plan with sensors located</p>
+<p><img src="./assets/Screenshot_2023-04-18_at_16.11.36.png" alt="Description available of sensors"></p>
+<p>Description available of sensors</p>
+<p>Our solution utilized time-based pattern analysis and clustering to identify the location of the missing sensors. Overall, the challenge was a fantastic opportunity for us to apply our expertise in data analysis and demonstrate our problem-solving skills.</p>
+<p>If you want to go more into the details of the solution here we go!</p>
+<h1>Solution</h1>
+<h2>Data Analysis</h2>
+<p>I started off with a quick glance over the data to get the feel over it and look for missing values and anomalies. The sensor overview was first, it had zone names, floor numbers, sensor ids and the sensor names. Some of the sensors had a string <code>unknown</code> in places where if we had no idea where the sensor was.</p>
+<p><img src="./assets/Screenshot_2023-04-26_at_22.23.59.png" alt="Head of the sensor overview dataset"></p>
+<p>Head of the sensor overview dataset</p>
+<p>Sensor data included recordings of the respective sensor measurements in 10 minute intervals and vdd values. As mentioned earlier, all the sensors had measurements for temperature, humidity, light and motion and some specific to task had CO2 or sound levels.</p>
+<p><img src="./assets/Screenshot_2023-04-26_at_22.03.42.png" alt="Head of the basic sensor dataset"></p>
+<p>Head of the basic sensor dataset</p>
+<p>I suspect vdd had to be the voltage value for the sensor – determining whether the sensor is powered or not.</p>
+<p>All the room sensor values where fine, except that some basic room temperatures were impossible values, for example, minimum temperature is -1000. Probably because it was when sensors were first set up or sensor malfunction. I decided upon setting these values as null and later backfilling them.</p>
+<p><img src="./assets/Screenshot_2023-04-26_at_22.07.39.png" alt="Rows that have temperature less than zero"></p>
+<p>Rows that have temperature less than zero</p>
+<p>The door sensors had three measurements – if it is open, the vdd and the counter. The counter stood for the cumulative number of times the door was opened.</p>
+<p>I noticed that the counter column had 99% of values – zeros and some reached up to 5000. This is probably a malfunction of the sensor and later has to be checked out. For now we'll not use it.</p>
+<p><img src="./assets/Screenshot_2023-04-26_at_22.12.43.png" alt="Value counts of the counter column"></p>
+<p>Value counts of the counter column</p>
+<p><img src="./assets/Screenshot_2023-04-26_at_22.11.51.png" alt="Description of the door sensor set"></p>
+<p>Description of the door sensor set</p>
+<p>Also, I checked for if there were any time gaps in the sensor measurements and for how long they lasted. As we can see there were 5 “data blackouts” where no sensor reported of data some of them lasting from 1-3 days up to 20 days.</p>
+<p><img src="./assets/Screenshot_2023-04-26_at_22.21.21.png" alt="Screenshot 2023-04-26 at 22.21.21.png"></p>
+<h2>Data Preprocessing</h2>
+<p>Here I extracted the needed values such as the floor number, made a list of sensors that are unknown, fixed the impossible temperature, removed the vdd and counter columns, converted the <code>isOpen</code> column type to boolean and localized all the time to UTC.</p>
+<p><img src="./assets/Screenshot_2023-04-26_at_22.27.04.png" alt="List of names of unknown sensors"></p>
+<p>List of names of unknown sensors</p>
+<h2>Exploratory Data Analysis</h2>
+<p>First I wanted to see what patterns there are in the data, so I began looking for how it changed overtime.</p>
+<h3>Over the year</h3>
+<p>In these plots the blue areas highlight the approximate summer and winter holidays, and the red line approximately indicates when covid has ended.</p>
+<p>Looking at temperature and humidity we can see and obvious seasonality in the data – high temperature and humidity in the summer and low in winter.</p>
+<p><img src="./assets/Untitled.png" alt="Untitled"></p>
+<p><img src="./assets/Untitled%201.png" alt="Untitled"></p>
+<p>The light shows a similar seasonality of data – <em>high in summer, low in winter</em>. Apparently, the light sensors pick up light not only from the lamps, but also from the sun.</p>
+<p><img src="./assets/Untitled%202.png" alt="Untitled"></p>
+<p>Motion sensor seems to be a good indicator of if there are people in the zone or not because during the holiday season the motion falls off.</p>
+<p><img src="./assets/Untitled%203.png" alt="Untitled"></p>
+<p>Looking at CO2 levels, I expected there to be a pattern if there are people on holiday, but it is difficult to see from here. What we can notice is that there was something placed in 2021 winter break in some room which increased the CO2 levels. I suspect this to be a refrigerator or a vending machine. There is also a sudden increase in CO2 levels which weared off in the post-summer of 2021.</p>
+<p><img src="./assets/Untitled%204.png" alt="Untitled"></p>
+<p>Similarly to motion measurements we can see a nice pattern of the decrease in sound during the breaks.</p>
+<p><img src="./assets/Untitled%205.png" alt="Untitled"></p>
+<p><img src="./assets/Untitled%206.png" alt="Untitled"></p>
+<p>Plotting if the door was open doesn’t make sense like this, but what we can see is that most of the doors are closed during the holidays. There is a room that is almost always has it's door closed.</p>
+<p><img src="./assets/Untitled%207.png" alt="Untitled"></p>
+<h3>Over the day</h3>
+<p>Here I’ll show only the interesting ones. In here the same sensor data is averaged over a day.</p>
+<p>Inspecting the light sensor we can see two groups formed. Referring back to the fact that the light sensor picks up also on the sunlight we may conclude that these two hills refer to sunrise and sunset.</p>
+<p><img src="./assets/Untitled%208.png" alt="Untitled"></p>
+<p>Looking up from where does the sun rise we can conclude that using the light sensor we can determine on east or on west side of the building the room is.</p>
+<p><img src="./assets/Screenshot_2023-04-26_at_22.59.48.png" alt="Screenshot 2023-04-26 at 22.59.48.png"></p>
+<p>Unsurprisingly inspecting the motion and sound results in high values during the working hours. Sometimes the motion sensors picked up on movement during the night, I suspect it to be noise or the flashes of shadows or movement from the windows.</p>
+<p><img src="./assets/Untitled%209.png" alt="Untitled"></p>
+<p><img src="./assets/Untitled%2010.png" alt="Untitled"></p>
+<p>Looking at CO2 and humidity levels we can see that there is a seasonality, during the night it increases and decreases during the day.</p>
+<p><img src="./assets/Untitled%2011.png" alt="Untitled"></p>
+<p><img src="./assets/Untitled%2012.png" alt="Untitled"></p>
+<h3>View a day</h3>
+<p>As Andrew Karpathy suggested once – to better understand the data you have to look into the tiniest details of it, maybe even try to label it yourself. So, here I took an arbitrary day and observed how the CO2 and motion values changed.</p>
+<p>As we can see, on some weekdays there is movement followed by increase in CO2, which is followed by movement and decrease in CO2. I suspect that this indicates the coming in and out of a class. We can use this observation for later to do occupancy prediction.</p>
+<p><img src="./assets/Untitled%2013.png" alt="Untitled"></p>
+<p><img src="./assets/Untitled%2014.png" alt="Untitled"></p>
+<p><img src="./assets/Untitled%2015.png" alt="Untitled"></p>
+<p><img src="./assets/Untitled%2016.png" alt="Untitled"></p>
+<p><img src="./assets/Untitled%2017.png" alt="Untitled"></p>
+<p><img src="./assets/Untitled%2018.png" alt="Untitled"></p>
+<h2>Task 1. Searching for unknown rooms</h2>
+<p>My idea was that sensors that area near each other will have similar changes in their measurements, and if we correlate them, they will have relatively high correlation. For the values I’ve used the standard temperature, humidity, light and motion values and their derivatives as they are present in all sensors. The data was resampled to a similar 30 minute interval, pairwise Pearson correlated per-sensor and mean squared of the values was calculated.</p>
+<p>It resulted in a huge table with correlation values.</p>
+<p><img src="./assets/Screenshot_2023-04-26_at_23.22.11.png" alt="Screenshot 2023-04-26 at 23.22.11.png"></p>
+<p>Mapping the known sensors to their zone numbers and leaving only the unknown sensors we can see that this data shows some zone predictions. From here we can see that Ilse is most likely to be in the room 2.38, Sofie to be in 1.03, Kees to be in 1.03, Anne and Sven to be in 0.0.</p>
+<p><img src="./assets/Untitled%2019.png" alt="Untitled"></p>
+<p>Also, taking into account what type of sensors they are we can deduce where the rest of the sensors are located.</p>
+<p><img src="./assets/Untitled%2020.png" alt="Untitled"></p>
+<p><img src="./assets/floorplan_names.png" alt="floorplan_names.png"></p>
+<p>Making the final predictions, which later were confirmed to be correct.</p>
+<table>
+<thead>
+<tr>
+<th>Sensor name</th>
+<th>Sensor Id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Anne</td>
+<td>Room 2</td>
+</tr>
+<tr>
+<td>Sven</td>
+<td>Sound 4</td>
+</tr>
+<tr>
+<td>Brian</td>
+<td>Room 5</td>
+</tr>
+<tr>
+<td>Kees</td>
+<td>Sound 15</td>
+</tr>
+<tr>
+<td>Sofie</td>
+<td>Room 11</td>
+</tr>
+<tr>
+<td>Ilse</td>
+<td>Sound 11</td>
+</tr>
+</tbody>
+</table>
+<p>As a bonus, it is interesting to cluster these sensors using dendrograms and see what patterns emerge. Clearly we can notice that there are groups of sensors which are indeed close to each other.</p>
+<p><img src="./assets/Untitled%2021.png" alt="Untitled"></p>
+<p>Examples of nearby rooms which are clustered together:</p>
+<p><img src="./assets/Untitled%2022.png" alt="Untitled"></p>
+<p><img src="./assets/Untitled%2023.png" alt="Untitled"></p>
+<p><img src="./assets/Untitled%2024.png" alt="Untitled"></p>
+<p><img src="./assets/Untitled%2025.png" alt="Untitled"></p>
+<p>Interestingly, if the light data is to be removed the clustering doesn’t work at as well meaning that determining what side the of the building room is located in is a good feature for the model.</p>
+<h3>Task 2. Occupancy prediction</h3>
+<p>For the task of occupancy prediction we thought of making a logistic regression model with sliding window. To train the model we sat down to label the data ourselves using the an open source tool <a href="https://labelstud.io/">Label Studio</a>. Unfortunately, we didn’t have enough time to prepare the data and train the models.</p>
+<p><img src="./assets/Screenshot_2023-04-13_at_19.05.45.png" alt="Screenshot 2023-04-13 at 19.05.45.png"></p>
+<h3>Future work</h3>
+<p>Apart from finishing labeling the data and training a model, I want to propose a way to improve the sensor search model. Currently it is comparing the two time series (signals) one-to-one, however this is not correct as one can be shifted which will result in a lower correlation score. To go around this we can use the <a href="https://en.wikipedia.org/wiki/Dynamic_time_warping">Dynamic Time Warping</a> algorithm which using <a href="https://en.wikipedia.org/wiki/Dynamic_programming">dynamic programming</a> to calculate the edit distance between the two signals, essentially mapping one signal onto another in the best way.</p>
+<p><img src="./assets/dtw_vs_euc.svg" alt="dtw_vs_euc.svg"></p>
+<h2>Conclusion</h2>
+<p>In conclusion, participating in the <em>Mind your Building</em> hackathon was an incredible opportunity for us to demonstrate our expertise in data analysis and problem-solving skills. Our solution utilized time-based pattern analysis and clustering to identify the location of the missing sensors. We also conducted exploratory data analysis to gain insights into the data that helped guide our approach to the problem.</p>
+<p>Personally, it was a nice refresher into data science and I learned a lot in the process.</p>
+<p>The data can be is uploaded and can be viewed on Kaggle (for right now it is private because I didn’t write any description for it).</p>
+<p><a href="https://kaggle.com/datasets/0f320b38d988b1a332524182c08ccf6f517ad4623ed419b0de8978c63e6b6dd2">Mind Your Building</a></p>
+2:[false,["$","div",null,{"children":["$","div",null,{"className":"markdown-body","children":["$","article",null,{"dangerouslySetInnerHTML":{"__html":"$8"}}]}]}]]
+7:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Mansur Nurmukhambetov"}],["$","meta","3",{"name":"description","content":"Generated by create next app"}],["$","meta","4",{"name":"next-size-adjust"}]]
+1:null
