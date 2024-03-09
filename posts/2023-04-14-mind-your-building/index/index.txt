@@ -2,8 +2,8 @@
 5:I[1778,[],""]
 6:I[9553,["250","static/chunks/250-d4164d91bfac7d8a.js","185","static/chunks/app/layout-82a10fef5eb86752.js"],"NavBar"]
 4:["slug","posts/2023-04-14-mind-your-building/index","oc"]
-0:["cCQQpk8MEDCmJ0JuKsInr",[[["",{"children":[["slug","posts/2023-04-14-mind-your-building/index","oc"],{"children":["__PAGE__?{\"slug\":[\"posts\",\"2023-04-14-mind-your-building\",\"index\"]}",{}]}]},"$undefined","$undefined",true],["",{"children":[["slug","posts/2023-04-14-mind-your-building/index","oc"],{"children":["__PAGE__",{},["$L1","$L2",null]]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},[null,["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_aaf875","children":[["$","$L6",null,{}],["$","main",null,{"className":"mt-2 m-auto max-w-4xl py-16 max-md:px-4 max-md:max-w-full","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}]]}]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/af35e6bd8f5544cf.css","precedence":"next","crossOrigin":""}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/087d32dc7477722f.css","precedence":"next","crossOrigin":""}]],"$L7"]]]]
-8:T350e,<h1>Mind Your Building Hackathon</h1>
+0:["YQm-m3qTlqLWN9JT8DFp-",[[["",{"children":[["slug","posts/2023-04-14-mind-your-building/index","oc"],{"children":["__PAGE__?{\"slug\":[\"posts\",\"2023-04-14-mind-your-building\",\"index\"]}",{}]}]},"$undefined","$undefined",true],["",{"children":[["slug","posts/2023-04-14-mind-your-building/index","oc"],{"children":["__PAGE__",{},["$L1","$L2",null]]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},[null,["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_aaf875","children":[["$","$L6",null,{}],["$","main",null,{"className":"mt-2 m-auto max-w-4xl py-16 max-md:px-4 max-md:max-w-full","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}]]}]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/af35e6bd8f5544cf.css","precedence":"next","crossOrigin":""}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/087d32dc7477722f.css","precedence":"next","crossOrigin":""}]],"$L7"]]]]
+8:T337e,<h1>Mind Your Building Hackathon</h1>
 <p>Recently as a company, <a href="https://researchable.nl/">Researchable</a>, we won the <em>Mind your Building</em> <em>hackathon</em>. It was a month-long competition organized by <em>TNO</em> in collaboration with the <em>Hanze University of Applied Sciences</em>, <em>DFKI</em>, and <em>AIMZ</em>, and supported by the <em>European Tailor-network</em> project.</p>
 <p><img src="./assets/DSCF6378.jpg" alt="DSCF6378.JPG"></p>
 <p><img src="./assets/DSCF6366.jpg" alt="DSCF6366.JPG"></p>
@@ -47,47 +47,47 @@
 <p>In these plots the blue areas highlight the approximate summer and winter holidays, and the red line approximately indicates when covid has ended.</p>
 <p>Looking at temperature and humidity we can see and obvious seasonality in the data – high temperature and humidity in the summer and low in winter.</p>
 <p><img src="./assets/Untitled.png" alt="Untitled"></p>
-<p><img src="./assets/Untitled%201.png" alt="Untitled"></p>
+<p>![Untitled](./assets/Untitled 1.png)</p>
 <p>The light shows a similar seasonality of data – <em>high in summer, low in winter</em>. Apparently, the light sensors pick up light not only from the lamps, but also from the sun.</p>
-<p><img src="./assets/Untitled%202.png" alt="Untitled"></p>
+<p>![Untitled](./assets/Untitled 2.png)</p>
 <p>Motion sensor seems to be a good indicator of if there are people in the zone or not because during the holiday season the motion falls off.</p>
-<p><img src="./assets/Untitled%203.png" alt="Untitled"></p>
+<p>![Untitled](./assets/Untitled 3.png)</p>
 <p>Looking at CO2 levels, I expected there to be a pattern if there are people on holiday, but it is difficult to see from here. What we can notice is that there was something placed in 2021 winter break in some room which increased the CO2 levels. I suspect this to be a refrigerator or a vending machine. There is also a sudden increase in CO2 levels which weared off in the post-summer of 2021.</p>
-<p><img src="./assets/Untitled%204.png" alt="Untitled"></p>
+<p>![Untitled](./assets/Untitled 4.png)</p>
 <p>Similarly to motion measurements we can see a nice pattern of the decrease in sound during the breaks.</p>
-<p><img src="./assets/Untitled%205.png" alt="Untitled"></p>
-<p><img src="./assets/Untitled%206.png" alt="Untitled"></p>
+<p>![Untitled](./assets/Untitled 5.png)</p>
+<p>![Untitled](./assets/Untitled 6.png)</p>
 <p>Plotting if the door was open doesn’t make sense like this, but what we can see is that most of the doors are closed during the holidays. There is a room that is almost always has it's door closed.</p>
-<p><img src="./assets/Untitled%207.png" alt="Untitled"></p>
+<p>![Untitled](./assets/Untitled 7.png)</p>
 <h3>Over the day</h3>
 <p>Here I’ll show only the interesting ones. In here the same sensor data is averaged over a day.</p>
 <p>Inspecting the light sensor we can see two groups formed. Referring back to the fact that the light sensor picks up also on the sunlight we may conclude that these two hills refer to sunrise and sunset.</p>
-<p><img src="./assets/Untitled%208.png" alt="Untitled"></p>
+<p>![Untitled](./assets/Untitled 8.png)</p>
 <p>Looking up from where does the sun rise we can conclude that using the light sensor we can determine on east or on west side of the building the room is.</p>
 <p><img src="./assets/Screenshot_2023-04-26_at_22.59.48.png" alt="Screenshot 2023-04-26 at 22.59.48.png"></p>
 <p>Unsurprisingly inspecting the motion and sound results in high values during the working hours. Sometimes the motion sensors picked up on movement during the night, I suspect it to be noise or the flashes of shadows or movement from the windows.</p>
-<p><img src="./assets/Untitled%209.png" alt="Untitled"></p>
-<p><img src="./assets/Untitled%2010.png" alt="Untitled"></p>
+<p>![Untitled](./assets/Untitled 9.png)</p>
+<p>![Untitled](./assets/Untitled 10.png)</p>
 <p>Looking at CO2 and humidity levels we can see that there is a seasonality, during the night it increases and decreases during the day.</p>
-<p><img src="./assets/Untitled%2011.png" alt="Untitled"></p>
-<p><img src="./assets/Untitled%2012.png" alt="Untitled"></p>
+<p>![Untitled](./assets/Untitled 11.png)</p>
+<p>![Untitled](./assets/Untitled 12.png)</p>
 <h3>View a day</h3>
 <p>As Andrew Karpathy suggested once – to better understand the data you have to look into the tiniest details of it, maybe even try to label it yourself. So, here I took an arbitrary day and observed how the CO2 and motion values changed.</p>
 <p>As we can see, on some weekdays there is movement followed by increase in CO2, which is followed by movement and decrease in CO2. I suspect that this indicates the coming in and out of a class. We can use this observation for later to do occupancy prediction.</p>
-<p><img src="./assets/Untitled%2013.png" alt="Untitled"></p>
-<p><img src="./assets/Untitled%2014.png" alt="Untitled"></p>
-<p><img src="./assets/Untitled%2015.png" alt="Untitled"></p>
-<p><img src="./assets/Untitled%2016.png" alt="Untitled"></p>
-<p><img src="./assets/Untitled%2017.png" alt="Untitled"></p>
-<p><img src="./assets/Untitled%2018.png" alt="Untitled"></p>
+<p>![Untitled](./assets/Untitled 13.png)</p>
+<p>![Untitled](./assets/Untitled 14.png)</p>
+<p>![Untitled](./assets/Untitled 15.png)</p>
+<p>![Untitled](./assets/Untitled 16.png)</p>
+<p>![Untitled](./assets/Untitled 17.png)</p>
+<p>![Untitled](./assets/Untitled 18.png)</p>
 <h2>Task 1. Searching for unknown rooms</h2>
 <p>My idea was that sensors that area near each other will have similar changes in their measurements, and if we correlate them, they will have relatively high correlation. For the values I’ve used the standard temperature, humidity, light and motion values and their derivatives as they are present in all sensors. The data was resampled to a similar 30 minute interval, pairwise Pearson correlated per-sensor and mean squared of the values was calculated.</p>
 <p>It resulted in a huge table with correlation values.</p>
 <p><img src="./assets/Screenshot_2023-04-26_at_23.22.11.png" alt="Screenshot 2023-04-26 at 23.22.11.png"></p>
 <p>Mapping the known sensors to their zone numbers and leaving only the unknown sensors we can see that this data shows some zone predictions. From here we can see that Ilse is most likely to be in the room 2.38, Sofie to be in 1.03, Kees to be in 1.03, Anne and Sven to be in 0.0.</p>
-<p><img src="./assets/Untitled%2019.png" alt="Untitled"></p>
+<p>![Untitled](./assets/Untitled 19.png)</p>
 <p>Also, taking into account what type of sensors they are we can deduce where the rest of the sensors are located.</p>
-<p><img src="./assets/Untitled%2020.png" alt="Untitled"></p>
+<p>![Untitled](./assets/Untitled 20.png)</p>
 <p><img src="./assets/floorplan_names.png" alt="floorplan_names.png"></p>
 <p>Making the final predictions, which later were confirmed to be correct.</p>
 <table>
@@ -125,12 +125,12 @@
 </tbody>
 </table>
 <p>As a bonus, it is interesting to cluster these sensors using dendrograms and see what patterns emerge. Clearly we can notice that there are groups of sensors which are indeed close to each other.</p>
-<p><img src="./assets/Untitled%2021.png" alt="Untitled"></p>
+<p>![Untitled](./assets/Untitled 21.png)</p>
 <p>Examples of nearby rooms which are clustered together:</p>
-<p><img src="./assets/Untitled%2022.png" alt="Untitled"></p>
-<p><img src="./assets/Untitled%2023.png" alt="Untitled"></p>
-<p><img src="./assets/Untitled%2024.png" alt="Untitled"></p>
-<p><img src="./assets/Untitled%2025.png" alt="Untitled"></p>
+<p>![Untitled](./assets/Untitled 22.png)</p>
+<p>![Untitled](./assets/Untitled 23.png)</p>
+<p>![Untitled](./assets/Untitled 24.png)</p>
+<p>![Untitled](./assets/Untitled 25.png)</p>
 <p>Interestingly, if the light data is to be removed the clustering doesn’t work at as well meaning that determining what side the of the building room is located in is a good feature for the model.</p>
 <h3>Task 2. Occupancy prediction</h3>
 <p>For the task of occupancy prediction we thought of making a logistic regression model with sliding window. To train the model we sat down to label the data ourselves using the an open source tool <a href="https://labelstud.io/">Label Studio</a>. Unfortunately, we didn’t have enough time to prepare the data and train the models.</p>

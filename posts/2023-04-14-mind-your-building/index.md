@@ -97,29 +97,29 @@ Looking at temperature and humidity we can see and obvious seasonality in the da
 
 ![Untitled](./assets/Untitled.png)
 
-![Untitled](./assets/Untitled%201.png)
+![Untitled](./assets/Untitled 1.png)
 
 The light shows a similar seasonality of data – _high in summer, low in winter_. Apparently, the light sensors pick up light not only from the lamps, but also from the sun.
 
-![Untitled](./assets/Untitled%202.png)
+![Untitled](./assets/Untitled 2.png)
 
 Motion sensor seems to be a good indicator of if there are people in the zone or not because during the holiday season the motion falls off.
 
-![Untitled](./assets/Untitled%203.png)
+![Untitled](./assets/Untitled 3.png)
 
 Looking at CO2 levels, I expected there to be a pattern if there are people on holiday, but it is difficult to see from here. What we can notice is that there was something placed in 2021 winter break in some room which increased the CO2 levels. I suspect this to be a refrigerator or a vending machine. There is also a sudden increase in CO2 levels which weared off in the post-summer of 2021.
 
-![Untitled](./assets/Untitled%204.png)
+![Untitled](./assets/Untitled 4.png)
 
 Similarly to motion measurements we can see a nice pattern of the decrease in sound during the breaks.
 
-![Untitled](./assets/Untitled%205.png)
+![Untitled](./assets/Untitled 5.png)
 
-![Untitled](./assets/Untitled%206.png)
+![Untitled](./assets/Untitled 6.png)
 
 Plotting if the door was open doesn’t make sense like this, but what we can see is that most of the doors are closed during the holidays. There is a room that is almost always has it's door closed.
 
-![Untitled](./assets/Untitled%207.png)
+![Untitled](./assets/Untitled 7.png)
 
 ### Over the day
 
@@ -127,7 +127,7 @@ Here I’ll show only the interesting ones. In here the same sensor data is aver
 
 Inspecting the light sensor we can see two groups formed. Referring back to the fact that the light sensor picks up also on the sunlight we may conclude that these two hills refer to sunrise and sunset.
 
-![Untitled](./assets/Untitled%208.png)
+![Untitled](./assets/Untitled 8.png)
 
 Looking up from where does the sun rise we can conclude that using the light sensor we can determine on east or on west side of the building the room is.
 
@@ -135,15 +135,15 @@ Looking up from where does the sun rise we can conclude that using the light sen
 
 Unsurprisingly inspecting the motion and sound results in high values during the working hours. Sometimes the motion sensors picked up on movement during the night, I suspect it to be noise or the flashes of shadows or movement from the windows.
 
-![Untitled](./assets/Untitled%209.png)
+![Untitled](./assets/Untitled 9.png)
 
-![Untitled](./assets/Untitled%2010.png)
+![Untitled](./assets/Untitled 10.png)
 
 Looking at CO2 and humidity levels we can see that there is a seasonality, during the night it increases and decreases during the day.
 
-![Untitled](./assets/Untitled%2011.png)
+![Untitled](./assets/Untitled 11.png)
 
-![Untitled](./assets/Untitled%2012.png)
+![Untitled](./assets/Untitled 12.png)
 
 ### View a day
 
@@ -151,17 +151,17 @@ As Andrew Karpathy suggested once – to better understand the data you have to 
 
 As we can see, on some weekdays there is movement followed by increase in CO2, which is followed by movement and decrease in CO2. I suspect that this indicates the coming in and out of a class. We can use this observation for later to do occupancy prediction.
 
-![Untitled](./assets/Untitled%2013.png)
+![Untitled](./assets/Untitled 13.png)
 
-![Untitled](./assets/Untitled%2014.png)
+![Untitled](./assets/Untitled 14.png)
 
-![Untitled](./assets/Untitled%2015.png)
+![Untitled](./assets/Untitled 15.png)
 
-![Untitled](./assets/Untitled%2016.png)
+![Untitled](./assets/Untitled 16.png)
 
-![Untitled](./assets/Untitled%2017.png)
+![Untitled](./assets/Untitled 17.png)
 
-![Untitled](./assets/Untitled%2018.png)
+![Untitled](./assets/Untitled 18.png)
 
 ## Task 1. Searching for unknown rooms
 
@@ -173,11 +173,11 @@ It resulted in a huge table with correlation values.
 
 Mapping the known sensors to their zone numbers and leaving only the unknown sensors we can see that this data shows some zone predictions. From here we can see that Ilse is most likely to be in the room 2.38, Sofie to be in 1.03, Kees to be in 1.03, Anne and Sven to be in 0.0.
 
-![Untitled](./assets/Untitled%2019.png)
+![Untitled](./assets/Untitled 19.png)
 
 Also, taking into account what type of sensors they are we can deduce where the rest of the sensors are located.
 
-![Untitled](./assets/Untitled%2020.png)
+![Untitled](./assets/Untitled 20.png)
 
 ![floorplan_names.png](./assets/floorplan_names.png)
 
@@ -194,17 +194,17 @@ Making the final predictions, which later were confirmed to be correct.
 
 As a bonus, it is interesting to cluster these sensors using dendrograms and see what patterns emerge. Clearly we can notice that there are groups of sensors which are indeed close to each other.
 
-![Untitled](./assets/Untitled%2021.png)
+![Untitled](./assets/Untitled 21.png)
 
 Examples of nearby rooms which are clustered together:
 
-![Untitled](./assets/Untitled%2022.png)
+![Untitled](./assets/Untitled 22.png)
 
-![Untitled](./assets/Untitled%2023.png)
+![Untitled](./assets/Untitled 23.png)
 
-![Untitled](./assets/Untitled%2024.png)
+![Untitled](./assets/Untitled 24.png)
 
-![Untitled](./assets/Untitled%2025.png)
+![Untitled](./assets/Untitled 25.png)
 
 Interestingly, if the light data is to be removed the clustering doesn’t work at as well meaning that determining what side the of the building room is located in is a good feature for the model.
 
