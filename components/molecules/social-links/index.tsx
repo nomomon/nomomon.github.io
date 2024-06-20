@@ -1,5 +1,5 @@
 import ClientOnlyPortal from "@/components/ui/client-only-portal";
-import socialLinks from "@/public/social-links.json";
+import socialLinks from "@/public/data/social-links.json";
 import Link from "next/link";
 
 const SocialLinks = () => {
