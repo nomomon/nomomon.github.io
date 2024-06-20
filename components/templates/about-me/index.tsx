@@ -6,8 +6,8 @@ import Link from "next/link";
 export const AboutMe: FC = () => {
   return (
     <>
-      <div className="flex flex-row items-center gap-8 max-md:flex-col">
-        <div className="w-44 h-44">
+      <div className="flex flex-row items-center gap-6 max-md:flex-col">
+        <div className="w-40 h-40">
           <img
             src="/assets/me.jpg"
             alt="Me"
@@ -17,11 +17,11 @@ export const AboutMe: FC = () => {
           />
         </div>
         <div className="">
-          <div className="font-bold text-xl max-md:text-center">
+          <div className="font-bold text-xl">
             {info.firstname} {info.lastname}
           </div>
           <div className="my-2">
-            <div className="text-gray-500 flex flex-row items-center max-md:justify-center">
+            <div className="text-gray-500 flex flex-row items-center">
               <Briefcase className="w-4 h-4 mr-1" />
               {info.job.title}
               <Link
@@ -36,7 +36,7 @@ export const AboutMe: FC = () => {
                 </span>
               </Link>
             </div>
-            <div className="text-gray-500 flex flex-row items-center max-md:justify-center">
+            <div className="text-gray-500 flex flex-row items-center">
               <GraduationCap className="w-4 h-4 mr-1" />
               {info.degree.title}
               <Link
@@ -52,7 +52,7 @@ export const AboutMe: FC = () => {
               </Link>
             </div>
           </div>
-          <div>{info.description}</div>
+          <div className="max-w-[38rem]">{info.description}</div>
         </div>
       </div>
     </>

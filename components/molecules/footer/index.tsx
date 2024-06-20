@@ -3,9 +3,14 @@ const Footer = () => {
 
   return (
     <footer>
-      <div className="w-full max-w-3xl  my-6 flex justify-between m-auto max-md:max-w-full max-md:px-4">
-        <span className="text-sm text-muted-foreground">nomomon © {year}</span>
-        <span>☁️</span>
+      <div className="mt-4 w-full max-w-3xl m-auto max-md:max-w-full max-md:px-4">
+        <hr className="w-full" />
+        <div className="my-6 flex justify-between items-center">
+          <span className="text-sm text-muted-foreground">
+            nomomon © {year}
+          </span>
+          <span>☁️</span>
+        </div>
       </div>
     </footer>
   );

@@ -4,6 +4,7 @@ import "./globals.css";
 import "katex/dist/katex.min.css";
 import "github-markdown-css/github-markdown-light.css";
 import Footer from "@/components/molecules/footer";
+import { cn } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,12 +20,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={cn(inter.className, "flex flex-col gap-2")}>
         <nav />
-        <main className="mt-2 m-auto max-w-3xl  py-16 max-md:px-4 max-md:max-w-full">
+        <main className="mx-auto w-full max-w-3xl max-md:px-4 max-md:max-w-full">
           {children}
         </main>
-        <hr className="w-full max-w-3xl  m-auto max-md:max-w-full max-md:px-4" />
         <Footer />
       </body>
     </html>

@@ -1,8 +1,5 @@
 import { create, parseMarkdown, walk } from "@/lib/server_utils";
-import { readFileSync, existsSync } from "fs";
 import { notFound } from "next/navigation";
-import { Metadata, ResolvingMetadata } from "next";
-import { AboutMe } from "@/components/templates/about-me";
 import { NavBar } from "@/components/molecules/nav-bar";
 
 const Page = async ({ params }: { params: { slug: string[] } }) => {
