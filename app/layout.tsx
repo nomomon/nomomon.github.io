@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import "katex/dist/katex.min.css";
 import "github-markdown-css/github-markdown-light.css";
-import { NavBar } from "@/components/molecules/nav-bar";
 import Footer from "@/components/molecules/footer";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -21,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <NavBar />
+        <nav />
         <main className="mt-2 m-auto max-w-4xl py-16 max-md:px-4 max-md:max-w-full">
           {children}
         </main>

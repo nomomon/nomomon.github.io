@@ -3,6 +3,7 @@ import { readFileSync, existsSync } from "fs";
 import { notFound } from "next/navigation";
 import { Metadata, ResolvingMetadata } from "next";
 import { AboutMe } from "@/components/templates/about-me";
+import { NavBar } from "@/components/molecules/nav-bar";
 
 const Page = async ({ params }: { params: { slug: string[] } }) => {
   const { data, markdown, error } = await create(params);
@@ -13,11 +14,7 @@ const Page = async ({ params }: { params: { slug: string[] } }) => {
 
   return (
     <>
-      {!params.slug && (
-        <div className="mb-8">
-          <AboutMe />
-        </div>
-      )}
+      <NavBar />
       <div>
         <div className="markdown-body">
           <article dangerouslySetInnerHTML={{ __html: markdown }} />
