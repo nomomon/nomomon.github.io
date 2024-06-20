@@ -12,7 +12,7 @@ const Page = async ({ params }: { params: { slug: string[] } }) => {
   return (
     <>
       <NavBar />
-      <div>
+      <div className="mt-8">
         <div className="markdown-body">
           <article dangerouslySetInnerHTML={{ __html: markdown }} />
         </div>

@@ -7,9 +7,8 @@ import { FC } from "react";
 
 const links = [
   { name: "nomomon", url: "/", isLogo: true },
-  { name: "About", url: "/" },
+  { name: "Projects", url: "/" },
   { name: "Blog", url: "/blog" },
-  { name: "Projects", url: "/projects" },
 ];
 
 export const NavBar: FC = () => {
