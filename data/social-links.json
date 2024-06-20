@@ -1,0 +1,22 @@
+[
+  {
+    "name": "GitHub",
+    "url": "https://github.com/nomomon",
+    "iconUrl": "/assets/icons/github.svg"
+  },
+  {
+    "name": "LinkedIn",
+    "url": "https://www.linkedin.com/in/nomomon/",
+    "iconUrl": "/assets/icons/linkedin.svg"
+  },
+  {
+    "name": "StackOverflow",
+    "url": "https://stackoverflow.com/users/15930948/mansur",
+    "iconUrl": "/assets/icons/stackoverflow.svg"
+  },
+  {
+    "name": "Telegram",
+    "url": "https://t.me/nomomon",
+    "iconUrl": "/assets/icons/telegram.svg"
+  }
+]
