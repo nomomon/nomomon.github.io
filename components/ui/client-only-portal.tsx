@@ -2,7 +2,7 @@ import { useRef, useEffect, useState, FC } from "react";
 import { createPortal } from "react-dom";
 
 interface ClientOnlyPortalProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   selector: string;
 }
 

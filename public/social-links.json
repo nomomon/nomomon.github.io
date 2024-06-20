@@ -1,0 +1,22 @@
+[
+  {
+    "name": "GitHub",
+    "url": "https://github.com/nomomon",
+    "iconUrl": "/assets/icons/github.svg"
+  },
+  {
+    "name": "LinkedIn",
+    "url": "https://www.linkedin.com/in/nomomon/",
+    "iconUrl": "/assets/icons/linkedin.svg"
+  },
+  {
+    "name": "Instagram",
+    "url": "https://www.instagram.com/m._.nsur/",
+    "iconUrl": "/assets/icons/instagram.svg"
+  },
+  {
+    "name": "Telegram",
+    "url": "https://t.me/nomomon",
+    "iconUrl": "/assets/icons/telegram.svg"
+  }
+]
