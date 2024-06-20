@@ -11,7 +11,7 @@ const SocialLinks = () => {
             <img
               src={iconUrl}
               alt={name}
-              className="w-6 h-6 cursor-pointer opacity-50 hover:opacity-80"
+              className="w-6 h-6 cursor-pointer opacity-50 duration-200 hover:opacity-80"
             />
           </Link>
         ))}
