@@ -21,10 +21,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <nav />
-        <main className="mt-2 m-auto max-w-4xl py-16 max-md:px-4 max-md:max-w-full">
+        <main className="mt-2 m-auto max-w-3xl  py-16 max-md:px-4 max-md:max-w-full">
           {children}
         </main>
-        <hr className="w-full max-w-4xl m-auto max-md:max-w-full max-md:px-4" />
+        <hr className="w-full max-w-3xl  m-auto max-md:max-w-full max-md:px-4" />
         <Footer />
       </body>
     </html>
