@@ -9,7 +9,7 @@ const Footer = () => {
           <span className="text-sm text-muted-foreground">
             nomomon © {year}
           </span>
-          <span>☁️</span>
+          <span>🥕</span>
         </div>
       </div>
     </footer>
