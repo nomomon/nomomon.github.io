@@ -55,6 +55,11 @@ export type WorkExperience = {
   skills: string[];
 };
 
+export type FunFact = {
+  emoji: string;
+  fact: string;
+};
+
 export type PersonalConfig = {
   name: string;
   title: string;
@@ -63,59 +68,66 @@ export type PersonalConfig = {
     paragraphs: string[];
     hobbies: string;
   };
+  funFacts: FunFact[];
   profileImage?: string;
   skills: Skill[];
   projects: Project[];
   education: Education[];
   workExperience: WorkExperience[];
   contact: {
-    email?: string;
-    phone?: string;
-    location?: string;
-    getInTouchPrompt?: string; // Added for contact section prompt
+    getInTouchPrompt?: string;
   };
   social: SocialLink[];
-  resume?: {
-    link: string;
-    label: string;
-  };
   testimonial?: {
     quote: string;
     author: string;
     position: string;
   };
-  footerCopyright?: string; // Added for footer copyright
+  footerCopyright?: string;
 };
 
 const config: PersonalConfig = {
   name: "Mansur Nurmukhambetov",
-  title: "Machine Learning Engineer, among other things..",
-  bio: "Passionate about solving complex problems with data. With a robust background in mathematics, machine learning, and software engineering, I specialize in developing AI-driven solutions that optimize processes, drive innovation, and uncover actionable insights.",
+  title: "Machine Learning Engineer & Community Builder",
+  bio: "I turn data into magic. From molecules to neural nets, I build things that learn—and love sharing the ride. ☕️",
   about: {
     paragraphs: [
-      "I'm a Machine Learning Engineer at Researchable B.V. with a Bachelor's degree in AI from the University of Groningen. I drive innovation through the development of advanced machine learning systems that transform complex data into actionable insights for businesses, research institutions, and government organizations.",
-      "My expertise spans from building scalable ML pipelines and MLOps workflows to developing AI-driven automation systems. I'm passionate about turning data into magic and building AI that actually makes life easier! When I'm not coding, you can find me exploring new technologies and optimizing algorithms.",
+      "A tinkerer at heart who writes code by day and chases film photo sunsets by evening. I believe learning is a lifelong journey best shared over coffee and whiteboard sketches.",
+      "I craft AI and ML solutions at Researchable B.V., weave together community-driven ML competitions, and occasionally nerd out on inversive geometry while sipping matcha. When I'm not coding, you'll find me fixing bikes, exploring hidden corners of Groningen, or cheering on a random chess engine battle.",
     ],
     hobbies:
-      "exploring new technologies, algorithm optimization, and building innovative AI solutions",
+      "film photography, running trails, puzzle hunts, bike repair, and cozy coding sessions with friends",
   },
+  funFacts: [
+    {
+      emoji: "📸",
+      fact: "I've shot 5 rolls of film in a single photo walk—no regrets!",
+    },
+    {
+      emoji: "🦆",
+      fact: "My desk hosts a rubber duck debugging squad of 7 quackers.🦆🦆🦆",
+    },
+    {
+      emoji: "🤖",
+      fact: "Won a Yandex AI art contest with a smart speaker prize.",
+    },
+    {
+      emoji: "🌐",
+      fact: "Learning Kazakh and Arabic one flashcard at a time.",
+    },
+  ],
   profileImage: "/assets/me.jpg",
   skills: [
     { name: "Python", category: "programming" },
-    { name: "JavaScript", category: "programming" },
     { name: "TypeScript", category: "programming" },
     { name: "React.js", category: "framework" },
     { name: "TensorFlow", category: "framework" },
-    { name: "Machine Learning", category: "other" },
-    { name: "Large Language Models (LLM)", category: "other" },
-    { name: "MLOps", category: "other" },
+    { name: "MLOps (MLflow, Azure)", category: "other" },
     { name: "Data Science", category: "other" },
-    { name: "Microsoft Azure", category: "cloud" },
-    { name: "MLflow", category: "tool" },
+    { name: "Algorithm Development", category: "other" },
     { name: "Serverless Computing", category: "cloud" },
     { name: "CI/CD", category: "tool" },
-    { name: "Data Analysis", category: "other" },
-    { name: "Algorithm Development", category: "other" },
+    { name: "Data Visualization", category: "other" },
   ],
   projects: [
     {
@@ -192,15 +204,14 @@ const config: PersonalConfig = {
   ],
   education: [
     {
-      title: "Bachelor of AI - University of Groningen",
+      title: "B.Sc. in Artificial Intelligence",
       description:
-        "Completed Bachelor's degree in Artificial Intelligence with focus on machine learning and data science.",
+        "University of Groningen — specialized in ML, data science & algorithms.",
       year: 2023,
     },
     {
-      title: "Data Science Bootcamp Graduate",
-      description:
-        "Successfully completed comprehensive data science bootcamp from Yandex Practicum.",
+      title: "Yandex Data Science Bootcamp",
+      description: "Intensive Python & ML immersion, final projects gallery.",
       year: 2022,
     },
   ],
@@ -208,8 +219,8 @@ const config: PersonalConfig = {
     {
       company: "Researchable B.V.",
       position: "Machine Learning Engineer",
-      duration: "Sep 2024 - Present",
-      location: "Groningen, Netherlands",
+      duration: "Sep 2021 - Present",
+      location: "Groningen, NL",
       type: "full-time",
       description: [
         "Developed algorithms to infer building structures from sensor metadata and measurements, resulting in a 300% reduction in manual inspection time.",
@@ -245,11 +256,8 @@ const config: PersonalConfig = {
     },
   ],
   contact: {
-    email: "", // i don't want to expose my email
-    location: "", // i don't want to expose my location
-    phone: "", // i don't want to expose my phone number
     getInTouchPrompt:
-      "I'm always open to discussing new projects, opportunities, or partnerships. Let's connect to discuss how we can turn data into magic and build AI that actually makes life easier! 🚀",
+      "I'm always up for a chat—whether it's AI, film cameras, or coffee spot recommendations in Groningen. Drop me a message! ☕️",
   },
   social: [
     {
@@ -262,15 +270,11 @@ const config: PersonalConfig = {
       url: "https://linkedin.com/in/nomomon",
       username: "nomomon",
     },
+    { platform: "telegram", url: "https://t.me/nomomon", username: "nomomon" },
     {
       platform: "stackoverflow",
       url: "https://stackoverflow.com/users/15930948/mansur",
       username: "mansur",
-    },
-    {
-      platform: "telegram",
-      url: "https://t.me/nomomon",
-      username: "nomomon",
     },
   ],
   testimonial: {
