@@ -69,7 +69,7 @@ export type PersonalConfig = {
   education: Education[];
   workExperience: WorkExperience[];
   contact: {
-    email: string;
+    email?: string;
     phone?: string;
     location?: string;
   };
@@ -239,10 +239,7 @@ const config: PersonalConfig = {
       ],
     },
   ],
-  contact: {
-    email: "mansur@nomomon.xyz",
-    location: "Groningen, Netherlands",
-  },
+  contact: {},
   social: [
     {
       platform: "github",
@@ -251,12 +248,12 @@ const config: PersonalConfig = {
     },
     {
       platform: "linkedin",
-      url: "https://linkedin.com/in/mansur-nurmukhambetov",
-      username: "mansur-nurmukhambetov",
+      url: "https://linkedin.com/in/nomomon",
+      username: "nomomon",
     },
     {
       platform: "stackoverflow",
-      url: "https://stackoverflow.com/users/mansur",
+      url: "https://stackoverflow.com/users/15930948/mansur",
       username: "mansur",
     },
     {

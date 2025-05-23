@@ -8,6 +8,7 @@ import {
   ExternalLink,
   MessageCircle,
   HelpCircle,
+  MapPinned,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -30,17 +31,19 @@ import { nanoid } from "nanoid";
 export default function Home() {
   // Helper function to get the appropriate icon for social platforms
   const getSocialIcon = (platform: string) => {
+    const className = "h-5 w-5 text-muted-foreground";
+
     switch (platform) {
       case "github":
-        return <Github className="h-5 w-5" />;
+        return <Github className={className} />;
       case "linkedin":
-        return <Linkedin className="h-5 w-5" />;
+        return <Linkedin className={className} />;
       case "stackoverflow":
-        return <HelpCircle className="h-5 w-5" />;
+        return <HelpCircle className={className} />;
       case "telegram":
-        return <MessageCircle className="h-5 w-5" />;
+        return <MessageCircle className={className} />;
       default:
-        return <ExternalLink className="h-5 w-5" />;
+        return <ExternalLink className={className} />;
     }
   };
 
@@ -306,13 +309,15 @@ export default function Home() {
                 magic and build AI that actually makes life easier! 🚀
               </p>
               <div className="space-y-2">
-                <div className="flex items-center gap-2">
-                  <Mail className="h-5 w-5 text-muted-foreground" />
-                  <span>{config.contact.email}</span>
-                </div>
+                {config.contact.email && (
+                  <div className="flex items-center gap-2">
+                    <Mail className="h-5 w-5 text-muted-foreground" />
+                    <span>{config.contact.email}</span>
+                  </div>
+                )}
                 {config.contact.location && (
                   <div className="flex items-center gap-2">
-                    <span className="h-5 w-5 text-muted-foreground">📍</span>
+                    <MapPinned className="h-5 w-5 text-muted-foreground" />
                     <span>{config.contact.location}</span>
                   </div>
                 )}
@@ -387,10 +392,12 @@ export default function Home() {
                 label={social.platform}
               />
             ))}
-            <Link href={`mailto:${config.contact.email}`} className="p-2">
-              <Mail className="h-5 w-5" />
-              <span className="sr-only">Email</span>
-            </Link>
+            {config.contact.email && (
+              <Link href={`mailto:${config.contact.email}`} className="p-2">
+                <Mail className="h-5 w-5" />
+                <span className="sr-only">Email</span>
+              </Link>
+            )}
           </div>
         </div>
       </footer>
