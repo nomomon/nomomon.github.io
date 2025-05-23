@@ -115,7 +115,7 @@ export default function Home() {
                 {config.bio}
               </p>
               <p className="text-sm text-muted-foreground italic">
-                That guy with that unpronounceable lastname 😂
+                That guy with that unpronounceable last name 😂
               </p>
               <div className="flex gap-4">
                 <Button asChild>
@@ -306,23 +306,21 @@ export default function Home() {
         </section>
 
         <section
-          id="achievements"
+          id="educations"
           className="py-12 px-6 md:px-10 rounded-lg bg-white shadow-sm my-8"
         >
           <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl mb-6 bg-gradient-to-r from-amber-500 to-pink-500 text-transparent bg-clip-text inline-block">
-            Achievements
+            Education
           </h2>
           <div className="space-y-8">
-            {config.achievements.map((achievement, index) => (
+            {config.education.map((edu, index) => (
               <div key={index} className="flex gap-4">
                 <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-pink-400 to-purple-600 flex items-center justify-center text-white">
-                  <span className="font-bold">{achievement.year}</span>
+                  <span className="font-bold">{edu.year}</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-medium">{achievement.title}</h3>
-                  <p className="text-muted-foreground">
-                    {achievement.description}
-                  </p>
+                  <h3 className="text-xl font-medium">{edu.title}</h3>
+                  <p className="text-muted-foreground">{edu.description}</p>
                 </div>
               </div>
             ))}

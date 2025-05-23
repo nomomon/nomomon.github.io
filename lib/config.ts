@@ -21,7 +21,7 @@ export type Project = {
   date?: string;
 };
 
-export type Achievement = {
+export type Education = {
   title: string;
   description: string;
   year: number;
@@ -66,7 +66,7 @@ export type PersonalConfig = {
   profileImage?: string;
   skills: Skill[];
   projects: Project[];
-  achievements: Achievement[];
+  education: Education[];
   workExperience: WorkExperience[];
   contact: {
     email: string;
@@ -123,11 +123,13 @@ const config: PersonalConfig = {
       demoUrl: "https://nomomon.github.io/inversive-geometry/",
       featured: true,
       date: "Aug 2022",
+      image: "/projects/inversive-geometry/assets/inversive-geometry.jpeg",
     },
     {
       title: "Markov Chain Text Generator",
       description:
         "Text generator written in React.js that uses Markov chains to generate text based on a given input.",
+      image: "/projects/markov-chain-text/assets/markov-chain-text.jpeg",
       category: "software",
       technologies: ["React.js", "Markov Chains", "NLP"],
       githubUrl: "https://github.com/nomomon/markov-text-generator",
@@ -144,6 +146,8 @@ const config: PersonalConfig = {
       githubUrl: "https://github.com/nomomon/molecule-energy-estimator",
       featured: true,
       date: "Apr 2022 - Jul 2022",
+      image:
+        "/projects/molecule-energy-estimator/assets/rucode-5.0-preview.gif",
     },
     {
       title: "Data Science Bootcamp",
@@ -154,6 +158,7 @@ const config: PersonalConfig = {
       githubUrl: "https://github.com/nomomon/data-science-bootcamp",
       featured: true,
       date: "Feb 2022 - May 2025",
+      image: "/projects/yandex-practicum/assets/yandex-practicum.png",
     },
     {
       title: "Anime RecSys",
@@ -164,6 +169,8 @@ const config: PersonalConfig = {
       githubUrl: "https://github.com/nomomon/anime-recsys",
       featured: true,
       date: "Sep 2021",
+      image:
+        "https://github.com/nomomon/Anime-RecSys/raw/main/images/banner.png",
     },
     {
       title: "Orama Visual Assistant",
@@ -175,15 +182,10 @@ const config: PersonalConfig = {
       demoUrl: "https://nomomon.github.io/orama-visual-assistant/",
       featured: true,
       date: "Nov 2019 - Jan 2022",
+      image: "/projects/orama-visual-assistant/assets/oramava-preview.jpeg",
     },
   ],
-  achievements: [
-    {
-      title: "Machine Learning Engineer at Researchable B.V.",
-      description:
-        "Promoted to Machine Learning Engineer, leading AI-driven automation projects and developing advanced ML systems.",
-      year: 2024,
-    },
+  education: [
     {
       title: "Bachelor of AI - University of Groningen",
       description:
