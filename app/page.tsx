@@ -97,16 +97,16 @@ export default function Home() {
               <p className="text-sm text-muted-foreground italic">
                 That guy with that unpronounceable last name 😂
               </p>
-              <div className="flex gap-4">
-                <SuperFancyButton sparkleCount={6} asChild>
-                  <Link href="/notes">View my notes</Link>
-                </SuperFancyButton>
+              <div className="flex flex-wrap gap-4 justify-center sm:justify-start">
                 <Button asChild>
                   <Link href="#contact">Get in touch</Link>
                 </Button>
                 <Button variant="outline" asChild>
                   <Link href="#projects">View my work</Link>
                 </Button>
+                <SuperFancyButton sparkleCount={6} asChild>
+                  <Link href="/notes">View my notes</Link>
+                </SuperFancyButton>
               </div>
             </div>
             <div className="flex-shrink-0">
