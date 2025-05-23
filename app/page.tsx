@@ -26,27 +26,10 @@ import { Heading2 } from "@/components/molecules/Heading2";
 import { SectionContainer } from "@/components/molecules/SectionContainer";
 import { SkillBadge } from "@/components/molecules/SkillBadge";
 import { SocialLink } from "@/components/molecules/SocialLink";
+import { SocialIcon } from "@/components/molecules/SocialIcon";
 import { nanoid } from "nanoid";
 
 export default function Home() {
-  // Helper function to get the appropriate icon for social platforms
-  const getSocialIcon = (platform: string) => {
-    const className = "h-5 w-5 text-muted-foreground";
-
-    switch (platform) {
-      case "github":
-        return <Github className={className} />;
-      case "linkedin":
-        return <Linkedin className={className} />;
-      case "stackoverflow":
-        return <HelpCircle className={className} />;
-      case "telegram":
-        return <MessageCircle className={className} />;
-      default:
-        return <ExternalLink className={className} />;
-    }
-  };
-
   return (
     <div className="min-h-screen bg-[#f8f9fa] bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:20px_20px]">
       <header className="sticky top-0 z-10 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -94,7 +77,7 @@ export default function Home() {
                 <SocialLink
                   key={social.platform + social.url}
                   href={social.url}
-                  icon={getSocialIcon(social.platform)}
+                  icon={<SocialIcon platform={social.platform} />}
                   label={social.platform}
                 />
               ))}
@@ -326,7 +309,7 @@ export default function Home() {
                     key={social.platform + social.url}
                     className="flex items-center gap-2"
                   >
-                    {getSocialIcon(social.platform)}
+                    <SocialIcon platform={social.platform} />
                     <Link
                       href={social.url}
                       target="_blank"
@@ -388,7 +371,7 @@ export default function Home() {
               <SocialLink
                 key={social.platform + social.url}
                 href={social.url}
-                icon={getSocialIcon(social.platform)}
+                icon={<SocialIcon platform={social.platform} />}
                 label={social.platform}
               />
             ))}
