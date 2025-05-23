@@ -8,7 +8,7 @@ import {
 import React from "react";
 
 interface SocialIconProps {
-  platform: string;
+  platform?: string;
   className?: string;
 }
 

@@ -232,7 +232,7 @@ export default function Home() {
                       {project.demoUrl && (
                         <SocialLink
                           href={project.demoUrl}
-                          icon={<ExternalLink className="h-5 w-5" />}
+                          icon={<SocialIcon />}
                           label="Live Demo"
                         />
                       )}
