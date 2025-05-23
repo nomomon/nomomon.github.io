@@ -1,7 +1,7 @@
 ---
 title: "Mind Your Building Hackathon"
 date: April 14, 2023
-description: Recently as a company, Researchable, we won the Mind your Building hackathon. It was a month-long competition organized by TNO in collaboration with the Hanze University of Applied Sciences, DFKI, and AIMZ, and supported by the European Tailor-network project.
+description: We won the Mind your Building hackathon and this is our solution. It was a month-long competition organized by TNO in collaboration with the Hanze University of Applied Sciences, DFKI, and AIMZ, and supported by the European Tailor-network project.
 thumbnail: "/posts/2023-04-14-mind-your-building/assets/cover.png"
 tags:
   - EDA

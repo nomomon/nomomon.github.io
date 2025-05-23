@@ -1,0 +1,275 @@
+export type Skill = {
+  name: string;
+  category:
+    | "programming"
+    | "framework"
+    | "tool"
+    | "database"
+    | "cloud"
+    | "other";
+};
+
+export type Project = {
+  title: string;
+  description: string;
+  category: "software" | "data-science" | "other";
+  image?: string;
+  technologies: string[];
+  githubUrl?: string;
+  demoUrl?: string;
+  featured?: boolean;
+  date?: string;
+};
+
+export type Achievement = {
+  title: string;
+  description: string;
+  year: number;
+  url?: string;
+};
+
+export type SocialLink = {
+  platform:
+    | "github"
+    | "linkedin"
+    | "twitter"
+    | "instagram"
+    | "facebook"
+    | "youtube"
+    | "medium"
+    | "dev"
+    | "stackoverflow"
+    | "telegram"
+    | "other";
+  url: string;
+  username?: string;
+};
+
+export type WorkExperience = {
+  company: string;
+  position: string;
+  duration: string;
+  location: string;
+  type: "full-time" | "part-time" | "contract" | "internship";
+  description: string[];
+  skills: string[];
+};
+
+export type PersonalConfig = {
+  name: string;
+  title: string;
+  bio: string;
+  about: {
+    paragraphs: string[];
+    hobbies: string;
+  };
+  profileImage?: string;
+  skills: Skill[];
+  projects: Project[];
+  achievements: Achievement[];
+  workExperience: WorkExperience[];
+  contact: {
+    email: string;
+    phone?: string;
+    location?: string;
+  };
+  social: SocialLink[];
+  resume?: string;
+  testimonial?: {
+    quote: string;
+    author: string;
+    position: string;
+  };
+};
+
+const config: PersonalConfig = {
+  name: "Mansur Nurmukhambetov",
+  title: "Machine Learning Engineer & Data Scientist",
+  bio: "Passionate about solving complex problems with data. With a robust background in mathematics, machine learning, and software engineering, I specialize in developing AI-driven solutions that optimize processes, drive innovation, and uncover actionable insights.",
+  about: {
+    paragraphs: [
+      "I'm a Machine Learning Engineer at Researchable B.V. with a Bachelor's degree in AI from the University of Groningen. I drive innovation through the development of advanced machine learning systems that transform complex data into actionable insights for businesses, research institutions, and government organizations.",
+      "My expertise spans from building scalable ML pipelines and MLOps workflows to developing AI-driven automation systems. I'm passionate about turning data into magic and building AI that actually makes life easier! When I'm not coding, you can find me exploring new technologies and optimizing algorithms.",
+    ],
+    hobbies:
+      "exploring new technologies, algorithm optimization, and building innovative AI solutions",
+  },
+  profileImage: "https://nomomon.xyz/assets/me.jpg",
+  skills: [
+    { name: "Python", category: "programming" },
+    { name: "JavaScript", category: "programming" },
+    { name: "TypeScript", category: "programming" },
+    { name: "React.js", category: "framework" },
+    { name: "TensorFlow", category: "framework" },
+    { name: "Machine Learning", category: "other" },
+    { name: "Large Language Models (LLM)", category: "other" },
+    { name: "MLOps", category: "other" },
+    { name: "Data Science", category: "other" },
+    { name: "Microsoft Azure", category: "cloud" },
+    { name: "MLflow", category: "tool" },
+    { name: "Serverless Computing", category: "cloud" },
+    { name: "CI/CD", category: "tool" },
+    { name: "Data Analysis", category: "other" },
+    { name: "Algorithm Development", category: "other" },
+  ],
+  projects: [
+    {
+      title: "Inversive Geometry",
+      description:
+        "A simple React.js app that demonstrates the inversive geometry of a point in a circle.",
+      category: "software",
+      technologies: ["React.js", "JavaScript", "Mathematics"],
+      githubUrl: "https://github.com/nomomon/inversive-geometry",
+      demoUrl: "https://nomomon.github.io/inversive-geometry/",
+      featured: true,
+      date: "Aug 2022",
+    },
+    {
+      title: "Markov Chain Text Generator",
+      description:
+        "Text generator written in React.js that uses Markov chains to generate text based on a given input.",
+      category: "software",
+      technologies: ["React.js", "Markov Chains", "NLP"],
+      githubUrl: "https://github.com/nomomon/markov-text-generator",
+      demoUrl: "https://nomomon.github.io/markov-text-generator/",
+      featured: true,
+      date: "Aug 2022",
+    },
+    {
+      title: "Molecule Energy Estimator",
+      description:
+        "The chemical and physical properties of a molecule are determined not only by its structural formula, but also by its conformation – positions of atoms in 3d space.",
+      category: "data-science",
+      technologies: ["Python", "Machine Learning", "Chemistry"],
+      githubUrl: "https://github.com/nomomon/molecule-energy-estimator",
+      featured: true,
+      date: "Apr 2022 - Jul 2022",
+    },
+    {
+      title: "Data Science Bootcamp",
+      description:
+        "Collection of final projects from data science bootcamp from Yandex Practicum.",
+      category: "data-science",
+      technologies: ["Python", "Data Science", "Machine Learning"],
+      githubUrl: "https://github.com/nomomon/data-science-bootcamp",
+      featured: true,
+      date: "Feb 2022 - May 2025",
+    },
+    {
+      title: "Anime RecSys",
+      description:
+        "Development and comparison of user-item recommendation systems in TensorFlow on an anime dataset.",
+      category: "data-science",
+      technologies: ["TensorFlow", "Recommendation Systems", "Python"],
+      githubUrl: "https://github.com/nomomon/anime-recsys",
+      featured: true,
+      date: "Sep 2021",
+    },
+    {
+      title: "Orama Visual Assistant",
+      description:
+        "Orama Visual Assistant is an app for visually impaired people that announces objects detected using user's phone camera.",
+      category: "software",
+      technologies: ["Computer Vision", "Mobile Development", "AI"],
+      githubUrl: "https://github.com/nomomon/orama-visual-assistant",
+      demoUrl: "https://nomomon.github.io/orama-visual-assistant/",
+      featured: true,
+      date: "Nov 2019 - Jan 2022",
+    },
+  ],
+  achievements: [
+    {
+      title: "Machine Learning Engineer at Researchable B.V.",
+      description:
+        "Promoted to Machine Learning Engineer, leading AI-driven automation projects and developing advanced ML systems.",
+      year: 2024,
+    },
+    {
+      title: "Bachelor of AI - University of Groningen",
+      description:
+        "Completed Bachelor's degree in Artificial Intelligence with focus on machine learning and data science.",
+      year: 2023,
+    },
+    {
+      title: "Data Science Bootcamp Graduate",
+      description:
+        "Successfully completed comprehensive data science bootcamp from Yandex Practicum.",
+      year: 2022,
+    },
+  ],
+  workExperience: [
+    {
+      company: "Researchable B.V.",
+      position: "Machine Learning Engineer",
+      duration: "Sep 2024 - Present",
+      location: "Groningen, Netherlands",
+      type: "full-time",
+      description: [
+        "Developed algorithms to infer building structures from sensor metadata and measurements, resulting in a 300% reduction in manual inspection time.",
+        "Built robust CI/CD pipelines deploying ML models in Azure serverless functions with real-time monitoring.",
+        "Designed MLOps workflows with MLflow to track experiments, detect drift, and optimize models for increased reliability.",
+        "Engineered end-to-end ML pipelines for ship energy usage forecasting, improving prediction accuracy by 15%.",
+        "Utilized research-backed fuel efficiency models enabling 10% more fuel-efficient route planning.",
+      ],
+      skills: [
+        "Large Language Models (LLM)",
+        "Microsoft Azure",
+        "MLOps",
+        "Machine Learning",
+      ],
+    },
+    {
+      company: "Researchable B.V.",
+      position: "Data Scientist",
+      duration: "Sep 2022 - Sep 2024",
+      location: "Groningen, Netherlands",
+      type: "part-time",
+      description: [
+        "Designed and developed a large-scale data labeling platform for video analysis, reducing manual annotation time by 40%.",
+        "Implemented automated segmentation and content analysis techniques that provided deep audience behavior insights.",
+        "Contributed to more targeted content strategies through advanced data analysis.",
+      ],
+      skills: [
+        "Machine Learning",
+        "Serverless Computing",
+        "Data Analysis",
+        "Video Processing",
+      ],
+    },
+  ],
+  contact: {
+    email: "mansur@nomomon.xyz",
+    location: "Groningen, Netherlands",
+  },
+  social: [
+    {
+      platform: "github",
+      url: "https://github.com/nomomon",
+      username: "nomomon",
+    },
+    {
+      platform: "linkedin",
+      url: "https://linkedin.com/in/mansur-nurmukhambetov",
+      username: "mansur-nurmukhambetov",
+    },
+    {
+      platform: "stackoverflow",
+      url: "https://stackoverflow.com/users/mansur",
+      username: "mansur",
+    },
+    {
+      platform: "telegram",
+      url: "https://t.me/nomomon",
+      username: "nomomon",
+    },
+  ],
+  resume: "/resume.pdf",
+  testimonial: {
+    quote:
+      "Mansur is a really talented and driven person that is always asking questions to learn more about a topic. As a student of a practical machine learning class, his group was exceptional and independent. Any practical problem gets him excited and he is always looking for optimizations.",
+    author: "Ömer Tarık Özyılmaz",
+    position: "CAIO/Co-Founder @ normai | PhD Candidate",
+  },
+};
+
+export default config;

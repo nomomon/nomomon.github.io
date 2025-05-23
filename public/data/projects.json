@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Orama Visual Assitant",
+    "description": "A mobile app for visually impaired people that announces objects detected using user's phone camera.",
+    "link": "https://github.com/nomomon/OramaVA",
+    "image": "/projects/orama-visual-assistant/assets/oramava-preview.jpeg",
+    "tags": ["PWA", "React", "TensorFlow"]
+  },
+  {
+    "title": "Orama Visual Assitant",
+    "description": "A mobile app for visually impaired people that announces objects detected using user's phone camera.",
+    "link": "https://github.com/nomomon/OramaVA",
+    "image": "/projects/orama-visual-assistant/assets/oramava-preview.jpeg",
+    "tags": ["PWA", "React", "TensorFlow"]
+  },
+  {
+    "title": "Orama Visual Assitant",
+    "description": "A mobile app for visually impaired people that announces objects detected using user's phone camera.",
+    "link": "https://github.com/nomomon/OramaVA",
+    "image": "/projects/orama-visual-assistant/assets/oramava-preview.jpeg",
+    "tags": ["PWA", "React", "TensorFlow"]
+  }
+]
