@@ -72,14 +72,17 @@ export type PersonalConfig = {
     email?: string;
     phone?: string;
     location?: string;
+    getInTouchPrompt?: string; // Added for contact section prompt
   };
   social: SocialLink[];
   resume?: string;
+  resumeLabel?: string; // Added for resume download label
   testimonial?: {
     quote: string;
     author: string;
     position: string;
   };
+  footerCopyright?: string; // Added for footer copyright
 };
 
 const config: PersonalConfig = {
@@ -239,7 +242,12 @@ const config: PersonalConfig = {
       ],
     },
   ],
-  contact: {},
+  contact: {
+    email: "mansur@example.com", // Example, update as needed
+    location: "Groningen, Netherlands",
+    getInTouchPrompt:
+      "I'm always open to discussing new projects, opportunities, or partnerships. Let's connect to discuss how we can turn data into magic and build AI that actually makes life easier! 🚀",
+  },
   social: [
     {
       platform: "github",
@@ -263,12 +271,14 @@ const config: PersonalConfig = {
     },
   ],
   resume: "/resume.pdf",
+  resumeLabel: "Download Resume",
   testimonial: {
     quote:
       "Mansur is a really talented and driven person that is always asking questions to learn more about a topic. As a student of a practical machine learning class, his group was exceptional and independent. Any practical problem gets him excited and he is always looking for optimizations.",
     author: "Ömer Tarık Özyılmaz",
     position: "CAIO/Co-Founder @ normai | PhD Candidate",
   },
+  footerCopyright: `© ${new Date().getFullYear()} Mansur Nurmukhambetov. All rights reserved.`,
 };
 
 export default config;

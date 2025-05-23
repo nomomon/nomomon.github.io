@@ -1,15 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Github,
-  Linkedin,
-  Mail,
-  FileText,
-  ExternalLink,
-  MessageCircle,
-  HelpCircle,
-  MapPinned,
-} from "lucide-react";
+import { Mail, FileText, ExternalLink, MapPinned } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -234,7 +225,7 @@ export default function Home() {
                       {project.githubUrl && (
                         <SocialLink
                           href={project.githubUrl}
-                          icon={<Github className="h-5 w-5" />}
+                          icon={<SocialIcon platform="github" />}
                           label="GitHub"
                         />
                       )}
@@ -286,11 +277,7 @@ export default function Home() {
           <Heading2>Get In Touch</Heading2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-4">
-              <p>
-                I'm always open to discussing new projects, opportunities, or
-                partnerships. Let's connect to discuss how we can turn data into
-                magic and build AI that actually makes life easier! 🚀
-              </p>
+              <p>{config.contact.getInTouchPrompt}</p>
               <div className="space-y-2">
                 {config.contact.email && (
                   <div className="flex items-center gap-2">
@@ -316,20 +303,8 @@ export default function Home() {
                       rel="noreferrer"
                       className="hover:underline"
                     >
-                      {(() => {
-                        switch (social.platform) {
-                          case "github":
-                            return "GitHub";
-                          case "linkedin":
-                            return "LinkedIn";
-                          case "stackoverflow":
-                            return "StackOverflow";
-                          case "telegram":
-                            return "Telegram";
-                          default:
-                            return social.platform;
-                        }
-                      })()}
+                      {social.platform.charAt(0).toUpperCase() +
+                        social.platform.slice(1)}
                     </Link>
                   </div>
                 ))}
@@ -342,7 +317,7 @@ export default function Home() {
                       rel="noreferrer"
                       className="hover:underline"
                     >
-                      Download Resume
+                      {config.resumeLabel ?? "Download Resume"}
                     </Link>
                   </div>
                 )}
@@ -364,7 +339,7 @@ export default function Home() {
       <footer className="border-t py-6 md:py-0 bg-white">
         <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
           <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-            © {new Date().getFullYear()} {config.name}. All rights reserved.
+            {config.footerCopyright}
           </p>
           <div className="flex items-center gap-4">
             {config.social.map((social) => (
@@ -372,7 +347,10 @@ export default function Home() {
                 key={social.platform + social.url}
                 href={social.url}
                 icon={<SocialIcon platform={social.platform} />}
-                label={social.platform}
+                label={
+                  social.platform.charAt(0).toUpperCase() +
+                  social.platform.slice(1)
+                }
               />
             ))}
             {config.contact.email && (
