@@ -20,6 +20,12 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import config from "@/lib/config";
+import { Heading1 } from "@/components/molecules/Heading1";
+import { Heading2 } from "@/components/molecules/Heading2";
+import { SectionContainer } from "@/components/molecules/SectionContainer";
+import { SkillBadge } from "@/components/molecules/SkillBadge";
+import { SocialLink } from "@/components/molecules/SocialLink";
+import { nanoid } from "nanoid";
 
 export default function Home() {
   // Helper function to get the appropriate icon for social platforms
@@ -81,35 +87,31 @@ export default function Home() {
           </div>
           <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
             <div className="flex items-center gap-2">
-              {config.social.map((social, index) => (
-                <Link
-                  key={index}
+              {config.social.map((social) => (
+                <SocialLink
+                  key={social.platform + social.url}
                   href={social.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="p-2"
-                >
-                  {getSocialIcon(social.platform)}
-                  <span className="sr-only">{social.platform}</span>
-                </Link>
+                  icon={getSocialIcon(social.platform)}
+                  label={social.platform}
+                />
               ))}
             </div>
           </div>
         </div>
       </header>
       <main className="container py-6 md:py-12">
-        <section
+        <SectionContainer
           id="hero"
           className="py-12 md:py-20 px-6 md:px-10 rounded-lg bg-white shadow-sm mb-8"
         >
           <div className="flex flex-col-reverse md:flex-row items-center gap-8">
             <div className="flex-1 space-y-4">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+              <Heading1>
                 Hello, I'm{" "}
                 <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-transparent bg-clip-text">
                   {config.name}
                 </span>
-              </h1>
+              </Heading1>
               <p className="text-xl text-muted-foreground">{config.title}</p>
               <p className="text-muted-foreground max-w-[600px]">
                 {config.bio}
@@ -129,7 +131,7 @@ export default function Home() {
             <div className="flex-shrink-0">
               <Image
                 src={
-                  config.profileImage || "/placeholder.svg?height=300&width=300"
+                  config.profileImage ?? "/placeholder.svg?height=300&width=300"
                 }
                 alt={`${config.name} profile`}
                 width={300}
@@ -138,48 +140,33 @@ export default function Home() {
               />
             </div>
           </div>
-        </section>
+        </SectionContainer>
 
-        <section
-          id="about"
-          className="py-12 px-6 md:px-10 rounded-lg bg-white shadow-sm my-8"
-        >
-          <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl mb-6 bg-gradient-to-r from-amber-500 to-pink-500 text-transparent bg-clip-text inline-block">
-            About Me
-          </h2>
+        <SectionContainer id="about">
+          <Heading2>About Me</Heading2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-4">
-              {config.about.paragraphs.map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
+              {config.about.paragraphs.map((paragraph) => (
+                <p key={nanoid()}>{paragraph}</p>
               ))}
             </div>
             <div className="space-y-4">
               <h3 className="text-xl font-medium">Skills</h3>
               <div className="flex flex-wrap gap-2">
-                {config.skills.map((skill, index) => (
-                  <Badge
-                    key={index}
-                    className="bg-gradient-to-r from-pink-500/80 to-purple-500/80 hover:from-pink-500 hover:to-purple-500 transition-colors"
-                  >
-                    {skill.name}
-                  </Badge>
+                {config.skills.map((skill) => (
+                  <SkillBadge key={skill.name} name={skill.name} />
                 ))}
               </div>
             </div>
           </div>
-        </section>
+        </SectionContainer>
 
-        <section
-          id="experience"
-          className="py-12 px-6 md:px-10 rounded-lg bg-white shadow-sm my-8"
-        >
-          <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl mb-6 bg-gradient-to-r from-amber-500 to-pink-500 text-transparent bg-clip-text inline-block">
-            Work Experience
-          </h2>
+        <SectionContainer id="experience">
+          <Heading2>Work Experience</Heading2>
           <div className="space-y-8">
-            {config.workExperience.map((work, index) => (
+            {config.workExperience.map((work) => (
               <div
-                key={index}
+                key={work.company + work.position + work.duration}
                 className="border-l-4 border-gradient-to-b from-pink-400 to-purple-600 pl-6"
               >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
@@ -195,9 +182,9 @@ export default function Home() {
                   {work.location} • {work.type}
                 </p>
                 <ul className="space-y-2 mb-4">
-                  {work.description.map((desc, descIndex) => (
+                  {work.description.map((desc) => (
                     <li
-                      key={descIndex}
+                      key={nanoid()}
                       className="text-sm text-muted-foreground"
                     >
                       • {desc}
@@ -205,8 +192,8 @@ export default function Home() {
                   ))}
                 </ul>
                 <div className="flex flex-wrap gap-2">
-                  {work.skills.map((skill, skillIndex) => (
-                    <Badge key={skillIndex} variant="outline">
+                  {work.skills.map((skill) => (
+                    <Badge key={skill} variant="outline">
                       {skill}
                     </Badge>
                   ))}
@@ -214,21 +201,16 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </section>
+        </SectionContainer>
 
-        <section
-          id="projects"
-          className="py-12 px-6 md:px-10 rounded-lg bg-white shadow-sm my-8"
-        >
-          <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl mb-6 bg-gradient-to-r from-amber-500 to-pink-500 text-transparent bg-clip-text inline-block">
-            Projects
-          </h2>
+        <SectionContainer id="projects">
+          <Heading2>Projects</Heading2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {config.projects
               .filter((project) => project.featured)
-              .map((project, index) => (
+              .map((project) => (
                 <Card
-                  key={index}
+                  key={project.title + (project.date ?? "")}
                   className="border border-muted/40 hover:shadow-md transition-shadow"
                 >
                   <CardHeader>
@@ -243,7 +225,7 @@ export default function Home() {
                   <CardContent>
                     <Image
                       src={
-                        project.image || "/placeholder.svg?height=200&width=400"
+                        project.image ?? "/placeholder.svg?height=200&width=400"
                       }
                       alt={`${project.title} screenshot`}
                       width={400}
@@ -256,34 +238,26 @@ export default function Home() {
                   </CardContent>
                   <CardFooter className="flex justify-between">
                     <div className="flex gap-2">
-                      {project.technologies
-                        .slice(0, 2)
-                        .map((tech, techIndex) => (
-                          <Badge key={techIndex} variant="outline">
-                            {tech}
-                          </Badge>
-                        ))}
+                      {project.technologies.slice(0, 2).map((tech) => (
+                        <Badge key={tech} variant="outline">
+                          {tech}
+                        </Badge>
+                      ))}
                     </div>
                     <div className="flex gap-2">
                       {project.githubUrl && (
-                        <Link
+                        <SocialLink
                           href={project.githubUrl}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <Github className="h-5 w-5" />
-                          <span className="sr-only">GitHub</span>
-                        </Link>
+                          icon={<ExternalLink className="h-5 w-5" />}
+                          label="GitHub"
+                        />
                       )}
                       {project.demoUrl && (
-                        <Link
+                        <SocialLink
                           href={project.demoUrl}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <ExternalLink className="h-5 w-5" />
-                          <span className="sr-only">Live Demo</span>
-                        </Link>
+                          icon={<ExternalLink className="h-5 w-5" />}
+                          label="Live Demo"
+                        />
                       )}
                     </div>
                   </CardFooter>
@@ -294,7 +268,7 @@ export default function Home() {
             <Button variant="outline" asChild>
               <Link
                 href={
-                  config.social.find((s) => s.platform === "github")?.url || "#"
+                  config.social.find((s) => s.platform === "github")?.url ?? "#"
                 }
                 target="_blank"
                 rel="noreferrer"
@@ -303,18 +277,13 @@ export default function Home() {
               </Link>
             </Button>
           </div>
-        </section>
+        </SectionContainer>
 
-        <section
-          id="educations"
-          className="py-12 px-6 md:px-10 rounded-lg bg-white shadow-sm my-8"
-        >
-          <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl mb-6 bg-gradient-to-r from-amber-500 to-pink-500 text-transparent bg-clip-text inline-block">
-            Education
-          </h2>
+        <SectionContainer id="educations">
+          <Heading2>Education</Heading2>
           <div className="space-y-8">
-            {config.education.map((edu, index) => (
-              <div key={index} className="flex gap-4">
+            {config.education.map((edu) => (
+              <div key={edu.title + edu.year} className="flex gap-4">
                 <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-pink-400 to-purple-600 flex items-center justify-center text-white">
                   <span className="font-bold">{edu.year}</span>
                 </div>
@@ -325,15 +294,10 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </section>
+        </SectionContainer>
 
-        <section
-          id="contact"
-          className="py-12 px-6 md:px-10 rounded-lg bg-white shadow-sm my-8"
-        >
-          <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl mb-6 bg-gradient-to-r from-amber-500 to-pink-500 text-transparent bg-clip-text inline-block">
-            Get In Touch
-          </h2>
+        <SectionContainer id="contact">
+          <Heading2>Get In Touch</Heading2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-4">
               <p>
@@ -352,8 +316,11 @@ export default function Home() {
                     <span>{config.contact.location}</span>
                   </div>
                 )}
-                {config.social.map((social, index) => (
-                  <div key={index} className="flex items-center gap-2">
+                {config.social.map((social) => (
+                  <div
+                    key={social.platform + social.url}
+                    className="flex items-center gap-2"
+                  >
                     {getSocialIcon(social.platform)}
                     <Link
                       href={social.url}
@@ -361,15 +328,20 @@ export default function Home() {
                       rel="noreferrer"
                       className="hover:underline"
                     >
-                      {social.platform === "github"
-                        ? "GitHub"
-                        : social.platform === "linkedin"
-                          ? "LinkedIn"
-                          : social.platform === "stackoverflow"
-                            ? "StackOverflow"
-                            : social.platform === "telegram"
-                              ? "Telegram"
-                              : social.platform}
+                      {(() => {
+                        switch (social.platform) {
+                          case "github":
+                            return "GitHub";
+                          case "linkedin":
+                            return "LinkedIn";
+                          case "stackoverflow":
+                            return "StackOverflow";
+                          case "telegram":
+                            return "Telegram";
+                          default:
+                            return social.platform;
+                        }
+                      })()}
                     </Link>
                   </div>
                 ))}
@@ -399,7 +371,7 @@ export default function Home() {
               </div>
             )}
           </div>
-        </section>
+        </SectionContainer>
       </main>
       <footer className="border-t py-6 md:py-0 bg-white">
         <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
@@ -407,17 +379,13 @@ export default function Home() {
             © {new Date().getFullYear()} {config.name}. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
-            {config.social.map((social, index) => (
-              <Link
-                key={index}
+            {config.social.map((social) => (
+              <SocialLink
+                key={social.platform + social.url}
                 href={social.url}
-                target="_blank"
-                rel="noreferrer"
-                className="p-2"
-              >
-                {getSocialIcon(social.platform)}
-                <span className="sr-only">{social.platform}</span>
-              </Link>
+                icon={getSocialIcon(social.platform)}
+                label={social.platform}
+              />
             ))}
             <Link href={`mailto:${config.contact.email}`} className="p-2">
               <Mail className="h-5 w-5" />
