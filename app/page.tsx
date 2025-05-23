@@ -251,7 +251,7 @@ export default function Home() {
                       {project.githubUrl && (
                         <SocialLink
                           href={project.githubUrl}
-                          icon={<ExternalLink className="h-5 w-5" />}
+                          icon={<Github className="h-5 w-5" />}
                           label="GitHub"
                         />
                       )}

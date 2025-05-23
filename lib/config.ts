@@ -94,7 +94,7 @@ const config: PersonalConfig = {
     hobbies:
       "exploring new technologies, algorithm optimization, and building innovative AI solutions",
   },
-  profileImage: "https://nomomon.xyz/assets/me.jpg",
+  profileImage: "/assets/me.jpg",
   skills: [
     { name: "Python", category: "programming" },
     { name: "JavaScript", category: "programming" },
