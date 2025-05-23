@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, ButtonProps } from "@/components/ui/button";
-import { Sparkle } from "@/components/ui/Sparkle";
+import { Sparkles } from "lucide-react";
 
 export interface SuperFancyButtonProps extends ButtonProps {
   sparkleCount?: number;
@@ -17,7 +17,7 @@ export const SuperFancyButton = React.forwardRef<
     const left = Math.random() * 80 + "%";
     const delay = (Math.random() * 1.2).toFixed(2) + "s";
     return (
-      <Sparkle
+      <Sparkles
         key={i}
         style={{
           position: "absolute",
@@ -27,6 +27,8 @@ export const SuperFancyButton = React.forwardRef<
           zIndex: 2,
           animationDelay: delay,
         }}
+        size={Math.random() * 10 + 5}
+        color="gold"
         className="animate-sparkle"
       />
     );

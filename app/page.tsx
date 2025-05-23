@@ -19,7 +19,7 @@ import { SkillBadge } from "@/components/molecules/SkillBadge";
 import { SocialLink } from "@/components/molecules/SocialLink";
 import { SocialIcon } from "@/components/molecules/SocialIcon";
 import { nanoid } from "nanoid";
-import { SuperFancyButton } from "@/components/ui/SuperFancyButton";
+import { SuperFancyButton } from "@/components/molecules/SuperFancyButton";
 
 export default function Home() {
   return (
