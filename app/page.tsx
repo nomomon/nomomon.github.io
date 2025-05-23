@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, FileText, ExternalLink, MapPinned } from "lucide-react";
+import { Mail, FileText, MapPinned } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -126,6 +126,10 @@ export default function Home() {
               {config.about.paragraphs.map((paragraph) => (
                 <p key={nanoid()}>{paragraph}</p>
               ))}
+              <div className="mt-4">
+                <h3 className="text-lg font-semibold">Hobbies</h3>
+                <p className="text-muted-foreground">{config.about.hobbies}</p>
+              </div>
             </div>
             <div className="space-y-4">
               <h3 className="text-xl font-medium">Skills</h3>
@@ -134,49 +138,21 @@ export default function Home() {
                   <SkillBadge key={skill.name} name={skill.name} />
                 ))}
               </div>
-            </div>
-          </div>
-        </SectionContainer>
-
-        <SectionContainer id="experience">
-          <Heading2>Work Experience</Heading2>
-          <div className="space-y-8">
-            {config.workExperience.map((work) => (
-              <div
-                key={work.company + work.position + work.duration}
-                className="border-l-4 border-gradient-to-b from-pink-400 to-purple-600 pl-6"
-              >
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                  <h3 className="text-xl font-medium">{work.position}</h3>
-                  <span className="text-sm text-muted-foreground">
-                    {work.duration}
-                  </span>
-                </div>
-                <p className="text-lg text-muted-foreground mb-2">
-                  {work.company}
-                </p>
-                <p className="text-sm text-muted-foreground mb-4">
-                  {work.location} • {work.type}
-                </p>
-                <ul className="space-y-2 mb-4">
-                  {work.description.map((desc) => (
+              <div className="mt-6">
+                <h3 className="text-lg font-semibold">Fun Facts</h3>
+                <ul className="list-none space-y-2">
+                  {config.funFacts.map((fact) => (
                     <li
-                      key={nanoid()}
-                      className="text-sm text-muted-foreground"
+                      key={fact.emoji + fact.fact}
+                      className="flex items-center gap-2"
                     >
-                      • {desc}
+                      <span className="text-xl">{fact.emoji}</span>
+                      <span>{fact.fact}</span>
                     </li>
                   ))}
                 </ul>
-                <div className="flex flex-wrap gap-2">
-                  {work.skills.map((skill) => (
-                    <Badge key={skill} variant="outline">
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
               </div>
-            ))}
+            </div>
           </div>
         </SectionContainer>
 
@@ -185,62 +161,139 @@ export default function Home() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {config.projects
               .filter((project) => project.featured)
-              .map((project) => (
-                <Card
-                  key={project.title + (project.date ?? "")}
-                  className="border border-muted/40 hover:shadow-md transition-shadow"
-                >
-                  <CardHeader>
-                    <CardTitle>{project.title}</CardTitle>
-                    <CardDescription>
-                      {project.category === "data-science"
-                        ? "Data Science"
-                        : "Software Development"}
-                      {project.date && ` • ${project.date}`}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <Image
-                      src={
-                        project.image ?? "/placeholder.svg?height=200&width=400"
-                      }
-                      alt={`${project.title} screenshot`}
-                      width={400}
-                      height={200}
-                      className="rounded-md mb-4 object-cover w-full h-48"
-                    />
-                    <p className="text-sm text-muted-foreground">
-                      {project.description}
-                    </p>
-                  </CardContent>
-                  <CardFooter className="flex justify-between">
-                    <div className="flex gap-2">
-                      {project.technologies.slice(0, 2).map((tech) => (
-                        <Badge key={tech} variant="outline">
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
-                    <div className="flex gap-2">
-                      {project.githubUrl && (
-                        <SocialLink
-                          href={project.githubUrl}
-                          icon={<SocialIcon platform="github" />}
-                          label="GitHub"
-                        />
-                      )}
-                      {project.demoUrl && (
-                        <SocialLink
-                          href={project.demoUrl}
-                          icon={<SocialIcon />}
-                          label="Live Demo"
-                        />
-                      )}
-                    </div>
-                  </CardFooter>
-                </Card>
-              ))}
+              .map((project) => {
+                let categoryLabel = "Other";
+                if (project.category === "data-science")
+                  categoryLabel = "Data Science";
+                else if (project.category === "software")
+                  categoryLabel = "Software Development";
+                return (
+                  <Card
+                    key={project.title + (project.date ?? "")}
+                    className="border border-muted/40 hover:shadow-md transition-shadow"
+                  >
+                    <CardHeader>
+                      <CardTitle>{project.title}</CardTitle>
+                      <CardDescription>
+                        {categoryLabel}
+                        {project.date && ` • ${project.date}`}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <Image
+                        src={
+                          project.image ??
+                          "/placeholder.svg?height=200&width=400"
+                        }
+                        alt={`${project.title} screenshot`}
+                        width={400}
+                        height={200}
+                        className="rounded-md mb-4 object-cover w-full h-48"
+                      />
+                      <p className="text-sm text-muted-foreground">
+                        {project.description}
+                      </p>
+                    </CardContent>
+                    <CardFooter className="flex flex-col gap-2 items-start">
+                      <div className="flex flex-wrap gap-2">
+                        {project.technologies.map((tech) => (
+                          <Badge key={tech} variant="outline">
+                            {tech}
+                          </Badge>
+                        ))}
+                      </div>
+                      <div className="flex gap-2">
+                        {project.githubUrl && (
+                          <SocialLink
+                            href={project.githubUrl}
+                            icon={<SocialIcon platform="github" />}
+                            label="GitHub"
+                          />
+                        )}
+                        {project.demoUrl && (
+                          <SocialLink
+                            href={project.demoUrl}
+                            icon={<SocialIcon />}
+                            label="Live Demo"
+                          />
+                        )}
+                      </div>
+                    </CardFooter>
+                  </Card>
+                );
+              })}
           </div>
+          {/* Non-featured projects */}
+          {config.projects.some((p) => !p.featured) && (
+            <div className="mt-12">
+              <Heading2>Other Projects</Heading2>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {config.projects
+                  .filter((project) => !project.featured)
+                  .map((project) => {
+                    let categoryLabel = "Other";
+                    if (project.category === "data-science")
+                      categoryLabel = "Data Science";
+                    else if (project.category === "software")
+                      categoryLabel = "Software Development";
+                    return (
+                      <Card
+                        key={project.title + (project.date ?? "")}
+                        className="border border-muted/40 hover:shadow-md transition-shadow"
+                      >
+                        <CardHeader>
+                          <CardTitle>{project.title}</CardTitle>
+                          <CardDescription>
+                            {categoryLabel}
+                            {project.date && ` • ${project.date}`}
+                          </CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                          <Image
+                            src={
+                              project.image ??
+                              "/placeholder.svg?height=200&width=400"
+                            }
+                            alt={`${project.title} screenshot`}
+                            width={400}
+                            height={200}
+                            className="rounded-md mb-4 object-cover w-full h-48"
+                          />
+                          <p className="text-sm text-muted-foreground">
+                            {project.description}
+                          </p>
+                        </CardContent>
+                        <CardFooter className="flex flex-col gap-2 items-start">
+                          <div className="flex flex-wrap gap-2">
+                            {project.technologies.map((tech) => (
+                              <Badge key={tech} variant="outline">
+                                {tech}
+                              </Badge>
+                            ))}
+                          </div>
+                          <div className="flex gap-2">
+                            {project.githubUrl && (
+                              <SocialLink
+                                href={project.githubUrl}
+                                icon={<SocialIcon platform="github" />}
+                                label="GitHub"
+                              />
+                            )}
+                            {project.demoUrl && (
+                              <SocialLink
+                                href={project.demoUrl}
+                                icon={<SocialIcon />}
+                                label="Live Demo"
+                              />
+                            )}
+                          </div>
+                        </CardFooter>
+                      </Card>
+                    );
+                  })}
+              </div>
+            </div>
+          )}
           <div className="mt-8 text-center">
             <Button variant="outline" asChild>
               <Link
@@ -267,6 +320,60 @@ export default function Home() {
                 <div>
                   <h3 className="text-xl font-medium">{edu.title}</h3>
                   <p className="text-muted-foreground">{edu.description}</p>
+                  {edu.url && (
+                    <Link
+                      href={edu.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-blue-600 hover:underline text-sm"
+                    >
+                      Learn more
+                    </Link>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </SectionContainer>
+
+        <SectionContainer id="experience">
+          <Heading2>Work Experience</Heading2>
+          <div className="space-y-8">
+            {config.workExperience.map((work) => (
+              <div
+                key={work.company + work.position + work.duration}
+                className="border-l-4 border-gradient-to-b from-pink-400 to-purple-600 pl-6"
+              >
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+                  <h3 className="text-xl font-medium">{work.position}</h3>
+                  <span className="text-sm text-muted-foreground">
+                    {work.duration}
+                  </span>
+                </div>
+                <p className="text-lg text-muted-foreground mb-2">
+                  {work.company}
+                </p>
+                <p className="text-sm text-muted-foreground mb-4">
+                  {work.location} •{" "}
+                  {work.type.charAt(0).toUpperCase() +
+                    work.type.slice(1).replace("-", " ")}
+                </p>
+                <ul className="space-y-2 mb-4">
+                  {work.description.map((desc) => (
+                    <li
+                      key={nanoid()}
+                      className="text-sm text-muted-foreground"
+                    >
+                      • {desc}
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex flex-wrap gap-2">
+                  {work.skills.map((skill) => (
+                    <Badge key={skill} variant="outline">
+                      {skill}
+                    </Badge>
+                  ))}
                 </div>
               </div>
             ))}

@@ -76,12 +76,18 @@ export type PersonalConfig = {
   workExperience: WorkExperience[];
   contact: {
     getInTouchPrompt?: string;
+    email?: string;
+    location?: string;
   };
   social: SocialLink[];
   testimonial?: {
     quote: string;
     author: string;
     position: string;
+  };
+  resume?: {
+    link: string;
+    label?: string;
   };
   footerCopyright?: string;
 };
@@ -113,7 +119,7 @@ const config: PersonalConfig = {
     },
     {
       emoji: "🌐",
-      fact: "Learning Kazakh and Arabic one flashcard at a time.",
+      fact: "Learning Dutch, Kazakh and Arabic one flashcard at a time.",
     },
   ],
   profileImage: "/assets/me.jpg",
@@ -207,7 +213,7 @@ const config: PersonalConfig = {
       title: "B.Sc. in Artificial Intelligence",
       description:
         "University of Groningen — specialized in ML, data science & algorithms.",
-      year: 2023,
+      year: 2024,
     },
     {
       title: "Yandex Data Science Bootcamp",
@@ -219,7 +225,7 @@ const config: PersonalConfig = {
     {
       company: "Researchable B.V.",
       position: "Machine Learning Engineer",
-      duration: "Sep 2021 - Present",
+      duration: "Sep 2024 - Present",
       location: "Groningen, NL",
       type: "full-time",
       description: [
