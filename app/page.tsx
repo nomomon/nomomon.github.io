@@ -84,7 +84,7 @@ export default function Home() {
           <div className="flex flex-col-reverse md:flex-row items-center gap-8">
             <div className="flex-1 space-y-4">
               <Heading1>
-                Hello, I'm{" "}
+                {"Hello, I'm "}
                 <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-transparent bg-clip-text">
                   {config.name}
                 </span>
@@ -326,7 +326,7 @@ export default function Home() {
             {config.testimonial && (
               <div className="bg-muted/30 p-6 rounded-lg border border-muted/40">
                 <p className="italic text-muted-foreground">
-                  "{config.testimonial.quote}"
+                  &quot;{config.testimonial.quote}&quot;
                 </p>
                 <p className="mt-4 font-medium">
                   — {config.testimonial.author}, {config.testimonial.position}
