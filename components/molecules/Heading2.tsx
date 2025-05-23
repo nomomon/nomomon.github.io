@@ -2,8 +2,8 @@ import React from "react";
 import { cn } from "@/lib/utils";
 
 interface Heading2Props extends React.HTMLAttributes<HTMLHeadingElement> {
-  children: React.ReactNode;
-  className?: string;
+  readonly children: React.ReactNode;
+  readonly className?: string;
 }
 
 export function Heading2({ children, className, ...props }: Heading2Props) {
