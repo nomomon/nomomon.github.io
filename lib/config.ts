@@ -243,8 +243,9 @@ const config: PersonalConfig = {
     },
   ],
   contact: {
-    email: "mansur@example.com", // Example, update as needed
-    location: "Groningen, Netherlands",
+    email: "", // i don't want to expose my email
+    location: "", // i don't want to expose my location
+    phone: "", // i don't want to expose my phone number
     getInTouchPrompt:
       "I'm always open to discussing new projects, opportunities, or partnerships. Let's connect to discuss how we can turn data into magic and build AI that actually makes life easier! 🚀",
   },
