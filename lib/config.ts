@@ -75,8 +75,10 @@ export type PersonalConfig = {
     getInTouchPrompt?: string; // Added for contact section prompt
   };
   social: SocialLink[];
-  resume?: string;
-  resumeLabel?: string; // Added for resume download label
+  resume?: {
+    link: string;
+    label: string;
+  };
   testimonial?: {
     quote: string;
     author: string;
@@ -87,7 +89,7 @@ export type PersonalConfig = {
 
 const config: PersonalConfig = {
   name: "Mansur Nurmukhambetov",
-  title: "Machine Learning Engineer & Data Scientist",
+  title: "Machine Learning Engineer, among other things..",
   bio: "Passionate about solving complex problems with data. With a robust background in mathematics, machine learning, and software engineering, I specialize in developing AI-driven solutions that optimize processes, drive innovation, and uncover actionable insights.",
   about: {
     paragraphs: [
@@ -271,8 +273,6 @@ const config: PersonalConfig = {
       username: "nomomon",
     },
   ],
-  resume: "/resume.pdf",
-  resumeLabel: "Download Resume",
   testimonial: {
     quote:
       "Mansur is a really talented and driven person that is always asking questions to learn more about a topic. As a student of a practical machine learning class, his group was exceptional and independent. Any practical problem gets him excited and he is always looking for optimizations.",

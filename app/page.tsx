@@ -312,12 +312,12 @@ export default function Home() {
                   <div className="flex items-center gap-2">
                     <FileText className="h-5 w-5 text-muted-foreground" />
                     <Link
-                      href={config.resume}
+                      href={config.resume.link}
                       target="_blank"
                       rel="noreferrer"
                       className="hover:underline"
                     >
-                      {config.resumeLabel ?? "Download Resume"}
+                      {config.resume.label ?? "Download Resume"}
                     </Link>
                   </div>
                 )}
